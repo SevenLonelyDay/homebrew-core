@@ -14,6 +14,7 @@ class Pypy39 < Formula
     sha256 cellar: :any,                 arm64_ventura: "7093697807420f79bee3f5460e9b299f2af0b5a6c0575f7b0d62818240674c2f"
     sha256 cellar: :any,                 sonoma:        "f7f05f94c024769c30430cf4f6bcd7f2f623a3750f79e1bcc329c0494c37560f"
     sha256 cellar: :any,                 ventura:       "62da1b87b483f0820b1f4e39980bcd4199ac8a9b29622e596841d1128cf4a417"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "185a9042e0501b1bab93f7741ff4bada3d5fa288b2c680958c89d2df73238052"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "e93eaacb73d4693cd455999a555fffacc3f718b52b25294ae72aaa7ba358e256"
   end
 
