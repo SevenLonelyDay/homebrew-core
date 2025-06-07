@@ -281,6 +281,7 @@ bedops
 bee
 behaviortree.cpp
 bench
+benchi
 bender
 benthos
 berglas
@@ -575,6 +576,7 @@ clive
 cljfmt
 cloc
 clojure
+clojure-lsp
 clojurescript
 closure-compiler
 cloud-nuke
@@ -697,6 +699,7 @@ cracklib
 crane
 crates-tui
 crd2pulumi
+credo
 cri-tools
 crispy-doom
 croaring
@@ -1430,6 +1433,7 @@ gql
 gradle
 gradle-completion
 gradle-profiler
+gradle@7
 grafana
 grafana-agent
 grafana-alloy
@@ -1564,6 +1568,7 @@ hsd
 html-xml-utils
 html2markdown
 htmldoc
+htmlhint
 htmlq
 htmltest
 htop
@@ -1774,6 +1779,7 @@ kanata
 kapacitor
 kapp
 karchive
+kargo
 karmadactl
 kaskade
 katago
@@ -2104,6 +2110,7 @@ libstrophe
 libsvgtiny
 libsvm
 libtasn1
+libtatsu
 libtensorflow
 libtickit
 libtiff
@@ -2166,6 +2173,7 @@ libxt
 libxv
 libxvmc
 libxxf86vm
+libzdb
 libzim
 libzzip
 license-eye
@@ -2259,6 +2267,7 @@ macchina
 mackup
 macmon
 mactop
+maeparser
 mafft
 mage
 magic_enum
@@ -2385,6 +2394,7 @@ miniupnpc
 minizinc
 minizip
 minizip-ng
+mint
 mintoolkit
 minuit2
 mise
@@ -2925,6 +2935,8 @@ polkit
 polynote
 ponyc
 popeye
+poppler
+poppler-qt5
 portablegl
 porter
 poselib
@@ -3250,6 +3262,7 @@ safety
 sagittarius-scheme
 samba
 saml2aws
+samply
 samtools
 sbcl
 sbom-tool
@@ -3473,6 +3486,7 @@ spr
 spytrap-adb
 sq
 sql-formatter
+sql-lint
 sql-migrate
 sqlancer
 sqlboiler
@@ -3486,6 +3500,7 @@ sqlmap
 sqlpage
 sqlparse
 sqlx-cli
+sqruff
 squashfuse
 squealer
 squid
@@ -3775,6 +3790,7 @@ trojan-go
 trufflehog
 trurl
 tsduck
+tsnet-serve
 tt
 ttdl
 tty-share
