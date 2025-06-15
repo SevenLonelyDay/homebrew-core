@@ -50,6 +50,7 @@
   ["qalculate-gtk", "qalculate-qt"],
   ["mame", "rom-tools"],
   ["mecab-unidic", "mecab-unidic-extended"],
+  ["micropython", "mpremote"],
   ["moarvm", "nqp", "rakudo"],
   ["moreutils", "sponge"],
   ["mupdf", "mupdf-tools"],
