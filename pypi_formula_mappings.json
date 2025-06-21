@@ -401,7 +401,8 @@
     "exclude_packages": ["certifi"]
   },
   "gptline": {
-    "exclude_packages": ["certifi", "pillow"]
+    "exclude_packages": ["certifi", "pillow"],
+    "extra_packages": ["lxml-html-clean"]
   },
   "gptme": {
     "exclude_packages": ["certifi", "pillow"]
@@ -568,6 +569,9 @@
     "exclude_packages": ["certifi", "cryptography"]
   },
   "mongo-orchestration": {
+    "exclude_packages": ["certifi"]
+  },
+  "moodle-dl": {
     "exclude_packages": ["certifi"]
   },
   "moto": {

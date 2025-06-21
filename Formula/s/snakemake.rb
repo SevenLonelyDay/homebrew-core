@@ -3,20 +3,20 @@ class Snakemake < Formula
 
   desc "Pythonic workflow system"
   homepage "https://snakemake.readthedocs.io/"
-  url "https://files.pythonhosted.org/packages/bc/32/13663b412501ed32fbab35a69278888a96918f2bf1a4259964d4d10fcdca/snakemake-9.5.1.tar.gz"
-  sha256 "480367b560b7c643eb8575274b4537b20e3cba23f2502b4d221a10e88703f6bd"
+  url "https://files.pythonhosted.org/packages/01/59/b3e9d89c09af0710fc45f51a9032d5d4f56e4442327c72a3585e39a0688d/snakemake-9.6.0.tar.gz"
+  sha256 "df7c24dd278d2420d04f15f14189427d0d4dae8ab55ca7094f53f92f1930b37c"
   license "MIT"
-  revision 2
+  revision 1
   head "https://github.com/snakemake/snakemake.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any,                 arm64_sequoia: "ab41a2c29992b88cc46f4512cf4b239a4ad1a16ea2c2564d705bdb840c98cd90"
-    sha256 cellar: :any,                 arm64_sonoma:  "c9368476e4598ec9783b78fe69cd3cd23e1ea62a07293220264078a19d0afee7"
-    sha256 cellar: :any,                 arm64_ventura: "1bc561d3eacf2459ad78ea97366e50c16b955c0f9a504fb8800b40e2a73c8d81"
-    sha256 cellar: :any,                 sonoma:        "6bd183e51b21dcf9c8cc21e8448c77a26e4bfcaac50145130f6af24ece9708b3"
-    sha256 cellar: :any,                 ventura:       "0e87ef8ddb3d633aa0e4ef5a36391177000519d795fe1875e3000c181ffeaf9a"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "5b561ac4debff0a7daf13e96e5eeb091aa30d02737c7db55ad2b2fea94a91501"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "b35e342cbf1022a86def6e86a49b0c7620a8f73e2ddc7e881ca365469134d739"
+    sha256 cellar: :any,                 arm64_sequoia: "1629820531ab4a8a8a6ee72669b490587fe8f7db57913da0be6f9ff64ae25fbb"
+    sha256 cellar: :any,                 arm64_sonoma:  "e615a0a32cdb8c8f131932384c00f9d5142d47a9ba3b30b885aa6477d37a5625"
+    sha256 cellar: :any,                 arm64_ventura: "20a4826bdc6cef9a6f2d7614847485496eecaee13ded15a32e94328e857a7142"
+    sha256 cellar: :any,                 sonoma:        "066c989fc019432ce41416080eb5ac3742c027443cf450227fc43e25fc66b142"
+    sha256 cellar: :any,                 ventura:       "184aef7166c6afa019c0341b7478168367b1e3f7d3858bf5b9d7c09444d45e0f"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "06762eadfddb29b9176ad30c7c4796350d8d2268218fda25821e8a8eb6f86980"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "8fdbad04d27db8adee2c182e3773ff018a6d90854bb76186c196b68481eb94f2"
   end
 
   depends_on "rust" => :build
@@ -151,8 +151,8 @@ class Snakemake < Formula
   end
 
   resource "pulp" do
-    url "https://files.pythonhosted.org/packages/fb/92/bf4b947ec8aac629b835b588e70664c1d0150a8369f798b6c5adb32e39ba/pulp-3.1.1.tar.gz"
-    sha256 "300a330e917c9ca9ac7fda6f5849bbf30d489c368117f197a3e3fd0bc1966d95"
+    url "https://files.pythonhosted.org/packages/2f/cd/cb1308632ad5b092ebbfe64d0cd0b9906caec6e52bff88f54ddd3d434694/pulp-3.2.1.tar.gz"
+    sha256 "fc6c02c47c06342c586b175924add753cad7638ff6149b3b43e87ac6709ac469"
   end
 
   resource "pyyaml" do
@@ -196,8 +196,8 @@ class Snakemake < Formula
   end
 
   resource "snakemake-interface-executor-plugins" do
-    url "https://files.pythonhosted.org/packages/61/9d/ca71ec355208cb3f4b2dfb590a09f5081b17e6272cdb904c97de5ee93996/snakemake_interface_executor_plugins-9.3.5.tar.gz"
-    sha256 "483b4c6b70f92170c4d87cfe213fad4ecab58abfeaee1ec428d3403026745265"
+    url "https://files.pythonhosted.org/packages/6a/62/0bf04bc7cf11d9019040e2a0957830ae5bee48ad5ee817c260145f3d99fc/snakemake_interface_executor_plugins-9.3.6.tar.gz"
+    sha256 "9c99540fd3f0ae751440b7e0a4f82323561f89e6205b12613d409374a450b84b"
   end
 
   resource "snakemake-interface-logger-plugins" do
@@ -231,8 +231,8 @@ class Snakemake < Formula
   end
 
   resource "urllib3" do
-    url "https://files.pythonhosted.org/packages/8a/78/16493d9c386d8e60e442a35feac5e00f0913c0f4b7c217c11e8ec2ff53e0/urllib3-2.4.0.tar.gz"
-    sha256 "414bc6535b787febd7567804cc015fee39daab8ad86268f1310a9250697de466"
+    url "https://files.pythonhosted.org/packages/15/22/9ee70a2574a4f4599c47dd506532914ce044817c7752a79b6a51286319bc/urllib3-2.5.0.tar.gz"
+    sha256 "3fc47733c7e419d4bc3f6b3dc2b4f890bb743906a30d56ba4a5bfa4bbff92760"
   end
 
   resource "wrapt" do

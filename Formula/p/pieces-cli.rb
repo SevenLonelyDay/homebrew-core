@@ -3,10 +3,11 @@ class PiecesCli < Formula
 
   desc "Command-line tool for Pieces.app"
   homepage "https://pieces.app/"
-  url "https://storage.googleapis.com/app-releases-production/pieces_cli/release/pieces_cli-1.15.1.tar.gz"
-  sha256 "e14b7b2c812148f334e6039a735bf21670fc79fc4aec3776aa2ea7daad0fe27b"
+  url "https://storage.googleapis.com/app-releases-production/pieces_cli/release/pieces_cli-1.15.2.tar.gz"
+  sha256 "9b3656716c6cdb41aa0c7e2d054f7e59a5e00a5bbf2dc4437bcb769141e2fc60"
 
   license "MIT"
+  revision 1
 
   livecheck do
     url "https://builds.pieces.app/stages/production/pieces_cli/version"
@@ -18,13 +19,13 @@ class PiecesCli < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
-    sha256 cellar: :any,                 arm64_sequoia: "91f3d70a93809e32437a44aaa8802e153567461e05bc1459842562a3f860768b"
-    sha256 cellar: :any,                 arm64_sonoma:  "fde55127d49fa2c7b9de290e872989ba6b37374f3d77b54ffbb04e2b5c1965e6"
-    sha256 cellar: :any,                 arm64_ventura: "1dbbf4c084b4f9c5b4ecf0fa5c5c85ce610274b8a96bd7542c19022a1d5861c8"
-    sha256 cellar: :any,                 sonoma:        "169296970fb6869cf69467302642f81ce5f3cd476f03db23b1b6ff524305d87d"
-    sha256 cellar: :any,                 ventura:       "e54e8d1c6726c805e05ce3da16d8f40a77eef2041f56b26ee0be531bc8e2a17c"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "08d2b5479fda93596b0bc5dd7d2f817aa9ed448b4671d0ef360403f99624de68"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "f5837cc8ed0dd324545a035792ceed9a4856dd0e5a73be685054ee01103c1397"
+    sha256 cellar: :any,                 arm64_sequoia: "da0252c7929a51d81e29b102d0e69f45b3403df80b8388a7bb75f0a7f5c0484d"
+    sha256 cellar: :any,                 arm64_sonoma:  "72b48afbcb9af33e228e75d3ccce8460ce2c1e873b6260f799cf6002a1260acf"
+    sha256 cellar: :any,                 arm64_ventura: "4085abd35af48ad50b57570da1c8529afbcfcfbab6d407eb139987fbfbec1648"
+    sha256 cellar: :any,                 sonoma:        "f9ce2be52f0d32aab4a8c0d4fa3e206eb58cbf2033258e1c98d0f1420c4c9933"
+    sha256 cellar: :any,                 ventura:       "c0537893a413323a7a52baa70c0412d8f6aa5a41d455ec7db0a978bf70c6a4b0"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "1f9497b4e411330d6781fc88514bac670795998a90cbc558cc57534477690cad"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "e9c062f1bd086f8a620de3ad13eb30a164b1bee9a00f6e43e3baaa3200744537"
   end
 
   depends_on "rust" => :build
@@ -103,8 +104,8 @@ class PiecesCli < Formula
   end
 
   resource "pydantic" do
-    url "https://files.pythonhosted.org/packages/f0/86/8ce9040065e8f924d642c58e4a344e33163a07f6b57f836d0d734e0ad3fb/pydantic-2.11.5.tar.gz"
-    sha256 "7f853db3d0ce78ce8bbb148c401c2cdd6431b3473c0cdff2755c7690952a7b7a"
+    url "https://files.pythonhosted.org/packages/00/dd/4325abf92c39ba8623b5af936ddb36ffcfe0beae70405d456ab1fb2f5b8c/pydantic-2.11.7.tar.gz"
+    sha256 "d989c3c6cb79469287b1569f7447a17848c998458d49ebe294e975b9baf0f0db"
   end
 
   resource "pydantic-core" do
@@ -183,8 +184,8 @@ class PiecesCli < Formula
   end
 
   resource "urllib3" do
-    url "https://files.pythonhosted.org/packages/8a/78/16493d9c386d8e60e442a35feac5e00f0913c0f4b7c217c11e8ec2ff53e0/urllib3-2.4.0.tar.gz"
-    sha256 "414bc6535b787febd7567804cc015fee39daab8ad86268f1310a9250697de466"
+    url "https://files.pythonhosted.org/packages/15/22/9ee70a2574a4f4599c47dd506532914ce044817c7752a79b6a51286319bc/urllib3-2.5.0.tar.gz"
+    sha256 "3fc47733c7e419d4bc3f6b3dc2b4f890bb743906a30d56ba4a5bfa4bbff92760"
   end
 
   resource "uvicorn" do

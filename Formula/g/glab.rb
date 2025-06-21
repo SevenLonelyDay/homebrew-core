@@ -2,21 +2,21 @@ class Glab < Formula
   desc "Open-source GitLab command-line tool"
   homepage "https://gitlab.com/gitlab-org/cli"
   url "https://gitlab.com/gitlab-org/cli.git",
-    tag:      "v1.59.2",
-    revision: "c0acec3f3bab0b433fabf487e0a71c780680ba90"
+    tag:      "v1.60.2",
+    revision: "001b8c4d5b83a7f96fd8dd4280a8f0d5eba5a3b9"
   license "MIT"
   head "https://gitlab.com/gitlab-org/cli.git", branch: "main"
 
   no_autobump! because: :requires_manual_review
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "ad7782e4ecff87da2537d8ed768e9c4c1a7c9ae994ad204cd4de5e446c43190f"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "ad7782e4ecff87da2537d8ed768e9c4c1a7c9ae994ad204cd4de5e446c43190f"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "ad7782e4ecff87da2537d8ed768e9c4c1a7c9ae994ad204cd4de5e446c43190f"
-    sha256 cellar: :any_skip_relocation, sonoma:        "e503d618e0f6b78a976f38c29ee9d5537296ca553f996c400d6d731435c1b375"
-    sha256 cellar: :any_skip_relocation, ventura:       "e503d618e0f6b78a976f38c29ee9d5537296ca553f996c400d6d731435c1b375"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "5683f0f8c93fefb4f94b1c84430fdf3ba76426d275a31dbc34fcf54b885125f3"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "25cf63c2340ad641bd9c08f800fa1fe6609de1054a19cbba80eac32e76a4f0b0"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "9623bcd1676199d3b43ef2ffebd67cc4ff5ade9a0f90038bb5b148b09823a0fc"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "9623bcd1676199d3b43ef2ffebd67cc4ff5ade9a0f90038bb5b148b09823a0fc"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "9623bcd1676199d3b43ef2ffebd67cc4ff5ade9a0f90038bb5b148b09823a0fc"
+    sha256 cellar: :any_skip_relocation, sonoma:        "21592419029ff4dca6dadef176c60c8648ad3d0c51d0df3316e944259ab27b71"
+    sha256 cellar: :any_skip_relocation, ventura:       "21592419029ff4dca6dadef176c60c8648ad3d0c51d0df3316e944259ab27b71"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "595623efa6d052cafba32b50548916515e7d09604fc8376162033cc4b717d871"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "7fe5b8cd4ebd1ac4a8975b1bc3c895e0925977f0448be82106b9c5de3e9192e2"
   end
 
   depends_on "go" => :build
