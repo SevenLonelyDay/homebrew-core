@@ -3,20 +3,19 @@ class KeeperCommander < Formula
 
   desc "Command-line and SDK interface to Keeper Password Manager"
   homepage "https://docs.keeper.io/en/privileged-access-manager/commander-cli/overview"
-  url "https://files.pythonhosted.org/packages/d6/56/5911f0e6eeee11d2e72ee7ab3130513e8ad60e480eb4e108a50922c2fbf8/keepercommander-17.1.1.tar.gz"
-  sha256 "03abf94fb594ff6eec63a1ac9076c8a7e839723e13b0ade9afabcfc123270969"
+  url "https://files.pythonhosted.org/packages/4a/35/946cf22d05714e4b7dfbd5b60fad139f86dc0a583497663d7c31e8e5dca3/keepercommander-17.1.2.tar.gz"
+  sha256 "ac111f0935f339edd6bb6c166124b6afed6738aff42e2c6daffe615ee676b1f7"
   license "MIT"
-  revision 1
   head "https://github.com/Keeper-Security/Commander.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_sequoia: "3fa374b9dd296a013db067102378b76e2b6a8ebbc5d98345cb83155ecb71eedd"
-    sha256 cellar: :any,                 arm64_sonoma:  "942c51ec4d681eba83598e57acda3c5a0ed3f51f095c9269af42617a1926b1e0"
-    sha256 cellar: :any,                 arm64_ventura: "4fd3d63803b9a48d4a83507cd01d211e35d95f5a57f14b867d809856dab44139"
-    sha256 cellar: :any,                 sonoma:        "8db9b0ea4adc8519a6f09c12f25538ee795856aebded17e9a398ae1db9406f67"
-    sha256 cellar: :any,                 ventura:       "c57bddbd5e5596f47624d3c31d19188402589adf87b31995ee9e3c0da2aa5f91"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "c4dccd333f0283664c8965b849ee05a4b31c01108001990288266be5db1383d9"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "cd5f161afe881805012b007bcd86606f77a416307efb4e366f5045633a3500a4"
+    sha256 cellar: :any,                 arm64_sequoia: "f797a1e7c78909936ad68575a39f1d0a14d0dc507009697c0165d9fe6e2e168b"
+    sha256 cellar: :any,                 arm64_sonoma:  "280f52cb1f6f134eda162ce8fefd318b8984c335777900e5346df9e161d78f13"
+    sha256 cellar: :any,                 arm64_ventura: "431328798386a36357668609ccb88dd16b0db81110ce54f41d701c3565307e1d"
+    sha256 cellar: :any,                 sonoma:        "afccbdb5d19e5b059a33623c6d80212190881930937a49481db7bd9d67172545"
+    sha256 cellar: :any,                 ventura:       "e8e29e3b1c9cb9c29b29fde92a53fc49751bcb20947a9b7b59f468353972a4a0"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "70473d105f78d244178167733657a3958ea2309e5a060df3a27ca0a5ca2e760c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "4596bf7f37607640b63047d94ced81108085eebb3a6d6082c522454c292e4f10"
   end
 
   depends_on "pkgconf" => :build
@@ -128,8 +127,8 @@ class KeeperCommander < Formula
   end
 
   resource "fonttools" do
-    url "https://files.pythonhosted.org/packages/b6/a9/3319c6ae07fd9dde51064ddc6d82a2b707efad8ed407d700a01091121bbc/fonttools-4.58.2.tar.gz"
-    sha256 "4b491ddbfd50b856e84b0648b5f7941af918f6d32f938f18e62b58426a8d50e2"
+    url "https://files.pythonhosted.org/packages/2e/5a/1124b2c8cb3a8015faf552e92714040bcdbc145dfa29928891b02d147a18/fonttools-4.58.4.tar.gz"
+    sha256 "928a8009b9884ed3aae17724b960987575155ca23c6f0b8146e400cc9e0d44ba"
   end
 
   resource "fpdf2" do
@@ -173,8 +172,8 @@ class KeeperCommander < Formula
   end
 
   resource "limits" do
-    url "https://files.pythonhosted.org/packages/f3/93/1d0d9feedbf58220be4160f5f3fbe51f52449d0699f896b32ce731756e30/limits-5.2.0.tar.gz"
-    sha256 "b6b659774f17befef2dd30a76dcd2bdecf3852e73b6627143d44ab4deda94b48"
+    url "https://files.pythonhosted.org/packages/79/32/95d4908a730213a5db40462b0e20c1b93a688b33eade8c4981bbf0ca08de/limits-5.4.0.tar.gz"
+    sha256 "27ebf55118e3c9045f0dbc476f4559b26d42f4b043db670afb8963f36cf07fd9"
   end
 
   resource "markdown-it-py" do
@@ -228,8 +227,8 @@ class KeeperCommander < Formula
   end
 
   resource "pydantic" do
-    url "https://files.pythonhosted.org/packages/f0/86/8ce9040065e8f924d642c58e4a344e33163a07f6b57f836d0d734e0ad3fb/pydantic-2.11.5.tar.gz"
-    sha256 "7f853db3d0ce78ce8bbb148c401c2cdd6431b3473c0cdff2755c7690952a7b7a"
+    url "https://files.pythonhosted.org/packages/00/dd/4325abf92c39ba8623b5af936ddb36ffcfe0beae70405d456ab1fb2f5b8c/pydantic-2.11.7.tar.gz"
+    sha256 "d989c3c6cb79469287b1569f7447a17848c998458d49ebe294e975b9baf0f0db"
   end
 
   resource "pydantic-core" do
@@ -308,8 +307,8 @@ class KeeperCommander < Formula
   end
 
   resource "urllib3" do
-    url "https://files.pythonhosted.org/packages/8a/78/16493d9c386d8e60e442a35feac5e00f0913c0f4b7c217c11e8ec2ff53e0/urllib3-2.4.0.tar.gz"
-    sha256 "414bc6535b787febd7567804cc015fee39daab8ad86268f1310a9250697de466"
+    url "https://files.pythonhosted.org/packages/15/22/9ee70a2574a4f4599c47dd506532914ce044817c7752a79b6a51286319bc/urllib3-2.5.0.tar.gz"
+    sha256 "3fc47733c7e419d4bc3f6b3dc2b4f890bb743906a30d56ba4a5bfa4bbff92760"
   end
 
   resource "wcwidth" do

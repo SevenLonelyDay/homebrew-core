@@ -1,8 +1,8 @@
 class AwsLc < Formula
   desc "General-purpose cryptographic library"
   homepage "https://github.com/aws/aws-lc"
-  url "https://github.com/aws/aws-lc/archive/refs/tags/v1.53.0.tar.gz"
-  sha256 "b7c3a456df40c0d19621848e8c7b70c1fa333f9e8f5aa72755890fb50c9963de"
+  url "https://github.com/aws/aws-lc/archive/refs/tags/v1.54.0.tar.gz"
+  sha256 "d491b6d6b233e88314a15170d435e28259f7cf4f950a427acc80a0e977aa683a"
   license all_of: ["Apache-2.0", "ISC", "OpenSSL", "MIT", "BSD-3-Clause"]
 
   livecheck do
@@ -11,13 +11,13 @@ class AwsLc < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "b32e904617a7d2edd9f48806dafbd628c5228cb81a3ad1bdbf0eeb5fa3d7e954"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "7080e7a9dddea84e7b65acafd236c04bc27df75c8a6e5a3a6ceebce6095cda88"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "fbd353cb57b9f146d1228c1083736dddd8f4545ceb3ad2e3ea7193e442e186a4"
-    sha256 cellar: :any_skip_relocation, sonoma:        "cee9654455ffd802e4c0edad0387d73bc01aab0b3103db97d2d0df4ffe625e52"
-    sha256 cellar: :any_skip_relocation, ventura:       "a243f0710a9799c4f5a3f779b783b83c0dd451c402ff74836045e079feb6a5f5"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "4ee5f863f1d9f5a422348eb7d75e43c4dae8450074ecd64222709a6e1fc9e4b8"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "886cc92b621687abeb5ac0325c11fc542a03e6169e83d3bf6ba19ebeac9ef806"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "81ccd5017a1ca29a020e68fc16ea33e37d342d1efd6dc8a5feb1850391003ebe"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "3b1889f117d645e0c9a132a46c54b9ccceee081a2b3690c76aad27009b57b5df"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "8d91bcccf2bc1baa246253ed80994cb14584df9c3fb6dff7a1c64fab95c7bed9"
+    sha256 cellar: :any_skip_relocation, sonoma:        "79f248c8e69eb12bbb4f817c3ab6293e9ffa78bb542abbe7fee4a08a1524c7ef"
+    sha256 cellar: :any_skip_relocation, ventura:       "19b9fb48483ca190a0605a9d47fff454824e8dff763fc3258dd182ed4d9817c7"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "40615e3ae1c5e90a3773ea9b6dc4121facf01f0e2e580aa3aee78319ffe91866"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "d3204c55b6de6d48129edf0a1e363427e51bb73200df7c68d6a760c7ac63ebaa"
   end
 
   keg_only "it conflicts with OpenSSL"

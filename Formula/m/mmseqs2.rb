@@ -39,6 +39,8 @@ class Mmseqs2 < Formula
   end
 
   def install
+    odie "Remove cmake 4 build patch" if build.stable? && version > "17-b804f"
+
     args = %W[
       -DCMAKE_POLICY_VERSION_MINIMUM=3.5
       -DHAVE_TESTS=0
@@ -59,12 +61,6 @@ class Mmseqs2 < Formula
     resource("documentation").stage { doc.install Dir["*"] }
     pkgshare.install "examples"
     bash_completion.install "util/bash-completion.sh" => "mmseqs.sh"
-  end
-
-  def caveats
-    on_intel do
-      "MMseqs2 requires at least SSE4.1 CPU instruction support." unless Hardware::CPU.sse4?
-    end
   end
 
   test do

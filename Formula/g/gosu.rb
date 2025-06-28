@@ -1,19 +1,19 @@
 class Gosu < Formula
   desc "Pragmatic language for the JVM"
   homepage "https://gosu-lang.github.io/"
-  url "https://github.com/gosu-lang/gosu-lang/archive/refs/tags/v1.18.4.tar.gz"
-  sha256 "63156dcfada79e9809d006fe097283d397b95ed73cf6e2da29bea1a822ffeee3"
+  url "https://github.com/gosu-lang/gosu-lang/archive/refs/tags/v1.18.6.tar.gz"
+  sha256 "22e756ece97b9139f04d75dd19e61e13d923a8b777e8f457606a32e25c2e8447"
   license "Apache-2.0"
   head "https://github.com/gosu-lang/gosu-lang.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "e12a8df75327b7a6f678e948de6e54c533b3268b6e2918c04fbe32ebf714008d"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "6717261ce99cace9a0f5b474aa4016dc42345e2e1d941bd9c23664e3c5f80f2f"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "7027e597cce5538becfa6e451faedc52d3ab1c85c175e5ba7df2e932e5e39811"
-    sha256 cellar: :any_skip_relocation, sonoma:        "64a74e0f12b66a7be551dfe944c9d85cb4495d47dffac0d346e40696398efb67"
-    sha256 cellar: :any_skip_relocation, ventura:       "0cae3bf8c24488c410d12773bc1e6f6ca566579ec1ced6831a9919ad31b842a2"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "5f7ee715e0a2cd1002350f06f5c99f3cfbbb25c88d41930b9347430cff9683f0"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "0aff995dbd2e47d5b759424448edf3a44e8005cc4ecbf1ac4a84510e6a2a37f6"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "484794e12ddc3dd5531947172771bfa1af355d2b6c5d835cc12d2548f09c0af4"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "4e70cb5eead066e5d9b73faebbbc4c918f737148cf31d363b18c3d1e0090a0a2"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "afd867fcec0ad217b9d4edcbac9657fbe280527dfe85e3c48cb5fa425b7f9fed"
+    sha256 cellar: :any_skip_relocation, sonoma:        "65094685513b715aa447c2b5221ebbae4a5fe121b39d890988f51c23581900fc"
+    sha256 cellar: :any_skip_relocation, ventura:       "0dfb0b64d9e2a8f95bcd5efd19cf945649492805daae70fd7db2ec8d1955bf8d"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "b45d808b97ff6a2e5d7df62112c977a43d1a826f64cc511ee38f83e3019f0271"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "910d6e90cbe2a448fe69b907d2af9a86cb6d4996d31a1b2c7406a751f0a3f850"
   end
 
   depends_on "maven" => :build
