@@ -6,27 +6,24 @@ class Glances < Formula
   url "https://files.pythonhosted.org/packages/e0/df/96cd0ff650bd491a73815171131304d9c0d15d90ef44fed26324558aabf0/glances-4.3.1.tar.gz"
   sha256 "952c4985b9c1ff9d9ebd23760a2dd124fa2315cf02acfa68f3b7e1c51e087c8c"
   license "LGPL-3.0-or-later"
-  revision 3
+  revision 5
 
   bottle do
-    sha256 cellar: :any,                 arm64_sequoia: "3a3719aff2beb674cced59b1388a18895a8d63bb2180085a7e84fc35b605f2c8"
-    sha256 cellar: :any,                 arm64_sonoma:  "2704c368ff9d3457fa8a177b0ba9fdae8aaa9631010349f9225746f2f0694056"
-    sha256 cellar: :any,                 arm64_ventura: "b30317f58cc7d4586e63496dc037d2c085af4bc1f01580f6543e510a8d3e3d37"
-    sha256 cellar: :any,                 sonoma:        "05c6ca94e53b66806e60ba99a16929434eb0506abbcda99df93a57ff573879e7"
-    sha256 cellar: :any,                 ventura:       "b685b3408c3a1ab6e616f4c764e6ba4b30dfa8c9458a7fc7f310e0ff1429a15d"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "fbe851008e7ca484d9b4c233e8ee757432c4bbbd725793efc8142fb86e88d8c1"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "996577afb61ee59095bdd98379eaa5ba69e81849a9760ba9acab2bc230a51955"
+    sha256 cellar: :any,                 arm64_sequoia: "894dd7cb770ddaa089c165c47435012f89994cb5bfe02a7f166775c2435be659"
+    sha256 cellar: :any,                 arm64_sonoma:  "eaf4f89fe1a05a43608137cf7ff74ead5d126fbf9c3908ecab147424550e5838"
+    sha256 cellar: :any,                 arm64_ventura: "4229127849b934862ef02e4ae88c2be8c9152123416f619f4154c285f035fc20"
+    sha256 cellar: :any,                 sonoma:        "76dc3b9aef89a91de4d0899bea9a43f8e28efa187bc7c357d4a1772fbdc519c2"
+    sha256 cellar: :any,                 ventura:       "a452242056001fa6c13b150970d7976665fe81db56841a27399c4edb4efca57e"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "31d47b51b206b1faa160f8ecbbf462b371b037f55463896edc10afece0da0698"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "dda017d665b0aad257237117d04b17dc5e00d86faec29d363800a0e73e834f09"
   end
 
   depends_on "cmake" => :build # for pyzmq
   depends_on "rust" => :build # for orjson
 
   depends_on "certifi"
-  depends_on "cffi"
   depends_on "cryptography"
-  depends_on "pycparser"
   depends_on "python@3.13"
-  depends_on "six"
   depends_on "zeromq"
 
   resource "annotated-types" do
@@ -90,8 +87,8 @@ class Glances < Formula
   end
 
   resource "fastapi" do
-    url "https://files.pythonhosted.org/packages/f4/55/ae499352d82338331ca1e28c7f4a63bfd09479b16395dce38cf50a39e2c2/fastapi-0.115.12.tar.gz"
-    sha256 "1e2c2a2646905f9e83d32f04a3f86aff4a286669c6c950ca95b5fd68c2602681"
+    url "https://files.pythonhosted.org/packages/ca/53/8c38a874844a8b0fa10dd8adf3836ac154082cf88d3f22b544e9ceea0a15/fastapi-0.115.14.tar.gz"
+    sha256 "b1de15cdc1c499a4da47914db35d0e4ef8f1ce62b624e94e0e5824421df99739"
   end
 
   resource "geomet" do
@@ -115,8 +112,8 @@ class Glances < Formula
   end
 
   resource "ibmcloudant" do
-    url "https://files.pythonhosted.org/packages/d2/e3/784ca6970caa0eac6508eff449f21d7ad67ce62c55ee2f58e64d0bc66928/ibmcloudant-0.10.3.tar.gz"
-    sha256 "1160140849cb73fa5b463bed4c4e40611d9e247087af5e477f6e3308837f4226"
+    url "https://files.pythonhosted.org/packages/f8/28/d4344e8a86c2869b9ae76f32233a66ef52ab2cf20bf5fc80ce2f0594a5e5/ibmcloudant-0.10.4.tar.gz"
+    sha256 "45271df0e5c24d4731e7221f134d06bc34077c238727c8670b36fc6f44348aaf"
   end
 
   resource "idna" do
@@ -150,8 +147,8 @@ class Glances < Formula
   end
 
   resource "kafka-python" do
-    url "https://files.pythonhosted.org/packages/01/cf/f55532155c7e2c54fdbdceb1412425f894fd0a6897575fa3454e541ce186/kafka_python-2.2.11.tar.gz"
-    sha256 "8ff8bcc158f48b47ba516536a5b1287db75a8ceff13d639da917ec52e171acde"
+    url "https://files.pythonhosted.org/packages/da/67/1434436f3cb409443f72a4843b877ac2d9bf586a31a0e966cf1dc4dc9a94/kafka_python-2.2.15.tar.gz"
+    sha256 "e0f480a45f3814cb0eb705b8b4f61069e1be61dae0d8c69d0f1f2da33eea1bd5"
   end
 
   resource "markupsafe" do
@@ -160,8 +157,8 @@ class Glances < Formula
   end
 
   resource "msgpack" do
-    url "https://files.pythonhosted.org/packages/cb/d0/7555686ae7ff5731205df1012ede15dd9d927f6227ea151e901c7406af4f/msgpack-1.1.0.tar.gz"
-    sha256 "dd432ccc2c72b914e4cb77afce64aab761c1137cc698be3984eee260bcb2896e"
+    url "https://files.pythonhosted.org/packages/45/b1/ea4f68038a18c77c9467400d166d74c4ffa536f34761f7983a104357e614/msgpack-1.1.1.tar.gz"
+    sha256 "77b79ce34a2bdab2594f490c8e80dd62a02d650b91a75159a63ec413b8d104cd"
   end
 
   resource "netifaces2" do
@@ -200,8 +197,8 @@ class Glances < Formula
   end
 
   resource "podman" do
-    url "https://files.pythonhosted.org/packages/fa/5c/ff701e438360a526a728eae3c18ee439c0875e4b937947f1cd04497ae17e/podman-5.4.0.1.tar.gz"
-    sha256 "ee537aaa44ba530fad7cd939d886a7632f9f7018064e7831e8cb614c54cb1789"
+    url "https://files.pythonhosted.org/packages/bf/e1/0fee9214caa0fd132fae78d71136a02bbb026711f23ad5063a7fea41a644/podman-5.5.0.tar.gz"
+    sha256 "4416af01d1a236185eb0110488241318eb3fb07337720a955246d807441d8b71"
   end
 
   resource "potsdb" do
@@ -230,8 +227,8 @@ class Glances < Formula
   end
 
   resource "pydantic" do
-    url "https://files.pythonhosted.org/packages/f0/86/8ce9040065e8f924d642c58e4a344e33163a07f6b57f836d0d734e0ad3fb/pydantic-2.11.5.tar.gz"
-    sha256 "7f853db3d0ce78ce8bbb148c401c2cdd6431b3473c0cdff2755c7690952a7b7a"
+    url "https://files.pythonhosted.org/packages/00/dd/4325abf92c39ba8623b5af936ddb36ffcfe0beae70405d456ab1fb2f5b8c/pydantic-2.11.7.tar.gz"
+    sha256 "d989c3c6cb79469287b1569f7447a17848c998458d49ebe294e975b9baf0f0db"
   end
 
   resource "pydantic-core" do
@@ -255,8 +252,8 @@ class Glances < Formula
   end
 
   resource "pymongo" do
-    url "https://files.pythonhosted.org/packages/74/0c/1fb60383ab4b20566407b87f1a95b7f5cda83e8d5594da6fc84e2a543405/pymongo-4.13.0.tar.gz"
-    sha256 "92a06e3709e3c7e50820d352d3d4e60015406bcba69808937dac2a6d22226fde"
+    url "https://files.pythonhosted.org/packages/4b/5a/d664298bf54762f0c89b8aa2c276868070e06afb853b4a8837de5741e5f9/pymongo-4.13.2.tar.gz"
+    sha256 "0f64c6469c2362962e6ce97258ae1391abba1566a953a492562d2924b44815c2"
   end
 
   resource "pysmart-smartx" do
@@ -290,8 +287,8 @@ class Glances < Formula
   end
 
   resource "pyzmq" do
-    url "https://files.pythonhosted.org/packages/b1/11/b9213d25230ac18a71b39b3723494e57adebe36e066397b961657b3b41c1/pyzmq-26.4.0.tar.gz"
-    sha256 "4bd13f85f80962f91a651a7356fe0472791a5f7a92f227822b5acf44795c626d"
+    url "https://files.pythonhosted.org/packages/f1/06/50a4e9648b3e8b992bef8eb632e457307553a89d294103213cfd47b3da69/pyzmq-27.0.0.tar.gz"
+    sha256 "b1f08eeb9ce1510e6939b6e5dcd46a17765e2333daae78ecf4606808442e52cf"
   end
 
   resource "reactivex" do
@@ -309,14 +306,19 @@ class Glances < Formula
     sha256 "f36b47402ecde768dbfafc46e8e4207b4360c654f1f3bb84475f0a28628fb19c"
   end
 
+  resource "six" do
+    url "https://files.pythonhosted.org/packages/94/e7/b2c673351809dca68a0e064b6af791aa332cf192da575fd474ed7d6f16a2/six-1.17.0.tar.gz"
+    sha256 "ff70335d468e7eb6ec65b95b99d3a2836546063f63acc5171de367e834932a81"
+  end
+
   resource "sniffio" do
     url "https://files.pythonhosted.org/packages/a2/87/a6771e1546d97e7e041b6ae58d80074f81b7d5121207425c964ddf5cfdbd/sniffio-1.3.1.tar.gz"
     sha256 "f4324edc670a0f49750a81b895f35c3adb843cca46f0530f79fc1babb23789dc"
   end
 
   resource "sparklines" do
-    url "https://files.pythonhosted.org/packages/42/10/a55ffb7b5ae130804ebcb53ecbb711a902403fe7efe67739aceeb4daf8f5/sparklines-0.5.0.tar.gz"
-    sha256 "069e48633fc1af354e9bbdfd0a644c1279d6632a572446aa9d741105f1177000"
+    url "https://files.pythonhosted.org/packages/1d/28/ef17c14c68e85b1f987d9ad64aa24f62592154f100206a097ffc545e4510/sparklines-0.7.0.tar.gz"
+    sha256 "efd2ff5126dac53ea4212c1e225f286beaf1907b35204465b65010db2eec4b2a"
   end
 
   resource "starlette" do
@@ -327,6 +329,11 @@ class Glances < Formula
   resource "statsd" do
     url "https://files.pythonhosted.org/packages/27/29/05e9f50946f4cf2ed182726c60d9c0ae523bb3f180588c574dd9746de557/statsd-4.0.1.tar.gz"
     sha256 "99763da81bfea8daf6b3d22d11aaccb01a8d0f52ea521daab37e758a4ca7d128"
+  end
+
+  resource "termcolor" do
+    url "https://files.pythonhosted.org/packages/ca/6c/3d75c196ac07ac8749600b60b03f4f6094d54e132c4d94ebac6ee0e0add0/termcolor-3.1.0.tar.gz"
+    sha256 "6a6dd7fbee581909eeec6a756cff1d7f7c376063b14e4a298dc4980309e55970"
   end
 
   resource "typing-extensions" do
@@ -340,13 +347,13 @@ class Glances < Formula
   end
 
   resource "urllib3" do
-    url "https://files.pythonhosted.org/packages/8a/78/16493d9c386d8e60e442a35feac5e00f0913c0f4b7c217c11e8ec2ff53e0/urllib3-2.4.0.tar.gz"
-    sha256 "414bc6535b787febd7567804cc015fee39daab8ad86268f1310a9250697de466"
+    url "https://files.pythonhosted.org/packages/15/22/9ee70a2574a4f4599c47dd506532914ce044817c7752a79b6a51286319bc/urllib3-2.5.0.tar.gz"
+    sha256 "3fc47733c7e419d4bc3f6b3dc2b4f890bb743906a30d56ba4a5bfa4bbff92760"
   end
 
   resource "uvicorn" do
-    url "https://files.pythonhosted.org/packages/de/ad/713be230bcda622eaa35c28f0d328c3675c371238470abdea52417f17a8e/uvicorn-0.34.3.tar.gz"
-    sha256 "35919a9a979d7a59334b6b10e05d77c1d0d574c50e0fc98b8b1a0f165708b55a"
+    url "https://files.pythonhosted.org/packages/5e/42/e0e305207bb88c6b8d3061399c6a961ffe5fbb7e2aa63c9234df7259e9cd/uvicorn-0.35.0.tar.gz"
+    sha256 "bc662f087f7cf2ce11a1d7fd70b90c9f98ef2e2831556dd078d131b96cc94a01"
   end
 
   resource "wifi" do
@@ -366,8 +373,9 @@ class Glances < Formula
 
   def install
     virtualenv_install_with_resources
-
-    prefix.install libexec/"share"
+    # Workaround limited netifaces2 functionality on macOS
+    # https://github.com/nicolargo/glances/issues/3219
+    inreplace libexec/"share/doc/glances/glances.conf", /(port_default_gateway)=True/, "\\1=False" if OS.mac?
   end
 
   test do

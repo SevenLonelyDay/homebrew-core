@@ -6,16 +6,16 @@ class Streamrip < Formula
   url "https://files.pythonhosted.org/packages/b8/c9/6997772e0217f3081e4e692c7b8b104aaa564c008f2593341e81bbbd2396/streamrip-2.1.0.tar.gz"
   sha256 "e59b4b406f9ac77eb59c927a1a082644e0902152ffeb6212b6b24af7fbef5540"
   license "GPL-3.0-only"
-  revision 1
+  revision 3
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "fc43b88cf3e6fab16674a3157386e59054916ebeb3291af3549558989ff1e0ad"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "e9adb78ebddc9db5f53686d1332ca5c470159dcef0e902750d311ee4d26463cb"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "9e8b3dd41ee4b7246f56c4a3b1202aae48c0a11ffaee002b55af489bfa7544dc"
-    sha256 cellar: :any_skip_relocation, sonoma:        "f1ce4a6941424de9d6be471066d6c8f86bb5e7176a566da47a383db10e7f6cb2"
-    sha256 cellar: :any_skip_relocation, ventura:       "4d589f63d64adf41bbc0598ce57c191680685e047bc0b5d88a456505ef0d1211"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "51b54fdaeedffa13d71fd0f32bb5b854ef94bfc8d7baa45ffe6761d17dd97620"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "bb7e08e0592589b8e3cb18f94e5010f894d49a48894da027a35e851c8e780086"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "2c136131df1bb9edf8c68e371a32fc099a82653302802752dbe1109ca9015ca4"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "530d93900626dc0063507b481a49ac34eaa7708aba3473c8d59f07cf922058e1"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "c50d5c5582277a04c6b9f9ca378582f5c5310f8e8dd0e228e329ad788d3c8868"
+    sha256 cellar: :any_skip_relocation, sonoma:        "d39c2e396b4525cc272f4c3946e7941fafddb31547042ddb1b44a1eb88f8dcf2"
+    sha256 cellar: :any_skip_relocation, ventura:       "56c78fa4da3d5320d498e0b8ba4f9e5157869d0905bb850706292ecb994e6736"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "79fda86e6f0861c6967fd4ff8700bc1d57aa541bdf151c8a3eccaa0ae53b6975"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "79defc759e7837a2b3257cbdf5607f4014fe8d0b2383bb58a5df25ab1fd714fa"
   end
 
   depends_on "certifi"
@@ -26,8 +26,8 @@ class Streamrip < Formula
   uses_from_macos "libffi"
 
   resource "aiodns" do
-    url "https://files.pythonhosted.org/packages/92/9b/e96226eed7568ddfd075b03695e3e1298d9de48724128a3a2957f5ee6ec8/aiodns-3.4.0.tar.gz"
-    sha256 "24b0ae58410530367f21234d0c848e4de52c1f16fbddc111726a4ab536ec1b2f"
+    url "https://files.pythonhosted.org/packages/17/0a/163e5260cecc12de6abc259d158d9da3b8ec062ab863107dcdb1166cdcef/aiodns-3.5.0.tar.gz"
+    sha256 "11264edbab51896ecf546c18eb0dd56dff0428c6aa6d2cd87e643e07300eb310"
   end
 
   resource "aiofiles" do
@@ -41,8 +41,8 @@ class Streamrip < Formula
   end
 
   resource "aiohttp" do
-    url "https://files.pythonhosted.org/packages/f2/84/ea27e6ad14747d8c51afe201fb88a5c8282b6278256d30a6f71f730add88/aiohttp-3.12.12.tar.gz"
-    sha256 "05875595d2483d96cb61fa9f64e75262d7ac6251a7e3c811d8e26f7d721760bd"
+    url "https://files.pythonhosted.org/packages/42/6e/ab88e7cb2a4058bed2f7870276454f85a7c56cd6da79349eb314fc7bbcaa/aiohttp-3.12.13.tar.gz"
+    sha256 "47e2da578528264a12e4e3dd8dd72a7289e5f812758fe086473fab037a10fcce"
   end
 
   resource "aiolimiter" do
@@ -126,8 +126,8 @@ class Streamrip < Formula
   end
 
   resource "multidict" do
-    url "https://files.pythonhosted.org/packages/91/2f/a3470242707058fe856fe59241eee5635d79087100b7042a867368863a27/multidict-6.4.4.tar.gz"
-    sha256 "69ee9e6ba214b5245031b76233dd95408a0fd57fdb019ddcc1ead4790932a8e8"
+    url "https://files.pythonhosted.org/packages/46/b5/59f27b4ce9951a4bce56b88ba5ff5159486797ab18863f2b4c1c5e8465bd/multidict-6.5.0.tar.gz"
+    sha256 "942bd8002492ba819426a8d7aefde3189c1b87099cdf18aaaefefcf7f3f7b6d2"
   end
 
   resource "mutagen" do
@@ -156,8 +156,8 @@ class Streamrip < Formula
   end
 
   resource "pycares" do
-    url "https://files.pythonhosted.org/packages/19/7a/01ef7ce35fc1312d6c1c07f3b87f329ad6daf41bb9cd57c8f017e0b653fa/pycares-4.8.0.tar.gz"
-    sha256 "2fc2ebfab960f654b3e3cf08a732486950da99393a657f8b44618ad3ed2d39c1"
+    url "https://files.pythonhosted.org/packages/f5/37/4d4f8ac929e98aad64781f37d9429e82ba65372fc89da0473cdbecdbbb03/pycares-4.9.0.tar.gz"
+    sha256 "8ee484ddb23dbec4d88d14ed5b6d592c1960d2e93c385d5e52b6fad564d82395"
   end
 
   resource "pycparser" do
@@ -176,8 +176,8 @@ class Streamrip < Formula
   end
 
   resource "pytest" do
-    url "https://files.pythonhosted.org/packages/fb/aa/405082ce2749be5398045152251ac69c0f3578c7077efc53431303af97ce/pytest-8.4.0.tar.gz"
-    sha256 "14d920b48472ea0dbf68e45b96cd1ffda4705f33307dcc86c676c1b5104838a6"
+    url "https://files.pythonhosted.org/packages/08/ba/45911d754e8eba3d5a841a5ce61a65a685ff1798421ac054f85aa8747dfb/pytest-8.4.1.tar.gz"
+    sha256 "7c67fd69174877359ed9371ec3af8a3d2b04741818c51e5e99cc1742251fa93c"
   end
 
   resource "pytest-asyncio" do
@@ -211,8 +211,8 @@ class Streamrip < Formula
   end
 
   resource "urllib3" do
-    url "https://files.pythonhosted.org/packages/8a/78/16493d9c386d8e60e442a35feac5e00f0913c0f4b7c217c11e8ec2ff53e0/urllib3-2.4.0.tar.gz"
-    sha256 "414bc6535b787febd7567804cc015fee39daab8ad86268f1310a9250697de466"
+    url "https://files.pythonhosted.org/packages/15/22/9ee70a2574a4f4599c47dd506532914ce044817c7752a79b6a51286319bc/urllib3-2.5.0.tar.gz"
+    sha256 "3fc47733c7e419d4bc3f6b3dc2b4f890bb743906a30d56ba4a5bfa4bbff92760"
   end
 
   resource "yarl" do

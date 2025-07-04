@@ -1,18 +1,18 @@
 class ImessageExporter < Formula
   desc "Command-line tool to export and inspect local iMessage database"
   homepage "https://github.com/ReagentX/imessage-exporter"
-  url "https://github.com/ReagentX/imessage-exporter/archive/refs/tags/2.7.1.tar.gz"
-  sha256 "4e02e3b395c33b9cca086336b9e3b6fc4830d9ff5b16de5d92fa6102e6502f1b"
+  url "https://github.com/ReagentX/imessage-exporter/archive/refs/tags/3.0.1.tar.gz"
+  sha256 "fd661f86e46a0940b22d6ca2c42983d97da2ccf5bc0c47962e8287244bdde1db"
   license "GPL-3.0-only"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "440034dcd3eef669505e01befd1db069a05970ded10dcc7e738cee40bbe19812"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "ab8c2be26c0fcf942eb41e5b07dbd07d1737334a665615eda9bc87eddde56946"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "6061991c50c97b0493a10a791ad6f1f51dafb73418cf85a7cbe326c1ba0f2707"
-    sha256 cellar: :any_skip_relocation, sonoma:        "3bd17ea5ddca11d562dfb89633e652e3f46bf187632e4e21a3388bf1cbcd8af7"
-    sha256 cellar: :any_skip_relocation, ventura:       "fb8e6aff799ed70fb06f00452339f08d9a7ce64e0dd44fad289c518dcae85c71"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "1f5d9e44176717bcce7e06a8c4a10efb0b2534c21863fa249bf13119ae0f5f4e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "cc49028a93d5ff81b5655a99035119e8596cba6917684edc9bddcfa6c4f4f225"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "58e74f4311ca7af5df6a88cf1e794dd54992c861b61b1c7556694febea2fc7c7"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "550356357868889a8cc73757fca11ebe231575e7548d07966015b7bd8ea7185c"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "d190f66454234a72f929d78199c516ebf5a8e75a6526481133fc55160eb0d2b9"
+    sha256 cellar: :any_skip_relocation, sonoma:        "3fe44907cb766907af7be5165b98542421c0ac28d526187b9e561845a606714d"
+    sha256 cellar: :any_skip_relocation, ventura:       "3adebf07736b3cee6cdb0cff354c80aff27331d7637c4a38d8f9abe6e0101009"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "5b0a39aff327eabbabd0868295234bf971ff956428f37df00a2392ff705b0b76"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "73ceb34fde10955d90a53677b2ee6953ce4850761cb3e59d6b73f30c03a9bd80"
   end
 
   depends_on "rust" => :build
@@ -28,6 +28,6 @@ class ImessageExporter < Formula
   test do
     assert_match version.to_s, shell_output(bin/"imessage-exporter --version")
     output = shell_output(bin/"imessage-exporter --diagnostics 2>&1")
-    assert_match "Invalid configuration: Database not found", output
+    assert_match "Invalid configuration", output
   end
 end

@@ -3,20 +3,19 @@ class CheckJsonschema < Formula
 
   desc "JSON Schema CLI"
   homepage "https://github.com/python-jsonschema/check-jsonschema"
-  url "https://files.pythonhosted.org/packages/51/8e/67e40a319334f5beed9943a4f28de527e27599e07600e10063fb5f18f8b0/check_jsonschema-0.33.0.tar.gz"
-  sha256 "504fe09f268d2d25d58381d1ed1d5ae8f6e80e7f300e8b155317b40f9f6db8f6"
+  url "https://files.pythonhosted.org/packages/b0/01/b71c19a199d731663b752cf6a50c4c557bd2ebec539f0b6da7d3f3e21126/check_jsonschema-0.33.2.tar.gz"
+  sha256 "20cf97e0a32be7f3652c009ce3538443196677a903b72b3b4cb522fb54ee4588"
   license "Apache-2.0"
-  revision 1
   head "https://github.com/python-jsonschema/check-jsonschema.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any,                 arm64_sequoia: "a9c709bf0572b6f7a7ce55e0c96025ea0339fc88f14788bb000745f6718eb1c4"
-    sha256 cellar: :any,                 arm64_sonoma:  "d27f5997aae3e3767e37484b9ea00278e13e0a026c0d96e4d6a1ba42ba552ed4"
-    sha256 cellar: :any,                 arm64_ventura: "597529eac0d01dcbaaeadec38b346e26e8a9f0d257ad31902ea039efc63d850d"
-    sha256 cellar: :any,                 sonoma:        "07c014b598d443bcc0e87ccbef9f85edc736061f7df3e51b576117cbc2a9540f"
-    sha256 cellar: :any,                 ventura:       "aa98b36493ee02d6b06beb815e5e3f2d17609f00ceedb6f472156b85911f9622"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "ae151ab3c059d1a55673074e0e70cfa1cedcc2317b9579e918e5e74ab72f4ec3"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "3ccd2882733ced5791bc3743cd1964bbcc8a76fbb79e654f4f613321d4e98d5c"
+    sha256 cellar: :any,                 arm64_sequoia: "ad64a28db9250e02e11f78ab1cb4908e38adccf69c02fdce603ea8402c185b8a"
+    sha256 cellar: :any,                 arm64_sonoma:  "544a7f856a4743b4172acc6fabe7fd1ffb72b14c92887bb7e5e7342d59a44e8c"
+    sha256 cellar: :any,                 arm64_ventura: "f39f8aa21b908098c7057da92e0e3e39991cfec2202640821574de8d3a27859c"
+    sha256 cellar: :any,                 sonoma:        "40dc34f220db80c4ee0cc9f7bbfd6a0cb9a9a218dfe1db9f874ea1326919dc49"
+    sha256 cellar: :any,                 ventura:       "873a1353832263008d81d66551adf585301f4f9edd55441994a40086b474e532"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "f7707755f3fdd505ed5a7f6d835333ecaf1485bcb90165a4d23a9798b353a8f2"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "9cfdb3891f709e124dd0ecc910ef6d6d92f488eff9ff87a0d4dcc7ba10120792"
   end
 
   depends_on "rust" => :build
@@ -104,8 +103,8 @@ class CheckJsonschema < Formula
   end
 
   resource "rpds-py" do
-    url "https://files.pythonhosted.org/packages/8c/a6/60184b7fc00dd3ca80ac635dd5b8577d444c57e8e8742cecabfacb829921/rpds_py-0.25.1.tar.gz"
-    sha256 "8960b6dac09b62dac26e75d7e2c4a22efb835d827a7278c34f72b2b84fa160e3"
+    url "https://files.pythonhosted.org/packages/a5/aa/4456d84bbb54adc6a916fb10c9b374f78ac840337644e4a5eda229c81275/rpds_py-0.26.0.tar.gz"
+    sha256 "20dae58a859b0906f0685642e591056f1e787f3a8b39c8e8749a45dc7d26bdb0"
   end
 
   resource "ruamel-yaml" do
@@ -134,8 +133,8 @@ class CheckJsonschema < Formula
   end
 
   resource "urllib3" do
-    url "https://files.pythonhosted.org/packages/8a/78/16493d9c386d8e60e442a35feac5e00f0913c0f4b7c217c11e8ec2ff53e0/urllib3-2.4.0.tar.gz"
-    sha256 "414bc6535b787febd7567804cc015fee39daab8ad86268f1310a9250697de466"
+    url "https://files.pythonhosted.org/packages/15/22/9ee70a2574a4f4599c47dd506532914ce044817c7752a79b6a51286319bc/urllib3-2.5.0.tar.gz"
+    sha256 "3fc47733c7e419d4bc3f6b3dc2b4f890bb743906a30d56ba4a5bfa4bbff92760"
   end
 
   resource "webcolors" do

@@ -1,8 +1,9 @@
 class Singular < Formula
   desc "Computer algebra system for polynomial computations"
   homepage "https://www.singular.uni-kl.de/"
-  url "https://www.singular.uni-kl.de/ftp/pub/Math/Singular/SOURCES/4-4-1/singular-4.4.1.tar.gz"
-  sha256 "6a4fbaaed05b89c35bff3b1c5e124344a088097f81affe129c9ae619b282b49b"
+  url "https://www.singular.uni-kl.de/ftp/pub/Math/Singular/SOURCES/4-4-1/singular-4.4.1p2.tar.gz"
+  version "4.4.1p2"
+  sha256 "7096f9f8d7bcc8e43be4a9521fb54cf685abf4ec14bd0870aa6a820cbd4648aa"
   license "GPL-2.0-or-later"
 
   livecheck do
@@ -35,14 +36,13 @@ class Singular < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 arm64_sequoia: "896fbb9eef9f94af1eaf50f0b9aa74349fa09c4af793afb5750191528d8abd2a"
-    sha256 arm64_sonoma:  "f5af6764654d8eb0bc0d37ad92eb4604d89d0d6948b567207305a97b06131a9a"
-    sha256 arm64_ventura: "25dbec84237a3a91179bb8821cc467380db5e9a6afb0c527c1892df8e7cc953b"
-    sha256 sonoma:        "fa44347fa78090b4159d95f152c2c1b44e139543366733e8999a7b7550a0993d"
-    sha256 ventura:       "45495c62336592f855eb8ce7a6bfe65317d3ebb09ef283e7a44a7b514e43d2bc"
-    sha256 arm64_linux:   "1c40c1d54986a5fe26d7b9be4c6ad059b910afb0289c145e4373c895526d74c4"
-    sha256 x86_64_linux:  "6648ecbf457333344ef6c772f27c9dc60e54deff011f4c211ddb5b3a1fa9dcfd"
+    sha256 arm64_sequoia: "b3dbf31901b8423556e9cacfa4fcf1c8d32a6180d742995c34ad702b8faa4f35"
+    sha256 arm64_sonoma:  "a4406c1b3b2d19a8781666a69111a0768a043bcda26fb1ae5239569f19bb805d"
+    sha256 arm64_ventura: "09c9b0481ace420791af5e7c317f1d5292623c775cb24fc5b4f21078499a5ab0"
+    sha256 sonoma:        "eb62e1ef508b00fa04b7579aff5a3518c4dc5502ac56978185cd3928199c9d4f"
+    sha256 ventura:       "c9873b833be991bcd211690e9ba63b34bfc5f6d89e838b385657778d1a18a078"
+    sha256 arm64_linux:   "b11bfd4da5163104c2be7977f1fd515ed69a1819dcaaec78dda1bdd177195cfd"
+    sha256 x86_64_linux:  "4ae08c2a869756e6c8c35919bcfa713172c2db63e9225af936460608806bc42f"
   end
 
   head do
@@ -62,10 +62,10 @@ class Singular < Formula
 
   def install
     system "./autogen.sh" if build.head?
-    system "./configure", *std_configure_args,
-                          "--disable-silent-rules",
+    system "./configure", "--disable-silent-rules",
                           "--with-python=#{which("python3.13")}",
-                          "CXXFLAGS=-std=c++11"
+                          "CXXFLAGS=-std=c++11",
+                          *std_configure_args
     system "make", "install"
   end
 
