@@ -3,19 +3,18 @@ class Bagels < Formula
 
   desc "Powerful expense tracker that lives in your terminal"
   homepage "https://github.com/EnhancedJax/Bagels"
-  url "https://files.pythonhosted.org/packages/83/3a/67fef626e22bce29970a5666702a7b2664541753abeaed653a0a694dd295/bagels-0.3.9.tar.gz"
-  sha256 "fbb3bb64d7f6909864004866b00e112917738a6fdf470871ea77b4e2f67d2d28"
+  url "https://files.pythonhosted.org/packages/6e/04/e19a99e357221cb41e1e2f0352172e282ac8195fa2418b776345497fb260/bagels-0.3.12.tar.gz"
+  sha256 "c3ebd4a727ddd62450528676a1ce3e475f92bd36edfed5f9c0b110bb24592608"
   license "GPL-3.0-or-later"
-  revision 1
 
   bottle do
-    sha256 cellar: :any,                 arm64_sequoia: "a2c90dd7c2abc9499d871c0c8a2d473b18c24bf32bf53b733b9a596201329605"
-    sha256 cellar: :any,                 arm64_sonoma:  "453b39b334cef33ffd546c4436c875bee30e94e1efecedf31b2a4f82970a3558"
-    sha256 cellar: :any,                 arm64_ventura: "15ee1a4e41ed2dd14a0ae2f59d0509af2da9d73cbd348e46404535754bd63c5d"
-    sha256 cellar: :any,                 sonoma:        "c370824aac5df92152fc77c47199c056bb5aae8e25309c1390f81fc2cd06cc16"
-    sha256 cellar: :any,                 ventura:       "589aba11c7c7caae6be38944a21f30274ee744a30fab9431a2b173647ae0d49e"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "5435b8353fdb040c8b7583d4e1ec0d040f01fad9a17b5a4779898f3f6d704661"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "6d5a37b5c2ef70840b8a0647117ed2028d1fd82bc48d17f9dc6e2033934883c2"
+    sha256 cellar: :any,                 arm64_sequoia: "05c63d6bda84de49d52698cf9bac601883f8a6a4b62f092cee3b54cb3ae65f76"
+    sha256 cellar: :any,                 arm64_sonoma:  "89a1a0b09c49a5dd385c7909bde5163f7f5cbf6b500506fc485dff94731b4d06"
+    sha256 cellar: :any,                 arm64_ventura: "9da975de485632649e1faeb44c5e95698cd5161a14f6591efdabd65fe5ae77c6"
+    sha256 cellar: :any,                 sonoma:        "065ba7999398d92b25afd22810d4d2d4502170b4968ec3e70bfd61e25744e735"
+    sha256 cellar: :any,                 ventura:       "38a5840b26bcd06093aecb737ea255fa9398c256e0d1df649859550d08ecf480"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "b8d1c115336e0229977554be9677ba3dbabdd5b78ec19ab1e732bb6a62a7a59f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "36ab04d8d2e7a6d33dcc9c171c49dcba08358bfec492ea55853a7986ef086307"
   end
 
   depends_on "rust" => :build # for pydantic_core
@@ -29,8 +28,8 @@ class Bagels < Formula
   end
 
   resource "aiohttp" do
-    url "https://files.pythonhosted.org/packages/f2/84/ea27e6ad14747d8c51afe201fb88a5c8282b6278256d30a6f71f730add88/aiohttp-3.12.12.tar.gz"
-    sha256 "05875595d2483d96cb61fa9f64e75262d7ac6251a7e3c811d8e26f7d721760bd"
+    url "https://files.pythonhosted.org/packages/42/6e/ab88e7cb2a4058bed2f7870276454f85a7c56cd6da79349eb314fc7bbcaa/aiohttp-3.12.13.tar.gz"
+    sha256 "47e2da578528264a12e4e3dd8dd72a7289e5f812758fe086473fab037a10fcce"
   end
 
   resource "aiohttp-jinja2" do
@@ -39,8 +38,8 @@ class Bagels < Formula
   end
 
   resource "aiosignal" do
-    url "https://files.pythonhosted.org/packages/ba/b5/6d55e80f6d8a08ce22b982eafa278d823b541c925f11ee774b0b9c43473d/aiosignal-1.3.2.tar.gz"
-    sha256 "a8c255c66fafb1e499c9351d0bf32ff2d8a0321595ebac3b93713656d2436f54"
+    url "https://files.pythonhosted.org/packages/61/62/06741b579156360248d1ec624842ad0edf697050bbaf7c3e46394e106ad1/aiosignal-1.4.0.tar.gz"
+    sha256 "f47eecd9468083c2029cc99945502cb7708b082c232f9aca65da147157b251c7"
   end
 
   resource "annotated-types" do
@@ -59,8 +58,8 @@ class Bagels < Formula
   end
 
   resource "certifi" do
-    url "https://files.pythonhosted.org/packages/e8/9e/c05b3920a3b7d20d3d3310465f50348e5b3694f4f88c6daf736eef3024c4/certifi-2025.4.26.tar.gz"
-    sha256 "0a816057ea3cdefcef70270d2c515e4506bbc954f417fa5ade2021213bb8f0c6"
+    url "https://files.pythonhosted.org/packages/73/f7/f14b46d4bcd21092d7d3ccef689615220d8a08fb25e564b65d20738e672e/certifi-2025.6.15.tar.gz"
+    sha256 "d747aa5a8b9bbbb1bb8c22bb13e22bd1f18e9796defa16bab421f7f7a317323b"
   end
 
   resource "charset-normalizer" do
@@ -81,6 +80,11 @@ class Bagels < Formula
   resource "frozenlist" do
     url "https://files.pythonhosted.org/packages/79/b1/b64018016eeb087db503b038296fd782586432b9c077fc5c7839e9cb6ef6/frozenlist-1.7.0.tar.gz"
     sha256 "2e310d81923c2437ea8670467121cc3e9b0f76d3043cc1d2331d56c7fb7a3a8f"
+  end
+
+  resource "greenlet" do
+    url "https://files.pythonhosted.org/packages/c9/92/bb85bd6e80148a4d2e0c59f7c0c2891029f8fd510183afc7d8d2feeed9b6/greenlet-3.2.3.tar.gz"
+    sha256 "8b0dd8ae4c0d6f5e54ee55ba935eeb3d735a9b58a8a1e5b5cbab64e01a39f365"
   end
 
   resource "idna" do
@@ -124,13 +128,13 @@ class Bagels < Formula
   end
 
   resource "msgpack" do
-    url "https://files.pythonhosted.org/packages/cb/d0/7555686ae7ff5731205df1012ede15dd9d927f6227ea151e901c7406af4f/msgpack-1.1.0.tar.gz"
-    sha256 "dd432ccc2c72b914e4cb77afce64aab761c1137cc698be3984eee260bcb2896e"
+    url "https://files.pythonhosted.org/packages/45/b1/ea4f68038a18c77c9467400d166d74c4ffa536f34761f7983a104357e614/msgpack-1.1.1.tar.gz"
+    sha256 "77b79ce34a2bdab2594f490c8e80dd62a02d650b91a75159a63ec413b8d104cd"
   end
 
   resource "multidict" do
-    url "https://files.pythonhosted.org/packages/91/2f/a3470242707058fe856fe59241eee5635d79087100b7042a867368863a27/multidict-6.4.4.tar.gz"
-    sha256 "69ee9e6ba214b5245031b76233dd95408a0fd57fdb019ddcc1ead4790932a8e8"
+    url "https://files.pythonhosted.org/packages/3d/2c/5dad12e82fbdf7470f29bff2171484bf07cb3b16ada60a6589af8f376440/multidict-6.6.3.tar.gz"
+    sha256 "798a9eb12dab0a6c2e29c1de6f3468af5cb2da6053a20dfa3344907eed0937cc"
   end
 
   resource "packaging" do
@@ -154,8 +158,8 @@ class Bagels < Formula
   end
 
   resource "pydantic" do
-    url "https://files.pythonhosted.org/packages/f0/86/8ce9040065e8f924d642c58e4a344e33163a07f6b57f836d0d734e0ad3fb/pydantic-2.11.5.tar.gz"
-    sha256 "7f853db3d0ce78ce8bbb148c401c2cdd6431b3473c0cdff2755c7690952a7b7a"
+    url "https://files.pythonhosted.org/packages/00/dd/4325abf92c39ba8623b5af936ddb36ffcfe0beae70405d456ab1fb2f5b8c/pydantic-2.11.7.tar.gz"
+    sha256 "d989c3c6cb79469287b1569f7447a17848c998458d49ebe294e975b9baf0f0db"
   end
 
   resource "pydantic-core" do
@@ -164,8 +168,8 @@ class Bagels < Formula
   end
 
   resource "pygments" do
-    url "https://files.pythonhosted.org/packages/7c/2d/c3338d48ea6cc0feb8446d8e6937e1408088a72a39937982cc6111d17f84/pygments-2.19.1.tar.gz"
-    sha256 "61c16d2a8576dc0649d9f39e089b5f02bcd27fba10d8fb4dcc28173f7a45151f"
+    url "https://files.pythonhosted.org/packages/b0/77/a5b8c569bf593b0140bde72ea885a803b82086995367bf2037de0159d924/pygments-2.19.2.tar.gz"
+    sha256 "636cb2477cec7f8952536970bc533bc43743542f70392ae026374600add5b887"
   end
 
   resource "python-dateutil" do
@@ -209,8 +213,8 @@ class Bagels < Formula
   end
 
   resource "typing-extensions" do
-    url "https://files.pythonhosted.org/packages/d1/bc/51647cd02527e87d05cb083ccc402f93e441606ff1f01739a62c8ad09ba5/typing_extensions-4.14.0.tar.gz"
-    sha256 "8676b788e32f02ab42d9e7c61324048ae4c6d844a399eebace3d4979d75ceef4"
+    url "https://files.pythonhosted.org/packages/98/5a/da40306b885cc8c09109dc2e1abd358d5684b1425678151cdaed4731c822/typing_extensions-4.14.1.tar.gz"
+    sha256 "38b39f4aeeab64884ce9f74c94263ef78f3c22467c8724005483154c26648d36"
   end
 
   resource "typing-inspection" do
@@ -224,8 +228,8 @@ class Bagels < Formula
   end
 
   resource "urllib3" do
-    url "https://files.pythonhosted.org/packages/8a/78/16493d9c386d8e60e442a35feac5e00f0913c0f4b7c217c11e8ec2ff53e0/urllib3-2.4.0.tar.gz"
-    sha256 "414bc6535b787febd7567804cc015fee39daab8ad86268f1310a9250697de466"
+    url "https://files.pythonhosted.org/packages/15/22/9ee70a2574a4f4599c47dd506532914ce044817c7752a79b6a51286319bc/urllib3-2.5.0.tar.gz"
+    sha256 "3fc47733c7e419d4bc3f6b3dc2b4f890bb743906a30d56ba4a5bfa4bbff92760"
   end
 
   resource "werkzeug" do

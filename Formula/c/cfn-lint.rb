@@ -3,18 +3,18 @@ class CfnLint < Formula
 
   desc "Validate CloudFormation templates against the CloudFormation spec"
   homepage "https://github.com/aws-cloudformation/cfn-lint/"
-  url "https://files.pythonhosted.org/packages/ca/4c/298568c3192763d8c6ebaef8c76d69d7154c362066a84c9cd4b64dc61c89/cfn_lint-1.36.0.tar.gz"
-  sha256 "47721fe23755663e69b7d84fec61b1c15fab4e7d8c75ab624e738913bcb59489"
+  url "https://files.pythonhosted.org/packages/b5/4d/102203fc949557fd216091434e30b28cb0099d1f2013d47719e2362a9e7b/cfn_lint-1.37.2.tar.gz"
+  sha256 "f77fe7e3dd2555549afaa33352aed2429530c6cbff3dba48a43e8b4dad3c3afa"
   license "MIT-0"
 
   bottle do
-    sha256 cellar: :any,                 arm64_sequoia: "edf75b24542915056686298e1e9007b2f85b00ace959092657726771f3afed48"
-    sha256 cellar: :any,                 arm64_sonoma:  "68078b44d3fd72ab5d6f85155478d446ace53d9f290e1394a9c52263cca1129e"
-    sha256 cellar: :any,                 arm64_ventura: "8850d54a7dd2b6da5170f11617e30b1e7eaebe642ded7b5973e2e5d85ee50b48"
-    sha256 cellar: :any,                 sonoma:        "9ffdf9464c288c82b0442b8da46024ca1b84814670c15452611699722ec3d340"
-    sha256 cellar: :any,                 ventura:       "fc7fa662cc9d8828783abc14cc9a5673fe101931a6d33ac7b28ce0582b9602d0"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "98007471c05fdd71af30cc7ce6ee1eaac9c8306eead41dd7304dbc12039deba9"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "a095c3c416c5c718f42dd5f2d01865e4c5ee7af5f15337e153aca81bf9f897f8"
+    sha256 cellar: :any,                 arm64_sequoia: "20b345f910450f2afa1b518596068dee9ea57ab08a1d2ae292a6f44897ce957e"
+    sha256 cellar: :any,                 arm64_sonoma:  "e7da4cc9b63e6b501cccb51d423e6cea65ece36888f470af01a37cd10f90f4f0"
+    sha256 cellar: :any,                 arm64_ventura: "7810a2250f9890824a5c76c1d18a7e8ce4bfbeca8ebaca41c1afb82661588878"
+    sha256 cellar: :any,                 sonoma:        "87c3fe41ccfda92488cafeac89fb9038b321d8499f21cd4efd17ab029887f11c"
+    sha256 cellar: :any,                 ventura:       "edb411b65bffcfbd27f58ef6713c1228a23b6d14dad7a86eda4a23ab8dff3546"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "b8175f882c42975eb6951ac8d6e39cb66515c3f5fe07989c2a76807e99a71fba"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "9e4157a0d28996a473368fd5eef4229ab3a376f1a19a4fddb1821267e1995f31"
   end
 
   depends_on "rust" => :build
@@ -32,18 +32,18 @@ class CfnLint < Formula
   end
 
   resource "aws-sam-translator" do
-    url "https://files.pythonhosted.org/packages/a2/f8/100c32414efc036d6aba7b2591773e9c86f999ab0030850d26e672ed513d/aws_sam_translator-1.98.0.tar.gz"
-    sha256 "fe9fdf51b593aca4cde29f555e272b00d90662315c8078e9f5f3448dd962c66b"
+    url "https://files.pythonhosted.org/packages/ef/78/ac6761ff3f37a1e989ddb62c9a58c4d289ad2ca2bdb3bed1319f4ae49e16/aws_sam_translator-1.99.0.tar.gz"
+    sha256 "be326054a7ee2f535fcd914db85e5d50bdf4054313c14888af69b6de3187cdf8"
   end
 
   resource "boto3" do
-    url "https://files.pythonhosted.org/packages/f1/ca/e7c1b5f7118fa3520f70ca11082472b64e2ffc4d81e7a4373339e4770f3a/boto3-1.38.35.tar.gz"
-    sha256 "38a407e467b24914ce24e5816f53305288ea44072778f88d2b4b6a2cffbcb220"
+    url "https://files.pythonhosted.org/packages/02/42/712a74bb86d06538c55067a35b8a82c57aa303eba95b2b1ee91c829288f4/boto3-1.39.3.tar.gz"
+    sha256 "0a367106497649ae3d8a7b571b8c3be01b7b935a0fe303d4cc2574ed03aecbb4"
   end
 
   resource "botocore" do
-    url "https://files.pythonhosted.org/packages/cd/2e/763918cd2b5af0345a38181bc5f16d1f6c32aad2a03b7738274cf068d864/botocore-1.38.35.tar.gz"
-    sha256 "3c7032948e066eed5f91d64cd51ee9664d1db9beaf3279ac27da608176bb3d54"
+    url "https://files.pythonhosted.org/packages/60/66/96e89cc261d75f0b8125436272c335c74d2a39df84504a0c3956adcd1301/botocore-1.39.3.tar.gz"
+    sha256 "da8f477e119f9f8a3aaa8b3c99d9c6856ed0a243680aa3a3fbbfc15a8d4093fb"
   end
 
   resource "jmespath" do
@@ -82,8 +82,8 @@ class CfnLint < Formula
   end
 
   resource "pydantic" do
-    url "https://files.pythonhosted.org/packages/f0/86/8ce9040065e8f924d642c58e4a344e33163a07f6b57f836d0d734e0ad3fb/pydantic-2.11.5.tar.gz"
-    sha256 "7f853db3d0ce78ce8bbb148c401c2cdd6431b3473c0cdff2755c7690952a7b7a"
+    url "https://files.pythonhosted.org/packages/00/dd/4325abf92c39ba8623b5af936ddb36ffcfe0beae70405d456ab1fb2f5b8c/pydantic-2.11.7.tar.gz"
+    sha256 "d989c3c6cb79469287b1569f7447a17848c998458d49ebe294e975b9baf0f0db"
   end
 
   resource "pydantic-core" do
@@ -112,8 +112,8 @@ class CfnLint < Formula
   end
 
   resource "rpds-py" do
-    url "https://files.pythonhosted.org/packages/8c/a6/60184b7fc00dd3ca80ac635dd5b8577d444c57e8e8742cecabfacb829921/rpds_py-0.25.1.tar.gz"
-    sha256 "8960b6dac09b62dac26e75d7e2c4a22efb835d827a7278c34f72b2b84fa160e3"
+    url "https://files.pythonhosted.org/packages/a5/aa/4456d84bbb54adc6a916fb10c9b374f78ac840337644e4a5eda229c81275/rpds_py-0.26.0.tar.gz"
+    sha256 "20dae58a859b0906f0685642e591056f1e787f3a8b39c8e8749a45dc7d26bdb0"
   end
 
   resource "s3transfer" do
@@ -132,8 +132,8 @@ class CfnLint < Formula
   end
 
   resource "typing-extensions" do
-    url "https://files.pythonhosted.org/packages/d1/bc/51647cd02527e87d05cb083ccc402f93e441606ff1f01739a62c8ad09ba5/typing_extensions-4.14.0.tar.gz"
-    sha256 "8676b788e32f02ab42d9e7c61324048ae4c6d844a399eebace3d4979d75ceef4"
+    url "https://files.pythonhosted.org/packages/98/5a/da40306b885cc8c09109dc2e1abd358d5684b1425678151cdaed4731c822/typing_extensions-4.14.1.tar.gz"
+    sha256 "38b39f4aeeab64884ce9f74c94263ef78f3c22467c8724005483154c26648d36"
   end
 
   resource "typing-inspection" do
@@ -142,8 +142,8 @@ class CfnLint < Formula
   end
 
   resource "urllib3" do
-    url "https://files.pythonhosted.org/packages/8a/78/16493d9c386d8e60e442a35feac5e00f0913c0f4b7c217c11e8ec2ff53e0/urllib3-2.4.0.tar.gz"
-    sha256 "414bc6535b787febd7567804cc015fee39daab8ad86268f1310a9250697de466"
+    url "https://files.pythonhosted.org/packages/15/22/9ee70a2574a4f4599c47dd506532914ce044817c7752a79b6a51286319bc/urllib3-2.5.0.tar.gz"
+    sha256 "3fc47733c7e419d4bc3f6b3dc2b4f890bb743906a30d56ba4a5bfa4bbff92760"
   end
 
   def install

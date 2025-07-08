@@ -3,19 +3,18 @@ class Fdroidserver < Formula
 
   desc "Create and manage Android app repositories for F-Droid"
   homepage "https://f-droid.org"
-  url "https://files.pythonhosted.org/packages/bd/81/728a7426ef7db26bee1a1737dbafe48f4253b249155ec1d6910ecad0c30c/fdroidserver-2.4.0.tar.gz"
-  sha256 "15d91bb8ca0fbc81a346ec222d910af064670c51f20a2b649ef2834c0555d19c"
+  url "https://files.pythonhosted.org/packages/33/76/2b5b90013b559a4cdc8dd627a937523ba58196dab16e48d4badb54bf5da5/fdroidserver-2.4.2.tar.gz"
+  sha256 "5dc926f8306473c33082fc4fdd3356207e5874f91c00c0d76125f26ce35bbe1b"
   license "AGPL-3.0-or-later"
-  revision 1
 
   bottle do
-    sha256 cellar: :any,                 arm64_sequoia: "94d05bd59d72e0430cf7f8ec19c66e56f4c436cfef6dabd41186e0123fee0be5"
-    sha256 cellar: :any,                 arm64_sonoma:  "07dc656e498196d546e09f3142171caa64e8eaa143c8c8072735634d1bf90ed8"
-    sha256 cellar: :any,                 arm64_ventura: "45b163314414c5b6636fd0b7dabf84a12532a00404ed3110d931867dde712b3f"
-    sha256 cellar: :any,                 sonoma:        "9dd084d8477069c027f78d33e8d9eb4317087f3509132d271b0b82311da07658"
-    sha256 cellar: :any,                 ventura:       "94a7759ec4cfb15f76c4abb17b3a3ea2868ca20aeaad5a21c8766c737a5126e9"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "70aed828b1e835ab2f66d5e50d65efd86d3e6e21b1cb688776b7a0db44312f0c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "31a1b61fe0f768079da110ef0a4e03734dd6d5b00b538b0d5a83422a0d6eefaa"
+    sha256 cellar: :any,                 arm64_sequoia: "2a1121ce163db3c67d32b30e10667c000571e12b2d637d1b438e86cf64d361e5"
+    sha256 cellar: :any,                 arm64_sonoma:  "abfee552e53e4571f9142d6c0f9c93278b80b0add68aa11657eb226564c5f559"
+    sha256 cellar: :any,                 arm64_ventura: "8ea2ac8abc1462eb95554655fd6d1ba3b0ce73eabd552b9a4564ac96dbcbae2b"
+    sha256 cellar: :any,                 sonoma:        "7644e0fb34c58585c1267d384cc9bb00958331bf2b266f1a31df3973656154f1"
+    sha256 cellar: :any,                 ventura:       "fa4725b24f2d00d1b2954360b0ad0e906b47bfd3986c311825331b50f4f89d14"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "72d345d6a950b14c30fb1551c7947f63f963d2d7f70ef79a790b13f1f6e08539"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "c29de3c7626ef5a3bdb231624a6427fa2087bb1281c77f52b118c085605492ff"
   end
 
   depends_on "ninja" => :build
@@ -135,8 +134,8 @@ class Fdroidserver < Formula
   end
 
   resource "fonttools" do
-    url "https://files.pythonhosted.org/packages/b6/a9/3319c6ae07fd9dde51064ddc6d82a2b707efad8ed407d700a01091121bbc/fonttools-4.58.2.tar.gz"
-    sha256 "4b491ddbfd50b856e84b0648b5f7941af918f6d32f938f18e62b58426a8d50e2"
+    url "https://files.pythonhosted.org/packages/2e/5a/1124b2c8cb3a8015faf552e92714040bcdbc145dfa29928891b02d147a18/fonttools-4.58.4.tar.gz"
+    sha256 "928a8009b9884ed3aae17724b960987575155ca23c6f0b8146e400cc9e0d44ba"
   end
 
   resource "future" do
@@ -260,13 +259,13 @@ class Fdroidserver < Formula
   end
 
   resource "pydot" do
-    url "https://files.pythonhosted.org/packages/d1/c3/6034ed1ebf2e3ba95a0e35fa7c43104e40444c0ed2b5325702c63e824dbf/pydot-4.0.0.tar.gz"
-    sha256 "12f16493337cade2f7631b87c8ccd299ba2e251f3ee5d0732a058df2887afe97"
+    url "https://files.pythonhosted.org/packages/50/35/b17cb89ff865484c6a20ef46bf9d95a5f07328292578de0b295f4a6beec2/pydot-4.0.1.tar.gz"
+    sha256 "c2148f681c4a33e08bf0e26a9e5f8e4099a82e0e2a068098f32ce86577364ad5"
   end
 
   resource "pygments" do
-    url "https://files.pythonhosted.org/packages/7c/2d/c3338d48ea6cc0feb8446d8e6937e1408088a72a39937982cc6111d17f84/pygments-2.19.1.tar.gz"
-    sha256 "61c16d2a8576dc0649d9f39e089b5f02bcd27fba10d8fb4dcc28173f7a45151f"
+    url "https://files.pythonhosted.org/packages/b0/77/a5b8c569bf593b0140bde72ea885a803b82086995367bf2037de0159d924/pygments-2.19.2.tar.gz"
+    sha256 "636cb2477cec7f8952536970bc533bc43743542f70392ae026374600add5b887"
   end
 
   resource "pynacl" do
@@ -340,8 +339,8 @@ class Fdroidserver < Formula
   end
 
   resource "urllib3" do
-    url "https://files.pythonhosted.org/packages/8a/78/16493d9c386d8e60e442a35feac5e00f0913c0f4b7c217c11e8ec2ff53e0/urllib3-2.4.0.tar.gz"
-    sha256 "414bc6535b787febd7567804cc015fee39daab8ad86268f1310a9250697de466"
+    url "https://files.pythonhosted.org/packages/15/22/9ee70a2574a4f4599c47dd506532914ce044817c7752a79b6a51286319bc/urllib3-2.5.0.tar.gz"
+    sha256 "3fc47733c7e419d4bc3f6b3dc2b4f890bb743906a30d56ba4a5bfa4bbff92760"
   end
 
   resource "wcwidth" do

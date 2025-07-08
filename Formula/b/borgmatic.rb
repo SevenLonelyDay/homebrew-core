@@ -3,19 +3,18 @@ class Borgmatic < Formula
 
   desc "Simple wrapper script for the Borg backup software"
   homepage "https://torsion.org/borgmatic/"
-  url "https://files.pythonhosted.org/packages/86/8c/0a80f219d9ca4c70cf345489b55a9c3e5c859c4d7bc99675ac1bc09eadb7/borgmatic-2.0.6.tar.gz"
-  sha256 "cb102d0fbb0a3a8d2fa04f01bdf2f41c6b273f42f6b1cd5fd1481704db7f6905"
+  url "https://files.pythonhosted.org/packages/14/5a/db4f743b29fe9b7446c06575a0f5c26b55b6ca7aa04eaf905bd3dfc3fad4/borgmatic-2.0.7.tar.gz"
+  sha256 "1ee9ca5d5b83193747f82cc841bb64374a11328710ee0561e8c7fa2fbc258406"
   license "GPL-3.0-or-later"
-  revision 1
 
   bottle do
-    sha256 cellar: :any,                 arm64_sequoia: "e98c544410321956a6a96762731331a60983cda901db405a87547fe7d5441e8c"
-    sha256 cellar: :any,                 arm64_sonoma:  "708606193f5b0f53aa346fb3b822a6d4b8f14107016d63805779e18bf9b857fb"
-    sha256 cellar: :any,                 arm64_ventura: "81c4f0df777ea6ae7fd9149e65d4d9438f14d030aea30a6ec6b1ea9b8fe555c3"
-    sha256 cellar: :any,                 sonoma:        "62b79c8dfaa13dc67ed0b875d9fb1485f6f89646e5000b0107f4d6fd232444f5"
-    sha256 cellar: :any,                 ventura:       "2bf966c4438b5efb05b0952f78ef371cca59857f0dbb5ce7e0641583b49de05f"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "ba631506d6f992b0fc03e658ed9d4a07bb3884f46a5aadd8e0eebf748499e606"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "547305cf7fa3207e9a9ee89ca2ca7084bb71ca2e0a45da3b26c2af0ac957bbb4"
+    sha256 cellar: :any,                 arm64_sequoia: "ee2c71d4050c4b47ebb232b809bd929d6fad3791fb779a1acb600381ea7e3059"
+    sha256 cellar: :any,                 arm64_sonoma:  "1adea187c0de31389e6ba79442142b1a0bd8f81b796137e1d8de5315e7c4153a"
+    sha256 cellar: :any,                 arm64_ventura: "479e56e723bf461dca3dc37e8eecc9f06165aedb8adfd3e8fc707d18f2f8525f"
+    sha256 cellar: :any,                 sonoma:        "5cc93a3501111d831d1dfa12ce75f519270df33756e1f29d26be883417792ff4"
+    sha256 cellar: :any,                 ventura:       "ab762766ed2e84ad8d830e2fcf52ccb59b572f9245c415c6994045ab848f4a83"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "7834a911e60936fe7f74d1f05e5661f87e74fd1ffad4fb350ea9e29ed89e2c82"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "6b8964eeb8eef7d2ce3aaf70f921ff93c2ed11a8dcc46ac622c14cb8f98ab052"
   end
 
   depends_on "rust" => :build # for rpds-py
@@ -78,8 +77,8 @@ class Borgmatic < Formula
   end
 
   resource "urllib3" do
-    url "https://files.pythonhosted.org/packages/8a/78/16493d9c386d8e60e442a35feac5e00f0913c0f4b7c217c11e8ec2ff53e0/urllib3-2.4.0.tar.gz"
-    sha256 "414bc6535b787febd7567804cc015fee39daab8ad86268f1310a9250697de466"
+    url "https://files.pythonhosted.org/packages/15/22/9ee70a2574a4f4599c47dd506532914ce044817c7752a79b6a51286319bc/urllib3-2.5.0.tar.gz"
+    sha256 "3fc47733c7e419d4bc3f6b3dc2b4f890bb743906a30d56ba4a5bfa4bbff92760"
   end
 
   def install

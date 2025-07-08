@@ -6,19 +6,20 @@ class SlitherAnalyzer < Formula
   url "https://files.pythonhosted.org/packages/f9/d7/327729240d0ab0291cf3e9b36f05e135676ffea796e4a74ec6b7ef7ad2dd/slither_analyzer-0.11.3.tar.gz"
   sha256 "09953ddb89d9ab182aa5826bda6fa3da482c82b5ffa371e34b35ba766044616e"
   license "AGPL-3.0-only"
-  revision 1
+  revision 2
   head "https://github.com/crytic/slither.git", branch: "master"
 
   no_autobump! because: :requires_manual_review
 
   bottle do
-    sha256 cellar: :any,                 arm64_sequoia: "ee9382ada729a8d7d2d1786c60147b11ca685d7075dabbd4c5626a2f2e1cfe58"
-    sha256 cellar: :any,                 arm64_sonoma:  "1bf2461cb516386b97e246bf94e0c9299d9251a6e034e2446615c805babba946"
-    sha256 cellar: :any,                 arm64_ventura: "04bd39d51cc46f7e47a66828274afe00c735d049bf37f360d46cb9a8d50b99e3"
-    sha256 cellar: :any,                 sonoma:        "97b945b157dd6a37961820bc278bc36697db48e3d28ac50284095c41c4149ae6"
-    sha256 cellar: :any,                 ventura:       "d83c951f5968f42c06021a77c98b3aa62dc5c24d14ed70cceb46c440cf018b37"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "79a4fb3e9bdfd48357b4d626fddeabff3c4046488a317b0e325cbc7568164bdf"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "889efa3d882133a296d3c39a740a32c8a826bb506b7b7ac7b68a2a5d5165054a"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_sequoia: "0f221ce11167436927e4f6c63412858355ce0eb3f3976ca1c3954355c5abcb89"
+    sha256 cellar: :any,                 arm64_sonoma:  "1cd148cd99d734a13a0f22fbde2789124ac1ee64e0c9ef59dadef22f2cdbd26b"
+    sha256 cellar: :any,                 arm64_ventura: "e4b349904ab125fb7157619cd490e9930df3d89d96be05c49342b2c700f7ebd0"
+    sha256 cellar: :any,                 sonoma:        "5066490ff24b2a4d362ee08b058c8a87dc7d41342a505eff8778dc243a0d1cd1"
+    sha256 cellar: :any,                 ventura:       "1ac55a6dc52f48fc823425febdea84875226a5932d31c22db5c75481c7b5f452"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "095af75047a69659af1a73d000eeba954b9c3372888711f8fd2a32cb698ba8ac"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "bcf095c52f2a0a7c922676fcd6120e3e4d3eee077c8f7c6e24376a201dc3554b"
   end
 
   depends_on "rust" => :build # for rpds-py
@@ -31,13 +32,13 @@ class SlitherAnalyzer < Formula
   end
 
   resource "aiohttp" do
-    url "https://files.pythonhosted.org/packages/f2/84/ea27e6ad14747d8c51afe201fb88a5c8282b6278256d30a6f71f730add88/aiohttp-3.12.12.tar.gz"
-    sha256 "05875595d2483d96cb61fa9f64e75262d7ac6251a7e3c811d8e26f7d721760bd"
+    url "https://files.pythonhosted.org/packages/42/6e/ab88e7cb2a4058bed2f7870276454f85a7c56cd6da79349eb314fc7bbcaa/aiohttp-3.12.13.tar.gz"
+    sha256 "47e2da578528264a12e4e3dd8dd72a7289e5f812758fe086473fab037a10fcce"
   end
 
   resource "aiosignal" do
-    url "https://files.pythonhosted.org/packages/ba/b5/6d55e80f6d8a08ce22b982eafa278d823b541c925f11ee774b0b9c43473d/aiosignal-1.3.2.tar.gz"
-    sha256 "a8c255c66fafb1e499c9351d0bf32ff2d8a0321595ebac3b93713656d2436f54"
+    url "https://files.pythonhosted.org/packages/61/62/06741b579156360248d1ec624842ad0edf697050bbaf7c3e46394e106ad1/aiosignal-1.4.0.tar.gz"
+    sha256 "f47eecd9468083c2029cc99945502cb7708b082c232f9aca65da147157b251c7"
   end
 
   resource "annotated-types" do
@@ -51,8 +52,8 @@ class SlitherAnalyzer < Formula
   end
 
   resource "bitarray" do
-    url "https://files.pythonhosted.org/packages/b8/0d/15826c7c2d49a4518a1b24b0d432f1ecad2e0b68168f942058b5de498498/bitarray-3.4.2.tar.gz"
-    sha256 "78ed2b911aabede3a31e3329b1de8abdc8104bd5e0545184ddbd9c7f668f4059"
+    url "https://files.pythonhosted.org/packages/0d/0f/6ecf00ec04622b8309aca3cfbdba20d5399d9e4e5a4b156d9ffd2e5610d3/bitarray-3.5.0.tar.gz"
+    sha256 "e10ae216416c36500c86c08ffceaf7589f6ad54056a7007845cdd907813e7d25"
   end
 
   resource "cbor2" do
@@ -136,8 +137,8 @@ class SlitherAnalyzer < Formula
   end
 
   resource "multidict" do
-    url "https://files.pythonhosted.org/packages/91/2f/a3470242707058fe856fe59241eee5635d79087100b7042a867368863a27/multidict-6.4.4.tar.gz"
-    sha256 "69ee9e6ba214b5245031b76233dd95408a0fd57fdb019ddcc1ead4790932a8e8"
+    url "https://files.pythonhosted.org/packages/3d/2c/5dad12e82fbdf7470f29bff2171484bf07cb3b16ada60a6589af8f376440/multidict-6.6.3.tar.gz"
+    sha256 "798a9eb12dab0a6c2e29c1de6f3468af5cb2da6053a20dfa3344907eed0937cc"
   end
 
   resource "packaging" do
@@ -166,8 +167,8 @@ class SlitherAnalyzer < Formula
   end
 
   resource "pydantic" do
-    url "https://files.pythonhosted.org/packages/f0/86/8ce9040065e8f924d642c58e4a344e33163a07f6b57f836d0d734e0ad3fb/pydantic-2.11.5.tar.gz"
-    sha256 "7f853db3d0ce78ce8bbb148c401c2cdd6431b3473c0cdff2755c7690952a7b7a"
+    url "https://files.pythonhosted.org/packages/00/dd/4325abf92c39ba8623b5af936ddb36ffcfe0beae70405d456ab1fb2f5b8c/pydantic-2.11.7.tar.gz"
+    sha256 "d989c3c6cb79469287b1569f7447a17848c998458d49ebe294e975b9baf0f0db"
   end
 
   resource "pydantic-core" do
@@ -211,8 +212,8 @@ class SlitherAnalyzer < Formula
   end
 
   resource "typing-extensions" do
-    url "https://files.pythonhosted.org/packages/d1/bc/51647cd02527e87d05cb083ccc402f93e441606ff1f01739a62c8ad09ba5/typing_extensions-4.14.0.tar.gz"
-    sha256 "8676b788e32f02ab42d9e7c61324048ae4c6d844a399eebace3d4979d75ceef4"
+    url "https://files.pythonhosted.org/packages/98/5a/da40306b885cc8c09109dc2e1abd358d5684b1425678151cdaed4731c822/typing_extensions-4.14.1.tar.gz"
+    sha256 "38b39f4aeeab64884ce9f74c94263ef78f3c22467c8724005483154c26648d36"
   end
 
   resource "typing-inspection" do
@@ -221,8 +222,8 @@ class SlitherAnalyzer < Formula
   end
 
   resource "urllib3" do
-    url "https://files.pythonhosted.org/packages/8a/78/16493d9c386d8e60e442a35feac5e00f0913c0f4b7c217c11e8ec2ff53e0/urllib3-2.4.0.tar.gz"
-    sha256 "414bc6535b787febd7567804cc015fee39daab8ad86268f1310a9250697de466"
+    url "https://files.pythonhosted.org/packages/15/22/9ee70a2574a4f4599c47dd506532914ce044817c7752a79b6a51286319bc/urllib3-2.5.0.tar.gz"
+    sha256 "3fc47733c7e419d4bc3f6b3dc2b4f890bb743906a30d56ba4a5bfa4bbff92760"
   end
 
   resource "wcwidth" do

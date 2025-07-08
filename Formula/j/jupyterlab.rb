@@ -3,22 +3,21 @@ class Jupyterlab < Formula
 
   desc "Interactive environments for writing and running code"
   homepage "https://jupyter.org/"
-  url "https://files.pythonhosted.org/packages/d3/2d/d1678dcf2db66cb4a38a80d9e5fcf48c349f3ac12f2d38882993353ae768/jupyterlab-4.4.3.tar.gz"
-  sha256 "a94c32fd7f8b93e82a49dc70a6ec45a5c18281ca2a7228d12765e4e210e5bca2"
+  url "https://files.pythonhosted.org/packages/e2/4d/7ca5b46ea56742880d71a768a9e6fb8f8482228427eb89492d55c5d0bb7d/jupyterlab-4.4.4.tar.gz"
+  sha256 "163fee1ef702e0a057f75d2eed3ed1da8a986d59eb002cbeb6f0c2779e6cd153"
   license all_of: [
     "BSD-3-Clause",
     "MIT", # semver.py
   ]
-  revision 2
 
   bottle do
-    sha256 cellar: :any,                 arm64_sequoia: "73ef3afa324330b81d0a43164608693b5cd1ca7c810c33fb68520c441e023132"
-    sha256 cellar: :any,                 arm64_sonoma:  "ddd36ec9820f5d0ffa4e08b38c5ea282b335458267bac89e52f4e2ddb8272260"
-    sha256 cellar: :any,                 arm64_ventura: "5b6c6cf6f395db614f1c766e41ddad9a9f4c4316e606b0a3d25909453bb82e88"
-    sha256 cellar: :any,                 sonoma:        "fefa0a6097de47235272478f4bdf9cf5efc2d7f48259f43953740cf7089b9081"
-    sha256 cellar: :any,                 ventura:       "4d1d52c30232265bb7695dd6aa8823fbf1e0957002660c499c5d4ad3de6c23fc"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "32bce5311ea8b07b4d67339bbf0dd28475a1268b64c5e94fdd6cda2d6275fa39"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "4891d939b214250cb97c174483f1f37e896592d2dbedd78650afd2c7a53b8c4d"
+    sha256 cellar: :any,                 arm64_sequoia: "52608752e0d98984da5609ddf586dc7b51d5ff68a7135aafc2aa0e82d10fd65d"
+    sha256 cellar: :any,                 arm64_sonoma:  "83cdd130bd59c35929302e1a10483981eb2a56009825bc83822b23a35c49d54b"
+    sha256 cellar: :any,                 arm64_ventura: "eb5be7a14d26d66148ecea961ae35bd82298c23fc3d9bc77f9c16c1771e5e13b"
+    sha256 cellar: :any,                 sonoma:        "90509c8402ce0e1873aeff145677233a1e079c490c9eb8d18e73672ae8877ee7"
+    sha256 cellar: :any,                 ventura:       "f6b4b57586b370610c49f46eac7d16d7149720f17b8f383d4148d7943093723d"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "eb3723112b1aa231f2e8e6e103d7744a724d172acfa5a5c3bb072b6492e834cb"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "29921b7c412e2d5fe452bb014f1da3780714bda065921e51bbbb5b36678950b7"
   end
 
   depends_on "cmake" => :build # for ipykernel
@@ -381,8 +380,8 @@ class Jupyterlab < Formula
   end
 
   resource "pygments" do
-    url "https://files.pythonhosted.org/packages/7c/2d/c3338d48ea6cc0feb8446d8e6937e1408088a72a39937982cc6111d17f84/pygments-2.19.1.tar.gz"
-    sha256 "61c16d2a8576dc0649d9f39e089b5f02bcd27fba10d8fb4dcc28173f7a45151f"
+    url "https://files.pythonhosted.org/packages/b0/77/a5b8c569bf593b0140bde72ea885a803b82086995367bf2037de0159d924/pygments-2.19.2.tar.gz"
+    sha256 "636cb2477cec7f8952536970bc533bc43743542f70392ae026374600add5b887"
   end
 
   resource "python-dateutil" do
@@ -401,8 +400,8 @@ class Jupyterlab < Formula
   end
 
   resource "pyzmq" do
-    url "https://files.pythonhosted.org/packages/b1/11/b9213d25230ac18a71b39b3723494e57adebe36e066397b961657b3b41c1/pyzmq-26.4.0.tar.gz"
-    sha256 "4bd13f85f80962f91a651a7356fe0472791a5f7a92f227822b5acf44795c626d"
+    url "https://files.pythonhosted.org/packages/f1/06/50a4e9648b3e8b992bef8eb632e457307553a89d294103213cfd47b3da69/pyzmq-27.0.0.tar.gz"
+    sha256 "b1f08eeb9ce1510e6939b6e5dcd46a17765e2333daae78ecf4606808442e52cf"
   end
 
   resource "referencing" do
@@ -501,8 +500,8 @@ class Jupyterlab < Formula
   end
 
   resource "urllib3" do
-    url "https://files.pythonhosted.org/packages/8a/78/16493d9c386d8e60e442a35feac5e00f0913c0f4b7c217c11e8ec2ff53e0/urllib3-2.4.0.tar.gz"
-    sha256 "414bc6535b787febd7567804cc015fee39daab8ad86268f1310a9250697de466"
+    url "https://files.pythonhosted.org/packages/15/22/9ee70a2574a4f4599c47dd506532914ce044817c7752a79b6a51286319bc/urllib3-2.5.0.tar.gz"
+    sha256 "3fc47733c7e419d4bc3f6b3dc2b4f890bb743906a30d56ba4a5bfa4bbff92760"
   end
 
   resource "wcwidth" do

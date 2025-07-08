@@ -1,17 +1,17 @@
 class Garnet < Formula
   desc "High-performance cache-store"
   homepage "https://microsoft.github.io/garnet/"
-  url "https://github.com/microsoft/garnet/archive/refs/tags/v1.0.72.tar.gz"
-  sha256 "4eb6d3df129d0f3dbf718678ada6f67c1315f19452fa08627bd5e2e654e440b4"
+  url "https://github.com/microsoft/garnet/archive/refs/tags/v1.0.76.tar.gz"
+  sha256 "5979d3c0690dfb775b80d227b3869b385ae997159f6e9883c7ad38d66603ba21"
   license "MIT"
 
   bottle do
-    sha256 cellar: :any,                 arm64_sequoia: "c4e06535b7d853c35d20bfdf0fdd672085e58db39c6b0f1c7cf963c53b90abd7"
-    sha256 cellar: :any,                 arm64_sonoma:  "8b8f833ec07cea62b47c73c1ad0286976de83599dec5ebec7bbe27d7945e7ea7"
-    sha256 cellar: :any,                 arm64_ventura: "feca476dcd18167d93cdad5c7f3628a3e5038c98bf8b6d4336293b85cc6013d6"
-    sha256 cellar: :any,                 ventura:       "56a0fa83d5cfc7ffc8da7ec93feceb25704a9a1fcd319224574c54fbbb8f6305"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "2b12bc6dbbfc8e07588a3eb1b4d53c6c60dc6455079b46633bfa58ad5a7863e9"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "516b0008ff79c6ad7683d52ff02cc562aa72a2e12c710b0a22f87fd900d5ef7d"
+    sha256 cellar: :any,                 arm64_sequoia: "74e624ee3b52edd838f5b351fb8873b0b5487f413521e58cd6e2bf36f623b8cf"
+    sha256 cellar: :any,                 arm64_sonoma:  "2162519194d708642cf4c0068ba78883a2c4435b8aec5df92a05420973e1b7d6"
+    sha256 cellar: :any,                 arm64_ventura: "5e431ca4d21200758bf1f991fd3881124dec55dc4fa224953db0410637feeb4e"
+    sha256 cellar: :any,                 ventura:       "ba586becf6475583944d6ffbc1d50d2c605057992832aeec855f53aa7d263545"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "82d50c65805d849a8e502b3f8adb028a5c2ac2a28bd2b66669494a653b95cc43"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "d21951c538069a4e8dce1ee4e3c295976fb9e34e4b6bcfdbf1281a464bbfc5ba"
   end
 
   depends_on "valkey" => :test

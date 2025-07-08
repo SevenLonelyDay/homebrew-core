@@ -3,19 +3,19 @@ class OciCli < Formula
 
   desc "Oracle Cloud Infrastructure CLI"
   homepage "https://docs.cloud.oracle.com/iaas/Content/API/Concepts/cliconcepts.htm"
-  url "https://files.pythonhosted.org/packages/29/5b/1dade985ce7859685426f370ddb76237e92865f2a53d0c288e62cfdd493a/oci_cli-3.58.1.tar.gz"
-  sha256 "5f9d2f2a26b32958d86f5887a02aed837a2218b00e26ecd8599ee82b51f83db1"
+  url "https://files.pythonhosted.org/packages/82/9c/c5e1d7031578d1edc822d4b6422854220c3996b6659b2809c99541ce730a/oci_cli-3.62.0.tar.gz"
+  sha256 "419273c6314d5d63e6adaace2cedb8e6f4dd439976ed3b9f8093705a26b0e7de"
   license any_of: ["UPL-1.0", "Apache-2.0"]
   head "https://github.com/oracle/oci-cli.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_sequoia: "7f43ddddf13a6d140b1dbc3497e9ad458ab6244e940607a9c216867f18faac9f"
-    sha256 cellar: :any,                 arm64_sonoma:  "94328ab704ace457101199d9ff71b11fbc6f50cb348b9fdc7016a1b0252b9961"
-    sha256 cellar: :any,                 arm64_ventura: "d1c90c17afd1ce6b3abc5c92e458d1272a5b7dfb337a764a65aedbbac838ebf2"
-    sha256 cellar: :any,                 sonoma:        "bf9545c8b9ef91d4303bcbc35d5c29dbd973e14e006a3597380f87b9682ef56f"
-    sha256 cellar: :any,                 ventura:       "ffcb407aefe0ef52349732f145b4e40a6a20c235e9db7f29e29595f9e79b7515"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "fc7bc6457f23d99afc2a194051ed7db812079753c43abde3055be3c196239a06"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "2697de97d514bcfcc06e0c8f102d26c89aab90641c609c78c8630b473bd85e3f"
+    sha256 cellar: :any,                 arm64_sequoia: "ea49ae094294dba7c998d6138c83a913018809352f63cdc66c8ea6d22979eccc"
+    sha256 cellar: :any,                 arm64_sonoma:  "cd9977a3bc8f0dd722dba59c7f3f1d20e978b9ab6c90132728897b277a6a3114"
+    sha256 cellar: :any,                 arm64_ventura: "886d9c6add05d8032d370deb51173b55c2e3f565d8d2355ba8fe1d1da45c5fdf"
+    sha256 cellar: :any,                 sonoma:        "f0dac02c119d1ef3e0a0b0cba522d8d485421d71f432009d86ee34cecbc58a68"
+    sha256 cellar: :any,                 ventura:       "c71be41d36909ae1b97bb97d2cd12f3da7f28772c54fc60957b49b26d0cf1739"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "3fab2ef9bcde9ca0eb011fe743fd5361ee8bf438d3741912e0f64e1185b74425"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "a527e29e133361619b8a9d5130e20352df883fce4e6c8c11e4f3fb37c12e65e9"
   end
 
   depends_on "certifi"
@@ -44,8 +44,8 @@ class OciCli < Formula
   end
 
   resource "oci" do
-    url "https://files.pythonhosted.org/packages/66/a6/6e9b94efabf8effc2060ee2e8f1b2f106f9c930052f7ab01fdb188177fad/oci-2.154.1.tar.gz"
-    sha256 "44b034ca7c08e3809d9a4244b075af9fdd1d45cf8f05cee57722b59a15d3a04f"
+    url "https://files.pythonhosted.org/packages/74/d7/82c59fd38f91899db9645ad404dd4844c805c004f4918b93fce996ee6550/oci-2.155.0.tar.gz"
+    sha256 "9718347918ef34539668539511f094ef0053a40e96e6ebc2c08742786a7eaeef"
   end
 
   resource "prompt-toolkit" do

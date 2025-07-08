@@ -3,18 +3,18 @@ class YtDlp < Formula
 
   desc "Feature-rich command-line audio/video downloader"
   homepage "https://github.com/yt-dlp/yt-dlp"
-  url "https://files.pythonhosted.org/packages/b7/fb/588a23e61586960273524d3aa726bd148116d422854f727f4d59c254cb6a/yt_dlp-2025.6.9.tar.gz"
-  sha256 "751f53a3b61353522bf805fa30bbcbd16666126537e39706eab4f8c368f111ac"
+  url "https://files.pythonhosted.org/packages/23/9c/ff64c2fed7909f43a9a0aedb7395c65404e71c2439198764685a6e3b3059/yt_dlp-2025.6.30.tar.gz"
+  sha256 "6d0ae855c0a55bfcc28dffba804ec8525b9b955d34a41191a1561a4cec03d8bd"
   license "Unlicense"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "6485edbed38cc3d713fb84223195bf045ff52b47f48c4d67f4d0a1387538ccac"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "cb1b42e9fa6e526573c7ef88d72bb88718b0355d8ead7b5cc80fabcb2873c5df"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "4cbcbc3081adc683202df7d1143d764969e2902e7062b816a96d1b72c78594e8"
-    sha256 cellar: :any_skip_relocation, sonoma:        "d9b9894dba9c049123fa386952789a1700f6c3e679b851b16fcced772bc89255"
-    sha256 cellar: :any_skip_relocation, ventura:       "448a9b38d7a37b42cfaad9bfb5da8dd1c6f3f7ab07052383cca2dbb97c8c0966"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "255b65b060d8f6f588d214e14216a88053aa543c89f46dd14926f2e8adfc5502"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "bb1a036ffb63c14919d9157f9391fb4e63de071372c1985841771dcc50a44487"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "e2c77d81502dd3f2315bbff5d0d0e2151a03799511dee60d595cbc8f9451c106"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "fbd4b226e2a1fcd857c909e32304269af0581af8e293788d86b44307c1907d5b"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "cc064cf49827d279a9104559bd0563fdc17c97b82f0fb4d94028587df5724da5"
+    sha256 cellar: :any_skip_relocation, sonoma:        "da0e2e6866599c5d885771e4d87029732d29d21448352512ae0bd40429eda94a"
+    sha256 cellar: :any_skip_relocation, ventura:       "9f3e6bd814e1fe9209311b1c4bc67186c70445149e12d93ba2e0707dc1007108"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "e1e50eae69a841057be2ef38d567b560a32b00b495b9d1dccf226635d39a2298"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "5f98f24fdd3b31a7c3bbd2e589feef3cb0094b5fe0dcdadce426459b591d7919"
   end
 
   head do
@@ -61,8 +61,8 @@ class YtDlp < Formula
   end
 
   resource "urllib3" do
-    url "https://files.pythonhosted.org/packages/8a/78/16493d9c386d8e60e442a35feac5e00f0913c0f4b7c217c11e8ec2ff53e0/urllib3-2.4.0.tar.gz"
-    sha256 "414bc6535b787febd7567804cc015fee39daab8ad86268f1310a9250697de466"
+    url "https://files.pythonhosted.org/packages/15/22/9ee70a2574a4f4599c47dd506532914ce044817c7752a79b6a51286319bc/urllib3-2.5.0.tar.gz"
+    sha256 "3fc47733c7e419d4bc3f6b3dc2b4f890bb743906a30d56ba4a5bfa4bbff92760"
   end
 
   resource "websockets" do
@@ -82,10 +82,6 @@ class YtDlp < Formula
   test do
     system bin/"yt-dlp", "https://raw.githubusercontent.com/Homebrew/brew/refs/heads/master/Library/Homebrew/test/support/fixtures/test.gif"
 
-    # YouTube tests fail bot detection
-    return if OS.linux? && ENV["HOMEBREW_GITHUB_ACTIONS"]
-
-    system bin/"yt-dlp", "--simulate", "https://www.youtube.com/watch?v=pOtd1cbOP7k"
-    system bin/"yt-dlp", "--simulate", "--yes-playlist", "https://www.youtube.com/watch?v=pOtd1cbOP7k&list=PLMsZ739TZDoLj9u_nob8jBKSC-mZb0Nhj"
+    system bin/"yt-dlp", "--simulate", "https://x.com/X/status/1922008207133671652"
   end
 end
