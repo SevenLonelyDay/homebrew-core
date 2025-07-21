@@ -1,19 +1,19 @@
 class SentryCli < Formula
   desc "Command-line utility to interact with Sentry"
   homepage "https://docs.sentry.io/cli/"
-  url "https://github.com/getsentry/sentry-cli/archive/refs/tags/2.46.0.tar.gz"
-  sha256 "eb7ab4f8ea6338582baf9335fef5d9e5340f918e8ac41116f9f83559b7c4d344"
+  url "https://github.com/getsentry/sentry-cli/archive/refs/tags/2.50.0.tar.gz"
+  sha256 "f04e09990a18bae8c737fe48a03f05c047e2eb6b9f6423c16507684c4a78fb7d"
   license "BSD-3-Clause"
   head "https://github.com/getsentry/sentry-cli.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "7da89ac606667a40338012b27cf303f4f9c4354752386ad5d2eb55596ff574cd"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "81a2c48146be930e3afff6163c4bec471076645d66a14d837832012e6d428db4"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "a511db75c5b7cc7a4b3fae779cd1e00b33555b4a973c113ab63c46bb45621979"
-    sha256 cellar: :any_skip_relocation, sonoma:        "4006029304324cf229de6b674ae287ccc5f51cae7d938eea730c8599b808edfa"
-    sha256 cellar: :any_skip_relocation, ventura:       "4b8ea2d4efc000e1f21626ce1ce23519b6376e5704c769d479319c773d25724b"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "a2ce7bab6e424741909ba67d7d6e2d6d4b347fdce8f114dff77c49c55a7d66f8"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "e11439501e145c7bdd4af4abb3827e18da777f07df9e4f9abe25b8230b2e07b6"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "1e48ef6e8ca81e7683e61d9d029b7caebce9cc783b0dd6acf957f235649cdf9a"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "99ede3e32ce4e88eebcfb7fdc814dea22975c95d79525d55eacb54792719d503"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "43e97f9d8d24ba77f0902d69954e00e34a455cb030694090959ffbb5e91d88cc"
+    sha256 cellar: :any_skip_relocation, sonoma:        "d194be2f390878195c1fc5b54f2352bd8f3314d19f468e10d64ce8fcb7ef57d1"
+    sha256 cellar: :any_skip_relocation, ventura:       "8b43aff552a77759d96fb006e4a09f5c1c7a38e6cace263572323dddfba40eba"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "07df704b1b74e24680472336f9d19b9b350de508c69d19fd449913b91d58b8e3"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "479adb0beea1e8a302099bbf84de1f138ebac79ec3388d49d8d527870dd1600b"
   end
 
   depends_on "pkgconf" => :build
@@ -21,6 +21,10 @@ class SentryCli < Formula
 
   uses_from_macos "bzip2"
   uses_from_macos "zlib"
+
+  on_ventura :or_older do
+    depends_on "swift" => :build
+  end
 
   on_linux do
     depends_on "openssl@3"

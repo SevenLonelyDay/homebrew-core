@@ -1,18 +1,17 @@
 class Colmap < Formula
   desc "Structure-from-Motion and Multi-View Stereo"
   homepage "https://colmap.github.io/"
-  url "https://github.com/colmap/colmap/archive/refs/tags/3.11.1.tar.gz"
-  sha256 "d2c20729ab5b1198e17725b720128f304f4cfae5c0a8c20d75c0e9c5bdee5860"
+  url "https://github.com/colmap/colmap/archive/refs/tags/3.12.3.tar.gz"
+  sha256 "1ad69660bd4e15b9cdd2ef407ac11c8e39bdcdc68625c1d142b0d8e80b6b2aa7"
   license "BSD-3-Clause"
-  revision 2
 
   bottle do
-    sha256 cellar: :any, arm64_sequoia: "a10d84ff5e6e26782f2043ea71657f741f6ad2a84870b15126d52dd75216fab8"
-    sha256 cellar: :any, arm64_sonoma:  "a3b2341aad18e5ee0e65a9ca38d497de5f2dae573525588e01026e609ff5929d"
-    sha256 cellar: :any, arm64_ventura: "7d88ee8e8f5fc8b369050c706df0a6c6179eeb7a56262fc17d8e5ea0f9e3d050"
-    sha256 cellar: :any, sonoma:        "9b56b2f3bdae3e126dff816fd6005b1142a7af895166666e626af58c93ef2497"
-    sha256 cellar: :any, ventura:       "40a9ed14c6bdbb969209c24500ab814e0614740492e8cc26d0e50b2355f26fb5"
-    sha256               x86_64_linux:  "ce9da6e8e8f4c41ef007ead45ed70122eeb4739f82bdeb36bfffcbfea922b5b9"
+    sha256 cellar: :any, arm64_sequoia: "d9d6f8cb33f720fbba71e593b599344f12c3c4a131586be0c1539e651d40c16e"
+    sha256 cellar: :any, arm64_sonoma:  "612ee1e6048a17d389c6ab765961c1ab28a7e598e7a8ce6ec4f44e1e51b146a1"
+    sha256 cellar: :any, arm64_ventura: "a51bd2b6e44de62547fd7d5b7d5fd7cbbfedca51dcca8c6c42fb50e12fea3581"
+    sha256 cellar: :any, sonoma:        "910ef8963bb937e50396a95aef4762183a61ba9af68d65b6f4d449a59f8491bc"
+    sha256 cellar: :any, ventura:       "80ad3f78825fc410a8b354fa59c267cb470498553fbc742d891e2f240c8d573e"
+    sha256               x86_64_linux:  "96fcb603aeb36314e0e49461ea7a6ad21c375b38e71ae77fac46813783011481"
   end
 
   depends_on "cmake" => :build
@@ -20,6 +19,7 @@ class Colmap < Formula
   depends_on "ceres-solver"
   depends_on "cgal"
   depends_on "eigen"
+  depends_on "faiss"
   depends_on "flann"
   depends_on "freeimage"
   depends_on "gflags"
@@ -50,6 +50,7 @@ class Colmap < Formula
     args = %w[
       -DCUDA_ENABLED=OFF
       -DFETCH_POSELIB=OFF
+      -DFETCH_FAISS=OFF
     ]
 
     system "cmake", "-S", ".", "-B", "build", *args, *std_cmake_args

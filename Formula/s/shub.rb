@@ -6,17 +6,18 @@ class Shub < Formula
   url "https://files.pythonhosted.org/packages/70/ad/b4fa99366cd3c8db8812438fb1e8b6f8a10b2935b0ee28ac238ade864a8f/shub-2.15.4.tar.gz"
   sha256 "abd656f488449a6f88084cfc6f0e5bf1e015377f9777a02f35ae5dd44179434a"
   license "BSD-3-Clause"
-  revision 5
+  revision 6
   head "https://github.com/scrapinghub/shub.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_sequoia: "0997f5ab806a2f48096d78e33791f2664da7092591dddedefab9f11f3369b925"
-    sha256 cellar: :any,                 arm64_sonoma:  "991fd74d7f2db20c0d81d59c0311b11d3a9d8116dd343d1879d87ed42c58ef59"
-    sha256 cellar: :any,                 arm64_ventura: "310b987f859d279de478525db1fc50bcf8dced46b482febbdc232ff6b630adb9"
-    sha256 cellar: :any,                 sonoma:        "9c8e963bac6146feaca7ea44ac2ad202f4130cbd85404acac0438d57e5d5ca0b"
-    sha256 cellar: :any,                 ventura:       "be0b669636f87b7efd376a6d55c1e6b76462d345ce58b67b1bf7e4d99b217932"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "114ffbc745abbc19f8dbfe27592423697aae0551421fab4086e1a5413f949422"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "1088ae56ab4a4656c223745ace56ca9cb58c895b31d64fa61ae03efe262bdd7f"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_sequoia: "b50ce3a684b5a0c6014916ddf290ec96f02a12310aec9823d627ff64afcb9f8f"
+    sha256 cellar: :any,                 arm64_sonoma:  "4c61144b808b3607bc732681dd988eef9ba5b29ade333939aee617f879da24fd"
+    sha256 cellar: :any,                 arm64_ventura: "1dd27be818a64f165a9a3b9bdd05149fb7187fc9e9e414048e9de49bc42cf48c"
+    sha256 cellar: :any,                 sonoma:        "5761d8269c923690891ba20c1891c83f0a7f06e27bce0eb95cd8b59a864eaf41"
+    sha256 cellar: :any,                 ventura:       "7f0ca84ddbe6490849aac25a2ab90c526b0d968b9d9239da2e2c469c4c303478"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "4370ad46cf66b857fe40b35055e44aac6c1ab82418d1b7e26a22213181504a46"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "e312b485c67099342faa54b7bfb4b8737afe94e7e2a34e791c265b1034c67e1f"
   end
 
   depends_on "certifi"
@@ -89,14 +90,14 @@ class Shub < Formula
   end
 
   resource "urllib3" do
-    url "https://files.pythonhosted.org/packages/8a/78/16493d9c386d8e60e442a35feac5e00f0913c0f4b7c217c11e8ec2ff53e0/urllib3-2.4.0.tar.gz"
-    sha256 "414bc6535b787febd7567804cc015fee39daab8ad86268f1310a9250697de466"
+    url "https://files.pythonhosted.org/packages/15/22/9ee70a2574a4f4599c47dd506532914ce044817c7752a79b6a51286319bc/urllib3-2.5.0.tar.gz"
+    sha256 "3fc47733c7e419d4bc3f6b3dc2b4f890bb743906a30d56ba4a5bfa4bbff92760"
   end
 
   def install
     virtualenv_install_with_resources
 
-    generate_completions_from_executable(bin/"shub", shells: [:fish, :zsh], shell_parameter_format: :click)
+    generate_completions_from_executable(bin/"shub", shell_parameter_format: :click)
   end
 
   test do

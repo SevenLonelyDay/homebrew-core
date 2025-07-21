@@ -1,9 +1,9 @@
 class UniversalCtags < Formula
   desc "Maintained ctags implementation"
   homepage "https://ctags.io/"
-  url "https://github.com/universal-ctags/ctags/archive/refs/tags/p6.2.20250608.0.tar.gz"
-  version "p6.2.20250608.0"
-  sha256 "de01848e246ab08d82f9d330700cbf75ff065b3e0678bfde2df891d3b9648b05"
+  url "https://github.com/universal-ctags/ctags/archive/refs/tags/p6.2.20250713.0.tar.gz"
+  version "p6.2.20250713.0"
+  sha256 "d0054c365c35c0cea853df39c050776923cd1896cc561ee16190919a461ffb0f"
   license "GPL-2.0-only"
   head "https://github.com/universal-ctags/ctags.git", branch: "master"
 
@@ -13,13 +13,13 @@ class UniversalCtags < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_sequoia: "49c3afdad7e1bfe4f3975453eb4976c5b9ad431395955e02251c93a1981087dd"
-    sha256 cellar: :any,                 arm64_sonoma:  "84a8070276028b500bf0e004f391eb5b05d14283fc87e773b90a721b107af7e7"
-    sha256 cellar: :any,                 arm64_ventura: "f47b018307706acbee0390d7bd8e97d67858fb4027c8e400f9f1ad4ad0f62964"
-    sha256 cellar: :any,                 sonoma:        "34c787e66cce2fc2655fd4ad85b90eda8db909f3f7ef7383cfc433c7df9ae99d"
-    sha256 cellar: :any,                 ventura:       "8f7e06cc29a82e4cc1d5690e3997a6c66a6aa50c941d8c434f68f1418cdb5be2"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "d1fe08679684d04d64e6ccca4660c55c0c96569ba2566c0f363f2f17b76b2cc4"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "6bf30781168a2c8542294eda84db49cbfd5cb64983c007ea749e3c54feb96dff"
+    sha256 cellar: :any,                 arm64_sequoia: "fcc0d50f8df27ed86ac8f3776539ec6ca3288d2630dcb794f089ab2baa10956e"
+    sha256 cellar: :any,                 arm64_sonoma:  "a12d5d0198262b6469b99328822e825cd37a70a3387dd27a74f7954b588e4220"
+    sha256 cellar: :any,                 arm64_ventura: "b2249ba971b2c6e15f9fa9457b8200d7427938cc93d29ccf726743a9f592fe4c"
+    sha256 cellar: :any,                 sonoma:        "de3cbaed045efb370bc204198be012b34c97f2bf66c7d770ae70bf6d3583fd8e"
+    sha256 cellar: :any,                 ventura:       "a19b0c406f2d688b0dde7e94fb82a4315662bcc9c069bbef4d08d3aa031bce6b"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "66af0731b4ed58544db7b42a91027a36ac801f95f46914e2a8402c8349834093"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "3cf4fb45a0c2bbacbec3cc5f0bdf6007a294c0431cd970b0796994ff50d83a91"
   end
 
   depends_on "autoconf" => :build

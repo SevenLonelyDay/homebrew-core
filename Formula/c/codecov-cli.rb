@@ -6,19 +6,20 @@ class CodecovCli < Formula
   url "https://files.pythonhosted.org/packages/3a/7e/7d916fa02a49d1f16fbb74498bdb95d005d008eb9792626b2468336297cb/codecov_cli-11.0.3.tar.gz"
   sha256 "0a6d92f51bc6bfb3c5bb6b59722ba3c32e1325f2d23562b4596e2c93782cadad"
   license "Apache-2.0"
-  revision 1
+  revision 2
   head "https://github.com/codecov/codecov-cli.git", branch: "main"
 
   no_autobump! because: :requires_manual_review
 
   bottle do
-    sha256 cellar: :any,                 arm64_sequoia: "5b5bd1526ecfb25b6d23954b95b21a56e15a8a9b972b731c3ea5aa051e2295c3"
-    sha256 cellar: :any,                 arm64_sonoma:  "fec967ee3ef0c8462db33a408060fe24fe2312348983bfd3b3974e092dce7453"
-    sha256 cellar: :any,                 arm64_ventura: "daeb99e7b149654e093c60e84ef205918d968376b620aba659f3e442818d3a84"
-    sha256 cellar: :any,                 sonoma:        "6c1e4bac47549d7d297ae3a34a5368604c25d987be28300239e4c9c2b5df5b83"
-    sha256 cellar: :any,                 ventura:       "bed3efb52068ac475f9f089a1edded15ad185d3dc64fbc169f5b2552e6b61828"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "a6b2732d5753b0ea53e465fce020c1f38517cd127cf657650e8802fa00ffa0f0"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "c5266e46169fa78c2190466589d7d455d69824320153d9f7e29672409e459373"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_sequoia: "69cb375432f5d70ddfd35b3a33357bbb07aed9bfaff936309718cf037605580a"
+    sha256 cellar: :any,                 arm64_sonoma:  "97b30c3f3b777638465c8efd14ae485c13c76db3b494fbc202b31cf67005de4f"
+    sha256 cellar: :any,                 arm64_ventura: "d9897494904364c692b2083c279e66e814a2273261de3d82a9471aaf6a0bfd3a"
+    sha256 cellar: :any,                 sonoma:        "54d0d6a2172813aed8d3783f16edcaae938e6a2c335a744b7202fc06d8f180e5"
+    sha256 cellar: :any,                 ventura:       "db40ba9e4816086618c175a6b03f571a6de22896b741f97fe200234f044d82d8"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "366181c9294dc966b4734ee2093a7c6f4f2fbfde9b2756dbecc5814296049ead"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "6cfcb05e3a81f7fc39548dc3b6a2b879e97aee8acf4ee60ccad52e9a4aed86b5"
   end
 
   depends_on "rust" => :build
@@ -26,8 +27,8 @@ class CodecovCli < Formula
   depends_on "python@3.13"
 
   resource "certifi" do
-    url "https://files.pythonhosted.org/packages/e8/9e/c05b3920a3b7d20d3d3310465f50348e5b3694f4f88c6daf736eef3024c4/certifi-2025.4.26.tar.gz"
-    sha256 "0a816057ea3cdefcef70270d2c515e4506bbc954f417fa5ade2021213bb8f0c6"
+    url "https://files.pythonhosted.org/packages/73/f7/f14b46d4bcd21092d7d3ccef689615220d8a08fb25e564b65d20738e672e/certifi-2025.6.15.tar.gz"
+    sha256 "d747aa5a8b9bbbb1bb8c22bb13e22bd1f18e9796defa16bab421f7f7a317323b"
   end
 
   resource "charset-normalizer" do
@@ -66,8 +67,8 @@ class CodecovCli < Formula
   end
 
   resource "sentry-sdk" do
-    url "https://files.pythonhosted.org/packages/22/67/d552a5f8e5a6a56b2feea6529e2d8ccd54349084c84176d5a1f7295044bc/sentry_sdk-2.29.1.tar.gz"
-    sha256 "8d4a0206b95fa5fe85e5e7517ed662e3888374bdc342c00e435e10e6d831aa6d"
+    url "https://files.pythonhosted.org/packages/04/4c/af31e0201b48469786ddeb1bf6fd3dfa3a291cc613a0fe6a60163a7535f9/sentry_sdk-2.30.0.tar.gz"
+    sha256 "436369b02afef7430efb10300a344fb61a11fe6db41c2b11f41ee037d2dd7f45"
   end
 
   resource "test-results-parser" do
@@ -76,14 +77,14 @@ class CodecovCli < Formula
   end
 
   resource "urllib3" do
-    url "https://files.pythonhosted.org/packages/8a/78/16493d9c386d8e60e442a35feac5e00f0913c0f4b7c217c11e8ec2ff53e0/urllib3-2.4.0.tar.gz"
-    sha256 "414bc6535b787febd7567804cc015fee39daab8ad86268f1310a9250697de466"
+    url "https://files.pythonhosted.org/packages/15/22/9ee70a2574a4f4599c47dd506532914ce044817c7752a79b6a51286319bc/urllib3-2.5.0.tar.gz"
+    sha256 "3fc47733c7e419d4bc3f6b3dc2b4f890bb743906a30d56ba4a5bfa4bbff92760"
   end
 
   def install
     virtualenv_install_with_resources
 
-    generate_completions_from_executable(bin/"codecovcli", shells: [:fish, :zsh], shell_parameter_format: :click)
+    generate_completions_from_executable(bin/"codecovcli", shell_parameter_format: :click)
   end
 
   test do

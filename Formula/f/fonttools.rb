@@ -3,26 +3,34 @@ class Fonttools < Formula
 
   desc "Library for manipulating fonts"
   homepage "https://github.com/fonttools/fonttools"
-  url "https://files.pythonhosted.org/packages/2e/5a/1124b2c8cb3a8015faf552e92714040bcdbc145dfa29928891b02d147a18/fonttools-4.58.4.tar.gz"
-  sha256 "928a8009b9884ed3aae17724b960987575155ca23c6f0b8146e400cc9e0d44ba"
+  url "https://files.pythonhosted.org/packages/8a/27/ec3c723bfdf86f34c5c82bf6305df3e0f0d8ea798d2d3a7cb0c0a866d286/fonttools-4.59.0.tar.gz"
+  sha256 "be392ec3529e2f57faa28709d60723a763904f71a2b63aabe14fee6648fe3b14"
   license "MIT"
   head "https://github.com/fonttools/fonttools.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "913dc4d1814468097c71160790d242d3bf92032cbe9209cbb31484d2cb16c9fb"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "5289c760f408a539132a031cd30a7602d7e097d3dbab7874c0fc932454c4d48e"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "6509b1ababd09f09dc685c64c55621995da27f581726091f206ec13c1d836547"
-    sha256 cellar: :any_skip_relocation, sonoma:        "d76f262cfc527af47eb98ad820fe0c4582f1a9bfdb93f6d10e4cf5941d628b1b"
-    sha256 cellar: :any_skip_relocation, ventura:       "48541c30ae606dddc53cc20a1d1a2b33bdccb4714694a8b09a1a6d82a5d4ac67"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "6db31cc9c66af48c7bb4cd2170f6cfb76828410c6b27c3d7e383a08d43821356"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "836f3baa6adadaf8446045936cb268dce81497e45ae4a8211fa91980dbdc7a36"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "730dd45f621a79d6d618875807196eb53a99c0cb1c5de5de0cdc1e36e1fa52fe"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "99f3624462aa2f63d08a5bed43735269095f622c198e97af27b456a56ff82f4d"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "dcbb429c3aa8813876e66c6f164fbaf6a77c103481c2d59521f90bcdbae7257a"
+    sha256 cellar: :any_skip_relocation, sonoma:        "82377dbee95736437b0ebb4d5f12617109b37e5f410ea4ab9beb70bde6e6b463"
+    sha256 cellar: :any_skip_relocation, ventura:       "2254acb738f2c83f6fc96db75c217785eaac550a2fe7ca0bb12d4940baab862b"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "dc590050f61f7de17e25c6ff945eedf803de9d15d095225be324bbc01dd131c8"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "7fa38bc2e58b59c174ec579c91336d8882bb6b90683922b977469d05a4cb1394"
   end
 
   depends_on "python@3.13"
 
+  uses_from_macos "libxml2"
+  uses_from_macos "libxslt"
+
   resource "brotli" do
     url "https://files.pythonhosted.org/packages/2f/c2/f9e977608bdf958650638c3f1e28f85a1b075f075ebbe77db8555463787b/Brotli-1.1.0.tar.gz"
     sha256 "81de08ac11bcb85841e440c13611c00b67d3bf82698314928d0b676362546724"
+  end
+
+  resource "lxml" do
+    url "https://files.pythonhosted.org/packages/c5/ed/60eb6fa2923602fba988d9ca7c5cdbd7cf25faa795162ed538b527a35411/lxml-6.0.0.tar.gz"
+    sha256 "032e65120339d44cdc3efc326c9f660f5f7205f3a535c1fdbf898b29ea01fb72"
   end
 
   resource "zopfli" do

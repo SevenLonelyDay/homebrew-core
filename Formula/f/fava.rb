@@ -3,19 +3,19 @@ class Fava < Formula
 
   desc "Web interface for the double-entry bookkeeping software Beancount"
   homepage "https://beancount.github.io/fava/"
-  url "https://files.pythonhosted.org/packages/08/b5/e81c3255851e9425198c5038d71604a3a32fa78e768f45a7506932b740f5/fava-1.30.3.tar.gz"
-  sha256 "ab0827ad2ffe628459614d260d5aea1374c4b830bbdd1e398afb3db799e5f88c"
+  url "https://files.pythonhosted.org/packages/4f/e5/c3dd51471c46559e9c2e86a1d51152bf72b79cd36d230f1910402ec5daeb/fava-1.30.5.tar.gz"
+  sha256 "a5f9d136101ccae6051ea3c1174a82acaef0d4f26230e7585c21a3fb15e2eae4"
   license "MIT"
   head "https://github.com/beancount/fava.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any,                 arm64_sequoia: "6cb62b1ea354ffebbde7eed3fdee4003d81e82559f24e71f29b75cf91f607dba"
-    sha256 cellar: :any,                 arm64_sonoma:  "71feae7976e052220f1812581623420d7ae2eef8bac3dea5d22772bcaaac03f8"
-    sha256 cellar: :any,                 arm64_ventura: "9b7af170f25136353f8363d7c0dca743cab644343dfe79d648bc6a7d28bfb522"
-    sha256 cellar: :any,                 sonoma:        "2e214bd3b911575170683df7f09188613294c3ec128130056cb80801b1b843c5"
-    sha256 cellar: :any,                 ventura:       "45b39ddc1f728e14ca1c5c0822863bdfa3fdb51e650680cb6f412eb977454301"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "b7de3c624f3cb70c19d5bcca8e4c0984ef807d0f372ad1c04b3208f4c10dcf18"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "ede87930151305e6185eee0306ba5f265ef4e480ca3264fc18bf21e8bf348ab0"
+    sha256 cellar: :any,                 arm64_sequoia: "a399d16b527a276848746d026a5d6f9dcbe19a66e364f654bd568202f115b25d"
+    sha256 cellar: :any,                 arm64_sonoma:  "6a3c8bf881164e8865cccf59c1dd544b1b56b8f29acd54cdbd08c5612ffea35d"
+    sha256 cellar: :any,                 arm64_ventura: "2792cb06d0ebeb561da0125fce7d97a682af3b48cd9c206af16031e993679740"
+    sha256 cellar: :any,                 sonoma:        "c1d0aa9375fbd826994f4e22fb6a1ef61dd4f336652a834247ebae91f1ac5703"
+    sha256 cellar: :any,                 ventura:       "3edabba59cc29e208507263b232307affc46dc185d8759ac336181deb1d7340e"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "259a6b9430b882d381571ae7dc7042868f3921df9c8e2753fb3baa5afaf0b4a3"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "6f576ac5c37f439e1d327af5ea5785f0b60880eca704752cfbea9755940fbbd0"
   end
 
   depends_on "bison" => :build # for beancount
@@ -104,8 +104,8 @@ class Fava < Formula
   end
 
   resource "jaraco-functools" do
-    url "https://files.pythonhosted.org/packages/ab/23/9894b3df5d0a6eb44611c36aec777823fc2e07740dabbd0b810e19594013/jaraco_functools-4.1.0.tar.gz"
-    sha256 "70f7e0e2ae076498e212562325e805204fc092d7b4c17e0e86c959e249701a9d"
+    url "https://files.pythonhosted.org/packages/49/1c/831faaaa0f090b711c355c6d8b2abf277c72133aab472b6932b03322294c/jaraco_functools-4.2.1.tar.gz"
+    sha256 "be634abfccabce56fa3053f8c7ebe37b682683a4ee7793670ced17bab0087353"
   end
 
   resource "jinja2" do
@@ -114,8 +114,8 @@ class Fava < Formula
   end
 
   resource "lxml" do
-    url "https://files.pythonhosted.org/packages/76/3d/14e82fc7c8fb1b7761f7e748fd47e2ec8276d137b6acfe5a4bb73853e08f/lxml-5.4.0.tar.gz"
-    sha256 "d12832e1dbea4be280b22fd0ea7c9b87f0d8fc51ba06e92dc62d52f804f78ebd"
+    url "https://files.pythonhosted.org/packages/c5/ed/60eb6fa2923602fba988d9ca7c5cdbd7cf25faa795162ed538b527a35411/lxml-6.0.0.tar.gz"
+    sha256 "032e65120339d44cdc3efc326c9f660f5f7205f3a535c1fdbf898b29ea01fb72"
   end
 
   resource "markdown2" do
@@ -184,13 +184,13 @@ class Fava < Formula
   end
 
   resource "typing-extensions" do
-    url "https://files.pythonhosted.org/packages/f6/37/23083fcd6e35492953e8d2aaaa68b860eb422b34627b13f2ce3eb6106061/typing_extensions-4.13.2.tar.gz"
-    sha256 "e6c81219bd689f51865d9e372991c540bda33a0379d5573cddb9a3a23f7caaef"
+    url "https://files.pythonhosted.org/packages/98/5a/da40306b885cc8c09109dc2e1abd358d5684b1425678151cdaed4731c822/typing_extensions-4.14.1.tar.gz"
+    sha256 "38b39f4aeeab64884ce9f74c94263ef78f3c22467c8724005483154c26648d36"
   end
 
   resource "watchfiles" do
-    url "https://files.pythonhosted.org/packages/03/e2/8ed598c42057de7aa5d97c472254af4906ff0a59a66699d426fc9ef795d7/watchfiles-1.0.5.tar.gz"
-    sha256 "b7529b5dcc114679d43827d8c35a07c493ad6f083633d573d81c660abc5979e9"
+    url "https://files.pythonhosted.org/packages/2a/9a/d451fcc97d029f5812e898fd30a53fd8c15c7bbd058fd75cfc6beb9bd761/watchfiles-1.1.0.tar.gz"
+    sha256 "693ed7ec72cbfcee399e92c895362b6e66d63dac6b91e2c11ae03d10d503e575"
   end
 
   resource "werkzeug" do
@@ -201,7 +201,7 @@ class Fava < Formula
   def install
     virtualenv_install_with_resources
 
-    generate_completions_from_executable(bin/"fava", shells: [:fish, :zsh], shell_parameter_format: :click)
+    generate_completions_from_executable(bin/"fava", shell_parameter_format: :click)
   end
 
   test do

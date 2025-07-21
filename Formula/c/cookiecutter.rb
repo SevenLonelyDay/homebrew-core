@@ -6,17 +6,18 @@ class Cookiecutter < Formula
   url "https://files.pythonhosted.org/packages/52/17/9f2cd228eb949a91915acd38d3eecdc9d8893dde353b603f0db7e9f6be55/cookiecutter-2.6.0.tar.gz"
   sha256 "db21f8169ea4f4fdc2408d48ca44859349de2647fbe494a9d6c3edfc0542c21c"
   license "BSD-3-Clause"
-  revision 7
+  revision 8
   head "https://github.com/cookiecutter/cookiecutter.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_sequoia: "8f8ce1408891204a128493ae483cc386514fa6b5a7851050be410b169b70cc78"
-    sha256 cellar: :any,                 arm64_sonoma:  "d096d39c167d199366b4e1e18a5435512f0cc6a73fcf3b744b0c3dc8ed1faf50"
-    sha256 cellar: :any,                 arm64_ventura: "ba5de2316f6697823e5cf0f4d895e3d503962d50f4f4cd921a567e43957d596d"
-    sha256 cellar: :any,                 sonoma:        "e787f3ad1edc5e88e7ea01d92cfb36cfa536dbaf8fbce5159176fbd93c1d7a5c"
-    sha256 cellar: :any,                 ventura:       "d6dbb71fc1d65c5c9b4cdc8dd0e948b67d09605abb337adb903a4de1ae5e167d"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "d801ff52f60d426ef77646da8f065457a8e8706c2b8be6367bd3f55d561f513d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "d754242f3e7a116e7862ca12fabc9122e075620ceb1c3d764190709b4101e5aa"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_sequoia: "be87c6e23c5feba86f0ccdabf62c38c9807e895d817a3c7cb4da8f02ad70bf09"
+    sha256 cellar: :any,                 arm64_sonoma:  "90a1804de2418db7dc3e495b51a63ab4c4f317ee3295f1b9db5a14ec3d4020c5"
+    sha256 cellar: :any,                 arm64_ventura: "d8c06a7b8879382099ba5ba4ce4ea115c9be3076b7d741844bc341ef7b09ff2d"
+    sha256 cellar: :any,                 sonoma:        "c504fb6fcbe4d6b10b71f0684bfb95910484b200bf4bb7417c8a41d6d8159e70"
+    sha256 cellar: :any,                 ventura:       "2d9caf06bda46b8e7dcf589bc6d7a99455c5c6786f41b0a9136ed7059b7d2ed4"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "ae6510978243d4488a2da666e8a58b00819c6fb2cbec763fbd854af0670402f1"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "65f980531acb36b45803dd286ba0c581fe6f98124ca7d30380b0b7cebcd7216f"
   end
 
   depends_on "certifi"
@@ -119,14 +120,14 @@ class Cookiecutter < Formula
   end
 
   resource "urllib3" do
-    url "https://files.pythonhosted.org/packages/8a/78/16493d9c386d8e60e442a35feac5e00f0913c0f4b7c217c11e8ec2ff53e0/urllib3-2.4.0.tar.gz"
-    sha256 "414bc6535b787febd7567804cc015fee39daab8ad86268f1310a9250697de466"
+    url "https://files.pythonhosted.org/packages/15/22/9ee70a2574a4f4599c47dd506532914ce044817c7752a79b6a51286319bc/urllib3-2.5.0.tar.gz"
+    sha256 "3fc47733c7e419d4bc3f6b3dc2b4f890bb743906a30d56ba4a5bfa4bbff92760"
   end
 
   def install
     virtualenv_install_with_resources
 
-    generate_completions_from_executable(bin/"cookiecutter", shells: [:fish, :zsh], shell_parameter_format: :click)
+    generate_completions_from_executable(bin/"cookiecutter", shell_parameter_format: :click)
   end
 
   test do

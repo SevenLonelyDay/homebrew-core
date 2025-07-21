@@ -6,11 +6,12 @@ class Dnsgen < Formula
   url "https://files.pythonhosted.org/packages/5f/e1/1c7d86f51da5b93f3f99ac99e3ad051ed82234147ddd869f77a3959e6abc/dnsgen-1.0.4.tar.gz"
   sha256 "1087e9e5c323918aa3511e592759716116a208012aee024ffdbeac5fce573a0c"
   license "MIT"
-  revision 1
+  revision 2
   head "https://github.com/AlephNullSK/dnsgen.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "eb3378e1d5287c2d53eb369225efc53f86773fc24e966f9b2444b3a06883e34f"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, all: "cf225b6dec77f197304858d44ca2d7789028e55922da378d290ecb3b84e5df73"
   end
 
   depends_on "certifi"
@@ -52,14 +53,14 @@ class Dnsgen < Formula
   end
 
   resource "urllib3" do
-    url "https://files.pythonhosted.org/packages/8a/78/16493d9c386d8e60e442a35feac5e00f0913c0f4b7c217c11e8ec2ff53e0/urllib3-2.4.0.tar.gz"
-    sha256 "414bc6535b787febd7567804cc015fee39daab8ad86268f1310a9250697de466"
+    url "https://files.pythonhosted.org/packages/15/22/9ee70a2574a4f4599c47dd506532914ce044817c7752a79b6a51286319bc/urllib3-2.5.0.tar.gz"
+    sha256 "3fc47733c7e419d4bc3f6b3dc2b4f890bb743906a30d56ba4a5bfa4bbff92760"
   end
 
   def install
     virtualenv_install_with_resources
 
-    generate_completions_from_executable(bin/"dnsgen", shells: [:fish, :zsh], shell_parameter_format: :click)
+    generate_completions_from_executable(bin/"dnsgen", shell_parameter_format: :click)
   end
 
   test do

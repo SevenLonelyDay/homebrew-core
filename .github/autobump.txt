@@ -126,6 +126,7 @@ arkade
 arm-none-eabi-gcc
 armadillo
 arp-scan
+arp-scan-rs
 arping
 arrayfire
 artillery
@@ -285,6 +286,7 @@ bench
 benchi
 bender
 benthos
+bento
 berglas
 bettercap
 bfs
@@ -516,6 +518,7 @@ chars
 chart-releaser
 chart-testing
 chatblade
+chawan
 chdig
 cheat
 check-jsonschema
@@ -601,6 +604,8 @@ clp
 clusterawsadm
 clusterctl
 clzip
+cmake
+cmake-docs
 cmake-language-server
 cmake-lint
 cmark
@@ -814,6 +819,7 @@ dhall-lsp-server
 dhall-toml
 dhall-yaml
 di
+diagram
 dialog
 diamond
 dicebear
@@ -1008,6 +1014,7 @@ erlang
 erlang_ls
 erlang@25
 erlang@26
+erlang@27
 erlfmt
 erofs-utils
 esbuild
@@ -1264,6 +1271,7 @@ gf
 gfold
 ggshield
 gh-ost
+ghalint
 ghcup
 ghex
 ghorg
@@ -1277,6 +1285,7 @@ gifski
 gimme
 ginac
 gismo
+git
 git-absorb
 git-annex
 git-bug
@@ -1284,12 +1293,14 @@ git-cinnabar
 git-cliff
 git-codereview
 git-cola
+git-credential-libsecret
 git-credential-oauth
 git-delete-merged-branches
 git-delta
 git-extras
 git-filter-repo
 git-grab
+git-gui
 git-ignore
 git-interactive-rebase-tool
 git-lfs
@@ -1300,6 +1311,7 @@ git-remote-hg
 git-review
 git-split-diffs
 git-subrepo
+git-svn
 git-sync
 git-town
 git-who
@@ -1381,6 +1393,7 @@ gocloc
 gocryptfs
 goctl
 godap
+goenv
 goffice
 gofumpt
 goimports
@@ -1433,6 +1446,7 @@ gperftools
 gpg-tui
 gpgme
 gprof2dot
+gpsd
 gpsim
 gptme
 gptscript
@@ -1792,6 +1806,7 @@ kaskade
 katago
 katana
 kbld
+kbt
 kcat
 kcgi
 kcov
@@ -2052,10 +2067,12 @@ libmxml
 libnetfilter_conntrack
 libnfs
 libnftnl
+libnghttp2
 libnghttp3
 libnotify
 libntlm
 libobjc2
+libogg
 libomemo-c
 libomp
 libopenmpt
@@ -2335,6 +2352,7 @@ mbedtls
 mbt
 mcap
 mcfly
+mcp-inspector
 mcpm
 md2pdf
 md4c
@@ -2361,6 +2379,7 @@ memtester
 menhir
 mercurial
 mergiraf
+mermaid-cli
 mesa
 meson
 meta-package-manager
@@ -2400,6 +2419,7 @@ minio
 minio-mc
 minio-warp
 minipro
+miniprot
 miniserve
 minisign
 miniupnpc
@@ -2448,6 +2468,7 @@ monika
 monit
 monitoring-plugins
 monolith
+moodle-dl
 moon
 morpheus
 morse
@@ -2461,6 +2482,7 @@ mpg123
 mpi4py
 mpich
 mpop
+mpremote
 mprocs
 mpv
 mqttui
@@ -2568,6 +2590,7 @@ nexttrace
 nfdump
 nfpm
 nftables
+nghttp2
 nginx
 ngs
 ngt
@@ -3072,6 +3095,7 @@ python-packaging
 python-setuptools
 python-yq
 pythran
+pytr
 pyupgrade
 qbe
 qbec
@@ -3092,6 +3116,13 @@ qrcp
 qrtool
 qshell
 qsv
+qt
+qt-libiodbc
+qt-mariadb
+qt-mysql
+qt-percona-server
+qt-postgresql
+qt-unixodbc
 qthreads
 qtkeychain
 quantlib
@@ -3178,6 +3209,7 @@ restish
 restview
 resvg
 retire
+retry
 reuse
 reveal-md
 revive
@@ -3374,6 +3406,7 @@ shellcheck
 shellharden
 shellz
 shepherd
+sherif
 sherlock
 shfmt
 showcert
@@ -3496,6 +3529,7 @@ spoofdpi
 spot
 spotbugs
 spotify_player
+spotifyd
 spr
 sprocket
 spytrap-adb
@@ -3606,6 +3640,7 @@ swift-format
 swift-protobuf
 swift-sh
 swiftformat
+swiftly
 swiftplantuml
 swig
 swtpm
@@ -4086,6 +4121,7 @@ xkbcomp
 xkeyboard-config
 xlsxio
 xmake
+xml2rfc
 xmlrpc-c
 xmlsectool
 xmount

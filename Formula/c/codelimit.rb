@@ -3,19 +3,18 @@ class Codelimit < Formula
 
   desc "Your Refactoring Alarm"
   homepage "https://github.com/getcodelimit/codelimit"
-  url "https://files.pythonhosted.org/packages/b2/35/88c6a31a680aaaa08906162e1a64187e8379c2f6fdf68a457d61e8a32ed1/codelimit-0.18.1.tar.gz"
-  sha256 "208e814cb3320ce5d1f862fc984b4e09760595b9ed6362bdc11214e3ee155549"
+  url "https://files.pythonhosted.org/packages/85/ba/ccae1eceaf2d165703ff80fbc67e64ef9aab0e8a75cfe7aa9b3565320e20/codelimit-0.19.9.tar.gz"
+  sha256 "e01fee79c06643b43b8d29f850f93a2be1e78033b3bc2acea5982a5fc5ead1a0"
   license "GPL-3.0-or-later"
-  revision 1
 
   bottle do
-    sha256 cellar: :any,                 arm64_sequoia: "18071157d23bb1d0bb254b13d3eba3f3bdab625e53180e4c245582febe7e8f05"
-    sha256 cellar: :any,                 arm64_sonoma:  "c5cdecb94c66b87c8b4d5807977afb05e470691b4c84e3ee684018485101113e"
-    sha256 cellar: :any,                 arm64_ventura: "58def15d46a033132a428c1b55ea007fe155071742521fb28866228f26183f13"
-    sha256 cellar: :any,                 sonoma:        "880b989a838e0b115b4adf2bae43e024da5d7c792a0e3a3d68033326baac6404"
-    sha256 cellar: :any,                 ventura:       "707acb498655fd56a9e398eb5e6f7c498a68cdc7215b1879e43fa7a4532fa538"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "e3cba55a81fc138c4cfae16dfd5daaa244f735d48bdc157a85a2b4c341a8e5ca"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "3c3a9ba5848dfa803f1d7a305a1980d17acc21a0a73b55480c27c4e071c1eae3"
+    sha256 cellar: :any,                 arm64_sequoia: "c430ba00ad810176f7167b849eb7c1402e37ba2fa9d75a787cb5fc69fa92fb96"
+    sha256 cellar: :any,                 arm64_sonoma:  "4f430b6ac55691410b56a6a2b5b43fbfe6fde844606051fc6fdbbd0e115b78ed"
+    sha256 cellar: :any,                 arm64_ventura: "5a4dac762395d5ccdbb20f845318ba02085e7172daba49a8c7ba9a8a0954fcce"
+    sha256 cellar: :any,                 sonoma:        "fe844660c484db5c0b33cadbe1c351cc3c8c8d1851e94a546b70fd60639ced80"
+    sha256 cellar: :any,                 ventura:       "3d9c3494a33312282dc3d648c69f16756db134d556f1af27bcdb6b4e1d802f04"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "c45bb27922d4c90486637f3ffb769fc7e7c0517543dc03823b8ee5bb2bb94e61"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "28adccc4f4860c375af32b2495af3e81cbb5f891a3ed97a742bce3caac137a94"
   end
 
   depends_on "certifi"
@@ -28,13 +27,13 @@ class Codelimit < Formula
   end
 
   resource "aiohttp" do
-    url "https://files.pythonhosted.org/packages/f2/84/ea27e6ad14747d8c51afe201fb88a5c8282b6278256d30a6f71f730add88/aiohttp-3.12.12.tar.gz"
-    sha256 "05875595d2483d96cb61fa9f64e75262d7ac6251a7e3c811d8e26f7d721760bd"
+    url "https://files.pythonhosted.org/packages/e6/0b/e39ad954107ebf213a2325038a3e7a506be3d98e1435e1f82086eec4cde2/aiohttp-3.12.14.tar.gz"
+    sha256 "6e06e120e34d93100de448fd941522e11dafa78ef1a893c179901b7d66aa29f2"
   end
 
   resource "aiosignal" do
-    url "https://files.pythonhosted.org/packages/ba/b5/6d55e80f6d8a08ce22b982eafa278d823b541c925f11ee774b0b9c43473d/aiosignal-1.3.2.tar.gz"
-    sha256 "a8c255c66fafb1e499c9351d0bf32ff2d8a0321595ebac3b93713656d2436f54"
+    url "https://files.pythonhosted.org/packages/61/62/06741b579156360248d1ec624842ad0edf697050bbaf7c3e46394e106ad1/aiosignal-1.4.0.tar.gz"
+    sha256 "f47eecd9468083c2029cc99945502cb7708b082c232f9aca65da147157b251c7"
   end
 
   resource "attrs" do
@@ -73,8 +72,8 @@ class Codelimit < Formula
   end
 
   resource "multidict" do
-    url "https://files.pythonhosted.org/packages/91/2f/a3470242707058fe856fe59241eee5635d79087100b7042a867368863a27/multidict-6.4.4.tar.gz"
-    sha256 "69ee9e6ba214b5245031b76233dd95408a0fd57fdb019ddcc1ead4790932a8e8"
+    url "https://files.pythonhosted.org/packages/3d/2c/5dad12e82fbdf7470f29bff2171484bf07cb3b16ada60a6589af8f376440/multidict-6.6.3.tar.gz"
+    sha256 "798a9eb12dab0a6c2e29c1de6f3468af5cb2da6053a20dfa3344907eed0937cc"
   end
 
   resource "pathspec" do
@@ -88,8 +87,8 @@ class Codelimit < Formula
   end
 
   resource "pygments" do
-    url "https://files.pythonhosted.org/packages/7c/2d/c3338d48ea6cc0feb8446d8e6937e1408088a72a39937982cc6111d17f84/pygments-2.19.1.tar.gz"
-    sha256 "61c16d2a8576dc0649d9f39e089b5f02bcd27fba10d8fb4dcc28173f7a45151f"
+    url "https://files.pythonhosted.org/packages/b0/77/a5b8c569bf593b0140bde72ea885a803b82086995367bf2037de0159d924/pygments-2.19.2.tar.gz"
+    sha256 "636cb2477cec7f8952536970bc533bc43743542f70392ae026374600add5b887"
   end
 
   resource "pyperclip" do
@@ -117,19 +116,24 @@ class Codelimit < Formula
     sha256 "653227a7c41a284ec5302173fbc044ee817c7bad5e6e4d8d55741b9aeb9eb65b"
   end
 
+  resource "shellingham" do
+    url "https://files.pythonhosted.org/packages/58/15/8b3609fd3830ef7b27b655beb4b4e9c62313a4e8da8c676e142cc210d58e/shellingham-1.5.4.tar.gz"
+    sha256 "8dbca0739d487e5bd35ab3ca4b36e11c4078f3a234bfce294b0a0291363404de"
+  end
+
   resource "typer" do
-    url "https://files.pythonhosted.org/packages/e9/7d/b1e0399aa5e27071f0042784681d28417f3e526c61f62c8e3635ee5ad334/typer-0.9.4.tar.gz"
-    sha256 "f714c2d90afae3a7929fcd72a3abb08df305e1ff61719381384211c4070af57f"
+    url "https://files.pythonhosted.org/packages/c5/8c/7d682431efca5fd290017663ea4588bf6f2c6aad085c7f108c5dbc316e70/typer-0.16.0.tar.gz"
+    sha256 "af377ffaee1dbe37ae9440cb4e8f11686ea5ce4e9bae01b84ae7c63b87f1dd3b"
   end
 
   resource "typing-extensions" do
-    url "https://files.pythonhosted.org/packages/d1/bc/51647cd02527e87d05cb083ccc402f93e441606ff1f01739a62c8ad09ba5/typing_extensions-4.14.0.tar.gz"
-    sha256 "8676b788e32f02ab42d9e7c61324048ae4c6d844a399eebace3d4979d75ceef4"
+    url "https://files.pythonhosted.org/packages/98/5a/da40306b885cc8c09109dc2e1abd358d5684b1425678151cdaed4731c822/typing_extensions-4.14.1.tar.gz"
+    sha256 "38b39f4aeeab64884ce9f74c94263ef78f3c22467c8724005483154c26648d36"
   end
 
   resource "urllib3" do
-    url "https://files.pythonhosted.org/packages/8a/78/16493d9c386d8e60e442a35feac5e00f0913c0f4b7c217c11e8ec2ff53e0/urllib3-2.4.0.tar.gz"
-    sha256 "414bc6535b787febd7567804cc015fee39daab8ad86268f1310a9250697de466"
+    url "https://files.pythonhosted.org/packages/15/22/9ee70a2574a4f4599c47dd506532914ce044817c7752a79b6a51286319bc/urllib3-2.5.0.tar.gz"
+    sha256 "3fc47733c7e419d4bc3f6b3dc2b4f890bb743906a30d56ba4a5bfa4bbff92760"
   end
 
   resource "yarl" do

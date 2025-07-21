@@ -1,19 +1,19 @@
 class AdaUrl < Formula
   desc "WHATWG-compliant and fast URL parser written in modern C++"
   homepage "https://github.com/ada-url/ada"
-  url "https://github.com/ada-url/ada/archive/refs/tags/v3.2.4.tar.gz"
-  sha256 "ce79b8fb0f6be6af3762a16c5488cbcd38c31d0655313a7030972a7eb2bda9e5"
+  url "https://github.com/ada-url/ada/archive/refs/tags/v3.2.6.tar.gz"
+  sha256 "2e0b0c464ae9b5d97bc99fbec37878dde4a436fa0a34127f5755a0dfeb2c84a0"
   license any_of: ["Apache-2.0", "MIT"]
   head "https://github.com/ada-url/ada.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any,                 arm64_sequoia: "888a54a0561d8d7df2d92ee25552177c7f1145b6ca8606389284b313d7808f45"
-    sha256 cellar: :any,                 arm64_sonoma:  "5e41211a52b56f862011aedd58db319d1296928584ac450175f6d690283102cd"
-    sha256 cellar: :any,                 arm64_ventura: "46c45697c40bae733701646a8496174268663721622865d65a0289f2135747e8"
-    sha256 cellar: :any,                 sonoma:        "0c034aa863f191ba9552202711d1dd6265223f6993e9cf39c4d057ee40580d24"
-    sha256 cellar: :any,                 ventura:       "2d82d7336972b9bf78964bde91c5dd863d96f95e59fe758f881986357353952f"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "107755dc326c42bc1e82f909f15ae7b8e25fcb6ef453c563caf7e39c677842a3"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "8bdbaddff93b1b3957c223fd1d713736c949d8c088bb2707e6b5870ba1028184"
+    sha256 cellar: :any,                 arm64_sequoia: "3bb7077ce7866a336ac40cb45959c51feee7f0c68c79fb8e90ea3c394695493f"
+    sha256 cellar: :any,                 arm64_sonoma:  "4ddddeea6b7dff766c1bbe89bd27a615dcb715dead135541826bd2a8c4a52007"
+    sha256 cellar: :any,                 arm64_ventura: "90a53c74cda428539d8b73aa8bbc433db40712e3b31b3c3a3022e0a4a0e9b324"
+    sha256 cellar: :any,                 sonoma:        "edc06d7b7bd2d46704146362f36a150d43fbd37628ac85a9ad01225391ba5fe4"
+    sha256 cellar: :any,                 ventura:       "c9d7a8bc5030750969e0b202fdadd3980769c60c0e6605ea49aee2dcf03c0e26"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "10273cd26d07039bea902435321d6a9218be651218db60401040bca9e330c20e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "a212d9cde2aa517ddb0c1109fea662e63d24e124b5c3fc467dd488b6408e09ea"
   end
 
   depends_on "cmake" => :build
@@ -44,6 +44,7 @@ class AdaUrl < Formula
 
   test do
     ENV["CXX"] = Formula["llvm"].opt_bin/"clang++" if OS.mac? && DevelopmentTools.clang_build_version <= 1500
+    ENV.prepend_path "PATH", Formula["binutils"].opt_bin if OS.linux?
 
     (testpath/"test.cpp").write <<~CPP
       #include "ada.h"

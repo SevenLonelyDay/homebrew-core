@@ -1,18 +1,18 @@
 class Odpi < Formula
   desc "Oracle Database Programming Interface for Drivers and Applications"
   homepage "https://oracle.github.io/odpi/"
-  url "https://github.com/oracle/odpi/archive/refs/tags/v5.5.1.tar.gz"
-  sha256 "8325384f9b332c4a3c91b5fa8189f26b07e8febba4310654d0b1b5d69687a0f6"
+  url "https://github.com/oracle/odpi/archive/refs/tags/v5.6.1.tar.gz"
+  sha256 "a22c37cbd362389e02a599282d27d4e98b05438d61c5957cd2b5ee97238de9a2"
   license any_of: ["Apache-2.0", "UPL-1.0"]
 
   bottle do
-    sha256 cellar: :any,                 arm64_sequoia: "bc20e1e7c5dae5d19e845cde1c3d0497c71015ebdb13d36cff8f08741a4131b8"
-    sha256 cellar: :any,                 arm64_sonoma:  "80b473d1a752d762306c4ddf263a5574050ed86d8cbaa89875e6a42361a08ceb"
-    sha256 cellar: :any,                 arm64_ventura: "01459cd115f60ee3c8a6ba124960b1b489801542152b1b6d203c01f0713fa433"
-    sha256 cellar: :any,                 sonoma:        "ec0f29e806f41a0ffa56b81f1c4352f46f2d7d82be5885a4a673372019c10047"
-    sha256 cellar: :any,                 ventura:       "7746fe52f85d8de435e00b0199009f6684d9deb224b4346cf8d68b67e7be14cb"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "deaa4b1012c15bb7d9bcd07bfe50c308ac13c31599d4463505981eda31e71b5b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "2175bfc184bc703d0c92fda2a7c685b8b0079ebf71292d65633816f568047437"
+    sha256 cellar: :any,                 arm64_sequoia: "1a48e1f1ddfc46a960b733b91f1155bf1e4a159e62b4dddd2081b63ef554bd73"
+    sha256 cellar: :any,                 arm64_sonoma:  "339ff48d94669dc1c30486baa2114401cb8971f45583a4e40a6ecab2ef26d6cc"
+    sha256 cellar: :any,                 arm64_ventura: "b20387f17bd89b0776235efd68db05b1cc05f3c34c84b626779948b1815c23b4"
+    sha256 cellar: :any,                 sonoma:        "e33f5f04c62be62922d5fc40377df730a52a0c83dbf3f373b1cc4042602a1d12"
+    sha256 cellar: :any,                 ventura:       "529f0094d037bd6f40b0808125c9f8f6a0c6ff6f786777c7a65ca031150bc9f5"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "d3c922f2eb582aa3047c681fc14a938262d1226ef2cc39f1caebc274092377b3"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "99134681181e2721c0313a3778f0234445bbe58f72ba0357e3b119f9c842be19"
   end
 
   def install

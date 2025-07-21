@@ -1,8 +1,8 @@
 class Ki18n < Formula
   desc "KDE Gettext-based UI text internationalization"
   homepage "https://api.kde.org/frameworks/ki18n/html/index.html"
-  url "https://download.kde.org/stable/frameworks/6.14/ki18n-6.14.0.tar.xz"
-  sha256 "2a5135412caf0a07eba4eeb60867ac6929df1c83c145ae757a6a1230f842e669"
+  url "https://download.kde.org/stable/frameworks/6.16/ki18n-6.16.0.tar.xz"
+  sha256 "c52ad10b14365e60c4a219cb66706d114476645297cb2a9f15498747cf4421d7"
   license all_of: [
     "BSD-3-Clause",
     "LGPL-2.0-or-later",
@@ -16,11 +16,11 @@ class Ki18n < Formula
   end
 
   bottle do
-    sha256 arm64_sonoma:  "813a3949fbec80841d7cdc7c13cf389843827da1de60ad2f41ad1d3090967403"
-    sha256 arm64_ventura: "30ab036fee1e082ef2a20a60f62b1cc556bbb50777fc0094767a74ab5bad50d2"
-    sha256 sonoma:        "00a85043356ed0e53aaa97b53201afe7a1e2930d4c135a03f0a340f021affee1"
-    sha256 ventura:       "97f1d16b5670dd1cf927ad43f8100ca94352c18809a2d3a8150b6b99deb1a9fa"
-    sha256 x86_64_linux:  "481f2625a6848c04d8bd956f54d0d9ff15530e11df285c0480382367718ae105"
+    sha256 arm64_sonoma:  "5ee8e5d4236de8e4ea9adc9c982b7345802a08c25ec846e5a32c01f5c4faccbf"
+    sha256 arm64_ventura: "260845feaef3455504b41951dc496237237cf7425fa384ac3296e0bf536d658e"
+    sha256 sonoma:        "5e03bdaaf08b9246ab73f17f1d5d322d05c8e761930ccb7761d9b0c70f541bd4"
+    sha256 ventura:       "f96cd0cbd7f59856d4889cb5af02494ddc7f260670dd26655f581d59a4387136"
+    sha256 x86_64_linux:  "b164bfef5a468f839d588b32a4e3b3f150c05e9b091d686f24ea1a8ceb2261b0"
   end
 
   depends_on "cmake" => [:build, :test]

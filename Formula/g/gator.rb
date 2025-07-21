@@ -1,18 +1,18 @@
 class Gator < Formula
   desc "CLI Utility for Open Policy Agent Gatekeeper"
   homepage "https://open-policy-agent.github.io/gatekeeper/"
-  url "https://github.com/open-policy-agent/gatekeeper/archive/refs/tags/v3.19.1.tar.gz"
-  sha256 "1ddf7f701185b53ee84601303eb6e845874986d623c21012963fc886b8452947"
+  url "https://github.com/open-policy-agent/gatekeeper/archive/refs/tags/v3.19.3.tar.gz"
+  sha256 "b95c38f719db5f5fd1f018b217b277148d0c39b47d648e371529523776028cfa"
   license "Apache-2.0"
   head "https://github.com/open-policy-agent/gatekeeper.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "dda00833a480f1e881b063a535df2a616cc9b2d9656fe3f5cc85bb7c88aa58db"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "0be8f6bd2b7f2e352e0c2c85c55961e638ceb94302e7bbbbac4fa29946ce5976"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "b7c0686f32dc7dfd6523474a820634c28da072ab4e703a3a90ec12557ce3da1e"
-    sha256 cellar: :any_skip_relocation, sonoma:        "977bf64a4673679756acfe5dd09810191acf48d3083d1274ce53005ad0d61062"
-    sha256 cellar: :any_skip_relocation, ventura:       "9e25ca0d79f1935bc4dca6108bb9c2e2d6be8a17884e1d6f1fe962ad7a029303"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "e3ca41458924356337af14aa5a5fe174ad6ffed08b6bebcc041437926027c803"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "f9316a570f1a660dca965829be90ebb92fbff4d943adbcbb51238d5882b0bc12"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "2ca5c8e81c04c1050be3a9774bafbd79647a54fc593c9615eb4a1e5317bc3473"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "f4c2bfb8e64a59403cc2ec840b678e6905219cca52dc1a762abebc535284d0d1"
+    sha256 cellar: :any_skip_relocation, sonoma:        "19bbeb8e1143320c1d2c47376e1685e271123d58257c42cbcd9ad291ba608cd5"
+    sha256 cellar: :any_skip_relocation, ventura:       "7f3ee576315464c109b8c66ab04bc143bad7478a0400db8d7b32ef6d96d40ede"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "dfa10caa07f7b26092bbac35ce7c4208b44e2e2722a191a5c6ea2272079e15b3"
   end
 
   depends_on "go" => :build

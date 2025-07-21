@@ -3,8 +3,8 @@
 class Mercurial < Formula
   desc "Scalable distributed version control system"
   homepage "https://mercurial-scm.org/"
-  url "https://www.mercurial-scm.org/release/mercurial-7.0.2.tar.gz"
-  sha256 "f7731f1b42acaeaacb8cf7e41c0a472a7aa31a8f47e518baea735f1cb2987e0c"
+  url "https://www.mercurial-scm.org/release/mercurial-7.0.3.tar.gz"
+  sha256 "59fc84640524da6f1938ea7e4eb0cd579fc7fedaaf563a916cb4f9dac0eacf6c"
   license "GPL-2.0-or-later"
 
   livecheck do
@@ -13,13 +13,13 @@ class Mercurial < Formula
   end
 
   bottle do
-    sha256 arm64_sequoia: "adcdd94f98f4e8214b39b1146dfc80d506147de819550038c96b960ecff9eb0e"
-    sha256 arm64_sonoma:  "3fe5462406773aa19b203c2ca413acfa8f71e1efe7ab1c36ddc547d878fda0d3"
-    sha256 arm64_ventura: "0429c995db285cbaeb2efc82b1d33ad2046cb664de0fc80ea08893ce2553a880"
-    sha256 sonoma:        "e1821949354dd3457e591a72600497769e419a52d2fc64136ba74974e3fc20bf"
-    sha256 ventura:       "9a7a4d71679097671e9fbc6c06c5d148c037676be4b08e163c936bb69a55654a"
-    sha256 arm64_linux:   "7c5d9f264c42b27e1e2082feb8330eea70dc8e949230b3a2dbdf5796274a123a"
-    sha256 x86_64_linux:  "5b9a76306427e100dd319136e80aede8e5b0dba734a1b788a57a9308f49c5932"
+    sha256 arm64_sequoia: "226367b9a5490c124494453efeff2afa583f6436d7a9bad75dd0ff3f811c2d9b"
+    sha256 arm64_sonoma:  "006178862cf68e0a06f07fa546254c0a878672ef8ac38d4cbeae56bf0681ca9a"
+    sha256 arm64_ventura: "5924c329544435d4e779ff8c8999d7416eb3c16ef7671ca2c86c07e3436a837f"
+    sha256 sonoma:        "4ab670a504fb5f26bd44257e94028192a59b24ef989ae639d07a49cb199423e6"
+    sha256 ventura:       "4f1d4209792f584ccf1c929c3ce4826fc40bd96f9c18516cec7ae84436cd9544"
+    sha256 arm64_linux:   "9f677326a8c0bdeaafc5e20f6fd5824e302b528e87eba8938e43dcfb780d5a12"
+    sha256 x86_64_linux:  "c1c9f4dedd67752544a56066845baf87a4b9067ac4473a6e2c5b6c1fbe27ff4b"
   end
 
   depends_on "python@3.13"
@@ -47,14 +47,14 @@ class Mercurial < Formula
     bash_completion.install share/"bash-completion/completions/hg"
   end
 
-  def caveats
+  def post_install
     return unless (opt_bin/"hg").exist?
     return unless deps.all? { |d| d.build? || d.test? || d.to_formula.any_version_installed? }
 
     cacerts_configured = `#{opt_bin}/hg config web.cacerts`.strip
     return if cacerts_configured.empty?
 
-    <<~EOS
+    opoo <<~EOS
       Homebrew has detected that Mercurial is configured to use a certificate
       bundle file as its trust store for TLS connections instead of using the
       default OpenSSL store. If you have trouble connecting to remote

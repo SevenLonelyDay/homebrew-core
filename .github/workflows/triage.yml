@@ -6,6 +6,7 @@ env:
   GH_REPO: ${{ github.repository }}
   GH_NO_UPDATE_NOTIFIER: 1
   GH_PROMPT_DISABLED: 1
+  HOMEBREW_DISABLE_LOAD_FORMULA: 1
 
 defaults:
   run:
@@ -29,6 +30,55 @@ jobs:
           name: event_payload
           path: ${{ github.event_path }}
 
+  check-base-branch:
+    permissions:
+      contents: read
+      issues: write
+      pull-requests: write
+    if: always() && github.repository_owner == 'Homebrew' && github.actor != 'BrewTestBot'
+    runs-on: ubuntu-latest
+    env:
+      PR: ${{ github.event.number }}
+    steps:
+      - name: Check pull request base branch
+        id: base
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          branch="$(
+            gh api \
+              --header 'Accept: application/vnd.github+json' \
+              --header 'X-GitHub-Api-Version: 2022-11-28' \
+              "repos/$GITHUB_REPOSITORY/pulls/$PR" \
+              --jq '.base.ref'
+          )"
+          echo "branch=${branch}" >>"${GITHUB_OUTPUT}"
+
+      - name: Change base branch to `main`
+        id: change
+        if: steps.base.outputs.branch == 'master'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh pr edit "${PR}" --base main --repo "${GITHUB_REPOSITORY}"
+
+      - name: Post comment
+        if: steps.base.outputs.branch == 'master'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BODY: |-
+            > [!TIP]
+            > This pull request targets the `master` branch. For future pull requests, please target the `main` branch instead.
+        run: gh pr comment "${PR}" --body "${BODY}" --repo "${GITHUB_REPOSITORY}"
+
+      - name: Post failure comment
+        if: failure() && steps.change.conclusion == 'failure'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BODY: |-
+            > [!CAUTION]
+            > Failed to change base branch to `main`. Please edit your pull request manually to target the `main` branch instead of the `master` branch.
+        run: gh pr comment "${PR}" --body "${BODY}" --repo "${GITHUB_REPOSITORY}"
+
   workflows-label:
     permissions:
       contents: read
@@ -36,12 +86,13 @@ jobs:
       pull-requests: write
     if: always() && github.repository_owner == 'Homebrew'
     runs-on: ubuntu-latest
+    env:
+      PR: ${{ github.event.number }}
     steps:
       - name: Check pull request changed files
         id: files
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          PR: ${{ github.event.number }}
         run: |
           workflow_modified="$(
             gh api \
@@ -62,8 +113,43 @@ jobs:
         if: always() && fromJson(steps.files.outputs.workflow_modified)
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          PR: ${{ github.event.number }}
         run: gh pr edit --add-label workflows "$PR" --repo "$GITHUB_REPOSITORY"
+
+  check-bottle-block:
+    permissions:
+      contents: read
+      issues: write
+      pull-requests: write
+    if: always() && github.repository_owner == 'Homebrew' && github.actor != 'BrewTestBot'
+    runs-on: ubuntu-latest
+    container:
+      image: ghcr.io/homebrew/ubuntu22.04:main
+    env:
+      PR: ${{ github.event.number }}
+    steps:
+      - name: Set up Homebrew
+        id: setup-homebrew
+        uses: Homebrew/actions/setup-homebrew@main
+        with:
+          core: true
+          cask: false
+          test-bot: false
+
+      - name: Check that bottle block is not modified
+        id: bottle-block
+        env:
+          HOMEBREW_GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: brew check-bottle-modification "${PR}"
+
+      - name: Post comment
+        if: failure() && steps.bottle-block.conclusion == 'failure'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BODY: |-
+            > [!CAUTION]
+            > Please **do not** modify the bottle block. Bottle block modifications can cause CI to misbehave.
+            > @BrewTestBot will handle updating the bottle block before this PR is merged.
+        run: gh pr comment "${PR}" --body "${BODY}" --repo "${GITHUB_REPOSITORY}"
 
   triage:
     runs-on: ubuntu-latest
@@ -77,12 +163,12 @@ jobs:
         if: >
           github.actor != 'BrewTestBot' &&
           !contains(github.event.pull_request.labels.*.name, 'CI-published-bottle-commits')
-        uses: Homebrew/actions/check-commit-format@master
+        uses: Homebrew/actions/check-commit-format@main
         with:
           token: ${{secrets.GITHUB_TOKEN}}
 
       - name: Label pull request
-        uses: Homebrew/actions/label-pull-requests@master
+        uses: Homebrew/actions/label-pull-requests@main
         if: always()
         with:
           token: ${{secrets.GITHUB_TOKEN}}
@@ -241,6 +327,8 @@ jobs:
                 gstreamer|\
                 haskell-language-server|\
                 libtensorflow|\
+                llvm@19|\
+                llvm|\
                 mame|\
                 metashell|\
                 mlkit|\
@@ -275,6 +363,8 @@ jobs:
                 brotli|\
                 c-ares|\
                 cabal-install|\
+                cmake|\
+                cryptography|\
                 dav1d|\
                 freetype|\
                 gcc|\
@@ -336,7 +426,18 @@ jobs:
               allow_any_match: true
 
             - label: CI-skip-recursive-dependents
-              path: Formula/.+/(ca-certificates|curl|gettext|openssl@3|sqlite|systemd).rb
+              path: "Formula/.+/(\
+                ca-certificates|\
+                certifi|\
+                cmake|\
+                curl|\
+                gettext|\
+                glib|\
+                openssl@3|\
+                wayland-protocols|\
+                sqlite|\
+                systemd\
+                ).rb"
               keep_if_no_match: true
               allow_any_match: true
 

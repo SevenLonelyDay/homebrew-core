@@ -3,20 +3,19 @@ class Safety < Formula
 
   desc "Checks Python dependencies for known vulnerabilities and suggests remediations"
   homepage "https://safetycli.com/product/safety-cli"
-  url "https://files.pythonhosted.org/packages/33/af/f135abb8d147629e9a27f436db5135314adc864a98b62922b33d6f05c836/safety-3.5.2.tar.gz"
-  sha256 "ecbb2e76f9574284f2c0e168e71ec92b39018ae9516b3b00f132de57ecaa09cb"
+  url "https://files.pythonhosted.org/packages/04/c0/832778e8f53e922f1939455cab4149339ca66c4f06e3c67599511d857279/safety-3.6.0.tar.gz"
+  sha256 "a820f827699f83d3d5c2faab24c0ac4d094911931503180847d97942c0a6f7e3"
   license "MIT"
-  revision 1
   head "https://github.com/pyupio/safety.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any,                 arm64_sequoia: "d2114f59b289d8fe2b13aa0f471f0d6347d16be40959ea31e65d6a127f177833"
-    sha256 cellar: :any,                 arm64_sonoma:  "bb885994626f605de592f48f8165c4400b75262cae32357ead5d4fc5fc5e093a"
-    sha256 cellar: :any,                 arm64_ventura: "e789cd397c3306ffb8e4112d9453a9dd539a03303b5ae9f3899bb696e3dab957"
-    sha256 cellar: :any,                 sonoma:        "75b352fb42a98c16fde56725fae800d6715e18f4cea1b1b0a155075f488d5266"
-    sha256 cellar: :any,                 ventura:       "0819c3fbacd956059e339699005719ea8600d8f61f8d5cedcab687ebade17e1a"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "28c98f5db9c2be18d20f64fb9d6f259d8fbe7426642d101f7bb179bf18c65b3b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "f6077f71360aa94cc9a7a89629ec2a8af3c0e219d9fd37ce6151b6013a2fc694"
+    sha256 cellar: :any,                 arm64_sequoia: "10a924ca0658caf1fb253d1a2b3fe6909da6860b3f53266558646dbfe661f2b0"
+    sha256 cellar: :any,                 arm64_sonoma:  "c818da96fa893550dbc3ee384b1dddef4c72669b4eff6d7a32f18a66c0e864f0"
+    sha256 cellar: :any,                 arm64_ventura: "288a3bfe949f2fba36b680210a9cb51e9c51d0d62e8c8c9a0e6e41390c853b81"
+    sha256 cellar: :any,                 sonoma:        "a1a930a1ecd67d6dcea55dd3a1a46486db151a46fef29f427dee5668c6efedd4"
+    sha256 cellar: :any,                 ventura:       "9b3cbb965dd355b7f6feb94783cb4356ef6a6cd5b99955e6814f2097b8c1699b"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "fe4b529f7c61afff47abb74fb8fc26a63c78a43a3b6cee820e1b3d5283ae0fef"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "76730a97371ac906f74288296db8b27fa3a061297e78c01bbb741a67bbc2fcb7"
   end
 
   depends_on "cmake" => :build
@@ -46,8 +45,8 @@ class Safety < Formula
   end
 
   resource "click" do
-    url "https://files.pythonhosted.org/packages/b9/2e/0090cbf739cee7d23781ad4b89a9894a41538e4fcf4c31dcdd705b78eb8b/click-8.1.8.tar.gz"
-    sha256 "ed53c9d8990d83c2a27deae68e4ee337473f6330c040a31d4225c9574d16096a"
+    url "https://files.pythonhosted.org/packages/60/6c/8ca2efa64cf75a977a0d7fac081354553ebe483345c734fb6b6515d96bbc/click-8.2.1.tar.gz"
+    sha256 "27c491cc05d968d271d5a1db13e3b5a184636d9d930f148c50b038f0d0646202"
   end
 
   resource "dparse" do
@@ -136,8 +135,8 @@ class Safety < Formula
   end
 
   resource "pygments" do
-    url "https://files.pythonhosted.org/packages/7c/2d/c3338d48ea6cc0feb8446d8e6937e1408088a72a39937982cc6111d17f84/pygments-2.19.1.tar.gz"
-    sha256 "61c16d2a8576dc0649d9f39e089b5f02bcd27fba10d8fb4dcc28173f7a45151f"
+    url "https://files.pythonhosted.org/packages/b0/77/a5b8c569bf593b0140bde72ea885a803b82086995367bf2037de0159d924/pygments-2.19.2.tar.gz"
+    sha256 "636cb2477cec7f8952536970bc533bc43743542f70392ae026374600add5b887"
   end
 
   resource "regex" do
@@ -206,13 +205,13 @@ class Safety < Formula
   end
 
   resource "typing-extensions" do
-    url "https://files.pythonhosted.org/packages/d1/bc/51647cd02527e87d05cb083ccc402f93e441606ff1f01739a62c8ad09ba5/typing_extensions-4.14.0.tar.gz"
-    sha256 "8676b788e32f02ab42d9e7c61324048ae4c6d844a399eebace3d4979d75ceef4"
+    url "https://files.pythonhosted.org/packages/98/5a/da40306b885cc8c09109dc2e1abd358d5684b1425678151cdaed4731c822/typing_extensions-4.14.1.tar.gz"
+    sha256 "38b39f4aeeab64884ce9f74c94263ef78f3c22467c8724005483154c26648d36"
   end
 
   resource "urllib3" do
-    url "https://files.pythonhosted.org/packages/8a/78/16493d9c386d8e60e442a35feac5e00f0913c0f4b7c217c11e8ec2ff53e0/urllib3-2.4.0.tar.gz"
-    sha256 "414bc6535b787febd7567804cc015fee39daab8ad86268f1310a9250697de466"
+    url "https://files.pythonhosted.org/packages/15/22/9ee70a2574a4f4599c47dd506532914ce044817c7752a79b6a51286319bc/urllib3-2.5.0.tar.gz"
+    sha256 "3fc47733c7e419d4bc3f6b3dc2b4f890bb743906a30d56ba4a5bfa4bbff92760"
   end
 
   def install

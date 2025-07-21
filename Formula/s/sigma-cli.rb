@@ -6,17 +6,18 @@ class SigmaCli < Formula
   url "https://files.pythonhosted.org/packages/5a/69/8c7583ddca7b3bb369a497526c56131b674eeae6cf6e4ccdb2f16922188c/sigma_cli-1.0.6.tar.gz"
   sha256 "5cd4471fcda44ea8e5671c81cc86bc685227107df57e128b75e125ee3d6d4123"
   license "LGPL-2.1-or-later"
-  revision 1
+  revision 2
   head "https://github.com/SigmaHQ/sigma-cli.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any,                 arm64_sequoia: "d754e6efa13fc89ab37488d821888bab525f4b927b0eed4a2b18b4fe6a8d81d4"
-    sha256 cellar: :any,                 arm64_sonoma:  "ce7e0529cb58a9acb36a63c1d7d44657bbdda8f6414b74413184ce1f127d15dc"
-    sha256 cellar: :any,                 arm64_ventura: "50eb57cae0a0c1a8c575b7231cb122bf6b8ab4b884004fb8c336093cbbb2b85d"
-    sha256 cellar: :any,                 sonoma:        "b345014c97a3fde1b375d36840a57aaa27d04c54f97f7b1307876187271032f3"
-    sha256 cellar: :any,                 ventura:       "2e78b1d237e4ce3ee84a94102032f8416e20d1fe5d4522e0faca3637959777f0"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "8faee91b2d30e606e21a1820bfce1303ab4995793b766614a604bcd368a6206c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "3f5daea0b0200e2a48df2bf10c08bdca20835dc68424abff8196d0dfd968fe19"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_sequoia: "c52a3d701cb7954648073ab399acf23aa9ba92001c1616b78509f58a904c2aed"
+    sha256 cellar: :any,                 arm64_sonoma:  "54ff4d366f2bd84868094772ea97010b70eab5ff747025b713e81904fa793983"
+    sha256 cellar: :any,                 arm64_ventura: "7249cf7861b6cb71bc72f301d9a5d6063b9101253f95787b9221205c50072d8c"
+    sha256 cellar: :any,                 sonoma:        "cccba010339924acd2086d9067db8c9ba572cdd04be8fa0df1c12d60ca72d3ae"
+    sha256 cellar: :any,                 ventura:       "bc4db80a1e8db098cc30cf8bd4c785f6eef7ed645c209824d84976560b0558ed"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "e9464d4ecedc600741583518048cd27c0126e1bef18130136527698bb795e6a3"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "7d24671a6f4c327b4b170eb1e4a47c5d97cddaac7848370e03d87e447821b80b"
   end
 
   depends_on "certifi"
@@ -97,8 +98,8 @@ class SigmaCli < Formula
   end
 
   resource "urllib3" do
-    url "https://files.pythonhosted.org/packages/8a/78/16493d9c386d8e60e442a35feac5e00f0913c0f4b7c217c11e8ec2ff53e0/urllib3-2.4.0.tar.gz"
-    sha256 "414bc6535b787febd7567804cc015fee39daab8ad86268f1310a9250697de466"
+    url "https://files.pythonhosted.org/packages/15/22/9ee70a2574a4f4599c47dd506532914ce044817c7752a79b6a51286319bc/urllib3-2.5.0.tar.gz"
+    sha256 "3fc47733c7e419d4bc3f6b3dc2b4f890bb743906a30d56ba4a5bfa4bbff92760"
   end
 
   resource "wcwidth" do
@@ -112,7 +113,7 @@ class SigmaCli < Formula
 
     virtualenv_install_with_resources
 
-    generate_completions_from_executable(bin/"sigma", shells: [:fish, :zsh], shell_parameter_format: :click)
+    generate_completions_from_executable(bin/"sigma", shell_parameter_format: :click)
   end
 
   test do

@@ -1,21 +1,19 @@
 class Kuzu < Formula
   desc "Embeddable graph database management system built for query speed & scalability"
   homepage "https://kuzudb.com/"
-  url "https://github.com/kuzudb/kuzu/archive/refs/tags/v0.10.0.tar.gz"
-  sha256 "df185b2688ccbfebfddf11520532caf2965300fd91c0c2b9d096da59c925228f"
+  url "https://github.com/kuzudb/kuzu/archive/refs/tags/v0.11.0.tar.gz"
+  sha256 "445872031fd41153dd5a35a3d471354f1a98f853df5aad45a0a47154c69eaf2f"
   license "MIT"
   head "https://github.com/kuzudb/kuzu.git", branch: "master"
 
-  no_autobump! because: :requires_manual_review
-
   bottle do
-    sha256 cellar: :any,                 arm64_sequoia: "bb7aa1820a91f16e0bdeb5f7c53712283bd554ae81620d1ba88fe42659ba463d"
-    sha256 cellar: :any,                 arm64_sonoma:  "98c6ea68a10e431295b2462087c3708c9d2bc20f0692183cd6a20afd742a3e87"
-    sha256 cellar: :any,                 arm64_ventura: "e08626d3676a27d8bb7982947ef08ff583c1a85bbb2d6d41354ca367b2b25dd2"
-    sha256 cellar: :any,                 sonoma:        "8eb48a39122afdeb15918d77e0e9ffc0317d439ca31e417bc9cc1fd45b8d4c62"
-    sha256 cellar: :any,                 ventura:       "2d313770379129941835d3af9c31b8b3c4b2681330179ef30b1fee40ddf14374"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "b79e4eb188a959d8a693738357983cbffab94b17219276bc57692b7bc76f323d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "56c16f0f1a7ee33ad239617882f1282a04a62606ded34fbbfdb7de79e0e9427c"
+    sha256 cellar: :any,                 arm64_sequoia: "e0408f5e2309ed34472e5c21d8676a3c885840e8d99361722bc6989035b607a2"
+    sha256 cellar: :any,                 arm64_sonoma:  "2b7f0e5c7b5c64a5260bb53f68adbaf55dd9cd583ad32f319d8b21d48697c851"
+    sha256 cellar: :any,                 arm64_ventura: "4eac4c3186998375e47d7ea5ce73e42f93ec29f0e0d7f6ea769cc134003f7861"
+    sha256 cellar: :any,                 sonoma:        "531d4d3f3d9d9f537211938787659f7100455603b23708f8908570483901edfc"
+    sha256 cellar: :any,                 ventura:       "92f1cb902c671432940d4a7ac13297d0661b7840cd91aea22f653ed75c99f3f1"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "af7c73032fc17a5283d678b11653d31ae591c1b052da1ceebe90d998ba29a9a4"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "54f3472c5ff2ac7fa69e362434ad0044b23de935627ff01238fb28bf5f2388ce"
   end
 
   depends_on "cmake" => :build
@@ -60,7 +58,7 @@ class Kuzu < Formula
   end
 
   test do
-    db_path = testpath/"testdb/"
+    db_path = testpath/"testdb.kuzu"
     cypher_path = testpath/"test.cypher"
     cypher_path.write <<~EOS
       CREATE NODE TABLE Person(name STRING, age INT64, PRIMARY KEY(name));

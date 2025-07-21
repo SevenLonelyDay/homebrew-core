@@ -1,8 +1,8 @@
 class Massdriver < Formula
   desc "Manage applications and infrastructure on Massdriver Cloud"
   homepage "https://www.massdriver.cloud/"
-  url "https://github.com/massdriver-cloud/mass/archive/refs/tags/1.10.7.tar.gz"
-  sha256 "fbaa8281509139d83b64f10a8851630242cd1648a2437b4be38c0e9e39e87775"
+  url "https://github.com/massdriver-cloud/mass/archive/refs/tags/1.11.5.tar.gz"
+  sha256 "a6723a3a5cdb1fe6633ee1adbbfce36aa769f60c3ed018d926510769d05b7c73"
   license "Apache-2.0"
   head "https://github.com/massdriver-cloud/mass.git", branch: "main"
 
@@ -15,12 +15,12 @@ class Massdriver < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "b7114dc9c2b595a774f1c445a69d51148301c25e33010d4657ac041b2156b56a"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "b7114dc9c2b595a774f1c445a69d51148301c25e33010d4657ac041b2156b56a"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "b7114dc9c2b595a774f1c445a69d51148301c25e33010d4657ac041b2156b56a"
-    sha256 cellar: :any_skip_relocation, sonoma:        "6ee801a50cfa9434d2c50152ac985fdbcb69a0aad4a1786312ed31f08a054609"
-    sha256 cellar: :any_skip_relocation, ventura:       "6ee801a50cfa9434d2c50152ac985fdbcb69a0aad4a1786312ed31f08a054609"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "d0a66e63f10ba634f78cce3b411070652425fea60f61965c08aeffa74d1cc353"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "9829fa2d8598b48419a5b87df41502b987275ce1b768c6e0877d273dca331602"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "9829fa2d8598b48419a5b87df41502b987275ce1b768c6e0877d273dca331602"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "9829fa2d8598b48419a5b87df41502b987275ce1b768c6e0877d273dca331602"
+    sha256 cellar: :any_skip_relocation, sonoma:        "c9dcc30b36935f324267bdde8b5938be788b6b3eb734023991a736745e0256d3"
+    sha256 cellar: :any_skip_relocation, ventura:       "c9dcc30b36935f324267bdde8b5938be788b6b3eb734023991a736745e0256d3"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "ce169952905a4f66416fd48639fa92e3715171832010dde1abd19853f5431151"
   end
 
   depends_on "go" => :build
@@ -37,12 +37,9 @@ class Massdriver < Formula
   end
 
   test do
+    assert_match version.to_s, shell_output("#{bin}/mass version")
+
     output = shell_output("#{bin}/mass bundle build 2>&1", 1)
     assert_match "Error: open massdriver.yaml: no such file or directory", output
-
-    output = shell_output("#{bin}/mass bundle lint 2>&1", 1)
-    assert_match "OrgID: missing required value: MASSDRIVER_ORG_ID", output
-
-    assert_match version.to_s, shell_output("#{bin}/mass version")
   end
 end

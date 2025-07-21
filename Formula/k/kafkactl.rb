@@ -1,18 +1,18 @@
 class Kafkactl < Formula
   desc "CLI for managing Apache Kafka"
   homepage "https://deviceinsight.github.io/kafkactl/"
-  url "https://github.com/deviceinsight/kafkactl/archive/refs/tags/v5.8.0.tar.gz"
-  sha256 "fe76c997cdc10aa52d984b6abcc14fe4c832182a1e03e1dd6225f38a4f5b5615"
+  url "https://github.com/deviceinsight/kafkactl/archive/refs/tags/v5.11.0.tar.gz"
+  sha256 "a5b8868a7cfcbde930803bc880d2ba58a3d5b3344f623634af3d3cebbe0c3f0c"
   license "Apache-2.0"
   head "https://github.com/deviceinsight/kafkactl.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "f5deecb945ab1c7f60dd9231cbc7ad9e921260a6c3c09ae950e65754b68716d7"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "f5deecb945ab1c7f60dd9231cbc7ad9e921260a6c3c09ae950e65754b68716d7"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "f5deecb945ab1c7f60dd9231cbc7ad9e921260a6c3c09ae950e65754b68716d7"
-    sha256 cellar: :any_skip_relocation, sonoma:        "d6b7d4466e3d793e4dda82a96539f79851b7424219f7724aedcdb4b2fdd36f43"
-    sha256 cellar: :any_skip_relocation, ventura:       "d6b7d4466e3d793e4dda82a96539f79851b7424219f7724aedcdb4b2fdd36f43"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "467ce6793c7872edebdd2f4b417249af775103b404e25d0ca4033fdfea2ed161"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "3394c624973b6b3c73fe0de76c1ba64e05c91bd0f7bee064243955f13181d121"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "3394c624973b6b3c73fe0de76c1ba64e05c91bd0f7bee064243955f13181d121"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "3394c624973b6b3c73fe0de76c1ba64e05c91bd0f7bee064243955f13181d121"
+    sha256 cellar: :any_skip_relocation, sonoma:        "55012f807d634720e9f1231fbd4b02ca6f5fd8c91fbece26686ea2bff37e5ddb"
+    sha256 cellar: :any_skip_relocation, ventura:       "55012f807d634720e9f1231fbd4b02ca6f5fd8c91fbece26686ea2bff37e5ddb"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "f3db6c13d760d1a37fc49ba46beea36f1b522318089ea15a0baf3517b60977fe"
   end
 
   depends_on "go" => :build
@@ -20,7 +20,7 @@ class Kafkactl < Formula
   def install
     ldflags = %W[
       -s -w
-      -X github.com/deviceinsight/kafkactl/v5/cmd.Version=#{version}
+      -X github.com/deviceinsight/kafkactl/v5/cmd.Version=v#{version}
       -X github.com/deviceinsight/kafkactl/v5/cmd.GitCommit=#{tap.user}
       -X github.com/deviceinsight/kafkactl/v5/cmd.BuildTime=#{time.iso8601}
     ]

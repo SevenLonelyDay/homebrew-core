@@ -1,8 +1,8 @@
 class Kdoctools < Formula
   desc "Create documentation from DocBook"
   homepage "https://api.kde.org/frameworks/kdoctools/html/index.html"
-  url "https://download.kde.org/stable/frameworks/6.14/kdoctools-6.14.0.tar.xz"
-  sha256 "acb9c761e8e10c30f2c32061f64096965459a0513250edf4432f40831a0f536e"
+  url "https://download.kde.org/stable/frameworks/6.16/kdoctools-6.16.0.tar.xz"
+  sha256 "5c0c531a7978650f593a63a2aba1a641d590537e74c644aa361c63584b115aa2"
   license all_of: [
     "BSD-3-Clause",
     "GPL-2.0-or-later",
@@ -17,11 +17,11 @@ class Kdoctools < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_sonoma:  "8b4a91f87bf8f1c209c052c502b13cac6dc72d54473c86b05303114c8e0388bc"
-    sha256 cellar: :any,                 arm64_ventura: "67a86914bb79cdc6281b39c2773aada61c7f1265ef0148de75669c13920a1e8a"
-    sha256 cellar: :any,                 sonoma:        "3f8b2ced702ccee1bd044d7aa489dfa5b98d9eeda82c92c6bc649851496bc74c"
-    sha256 cellar: :any,                 ventura:       "56a3d3e6d77ec3a6a517d6a469f1ac136573a29153f8b7021e5c55d67b740526"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "99af23b7ef2bcb011b0d31bb265cace00fd5603a4d602aee7dc6954fb74df70e"
+    sha256 cellar: :any,                 arm64_sonoma:  "8d7efaff525811b62abb0316288a73e618cbfd7f6c96e4bef48bd1f79a8e604a"
+    sha256 cellar: :any,                 arm64_ventura: "dfba835e98c136797a3c1fd45841a1190b6d9785408e29ccf6ebd96b738d6a14"
+    sha256 cellar: :any,                 sonoma:        "9a93e956736b717755b8bebd21953c5a1481d623561cde97b7e185c7d0d38a4d"
+    sha256 cellar: :any,                 ventura:       "0d2047c8416cf079f0475618d5833f72796d8d671dc46b1c9f0360dbe4fe4513"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "e0e4cd4f78b5eb2b728eb9d4f6e6a6385cf6a973ddb1cae5659fa0ba99b0495c"
   end
 
   depends_on "cmake" => [:build, :test]
@@ -39,8 +39,8 @@ class Kdoctools < Formula
 
   resource "URI::Escape" do
     on_linux do
-      url "https://cpan.metacpan.org/authors/id/O/OA/OALDERS/URI-5.27.tar.gz"
-      sha256 "11962d8a8a8496906e5d34774affc235a1c95c112d390c0b4171f3e91e9e2a97"
+      url "https://cpan.metacpan.org/authors/id/O/OA/OALDERS/URI-5.32.tar.gz"
+      sha256 "9632067d34e14e0dae2da94631c4f25a387fcc48d06fa29330e8b3c04c4e913d"
     end
   end
 

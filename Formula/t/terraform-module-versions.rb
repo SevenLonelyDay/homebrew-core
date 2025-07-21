@@ -1,18 +1,18 @@
 class TerraformModuleVersions < Formula
   desc "CLI that checks Terraform code for module updates"
   homepage "https://github.com/keilerkonzept/terraform-module-versions"
-  url "https://github.com/keilerkonzept/terraform-module-versions/archive/refs/tags/v3.3.11.tar.gz"
-  sha256 "f18b908c48b942de8327a958ae56242bd39d6530f7bd9d7f862dc2fa89c115e5"
+  url "https://github.com/keilerkonzept/terraform-module-versions/archive/refs/tags/v3.3.13.tar.gz"
+  sha256 "b85fbeb788c6fca0c328a29a1aab839cd556a7506105f544326a6e322d2aaf80"
   license "MIT"
   head "https://github.com/keilerkonzept/terraform-module-versions.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "30efd3f974b11b2a2485bd27ff1d84e022df9e9186436600d3ff3f1d1cf6c050"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "30efd3f974b11b2a2485bd27ff1d84e022df9e9186436600d3ff3f1d1cf6c050"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "30efd3f974b11b2a2485bd27ff1d84e022df9e9186436600d3ff3f1d1cf6c050"
-    sha256 cellar: :any_skip_relocation, sonoma:        "f4457aa6a640b738a5c3ac987822c98ff9011c9bb9a2db105ae8bd39b9d0e57c"
-    sha256 cellar: :any_skip_relocation, ventura:       "f4457aa6a640b738a5c3ac987822c98ff9011c9bb9a2db105ae8bd39b9d0e57c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "d22cd7b027f23b40571fcb3f2828270a6ad31c52f6342fd75bbbb63dd5984f35"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "f120f8f70dfe4d25b7df6c6fb2469eeaf6bca263d732ad30397a7ec34e9892c6"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "f120f8f70dfe4d25b7df6c6fb2469eeaf6bca263d732ad30397a7ec34e9892c6"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "f120f8f70dfe4d25b7df6c6fb2469eeaf6bca263d732ad30397a7ec34e9892c6"
+    sha256 cellar: :any_skip_relocation, sonoma:        "e1f9c1efef4d6bd1de99676ca38f0d48df39201303c7cb5ef5171f013f51b9f1"
+    sha256 cellar: :any_skip_relocation, ventura:       "e1f9c1efef4d6bd1de99676ca38f0d48df39201303c7cb5ef5171f013f51b9f1"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "58972338b2b52cdd49510d81a228a18eeaa615d4ceec36cd35707dad896b0966"
   end
 
   depends_on "go" => :build

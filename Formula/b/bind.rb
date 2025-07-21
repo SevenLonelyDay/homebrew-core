@@ -8,9 +8,10 @@ class Bind < Formula
   # "version_scheme" because someone upgraded to 9.15.0, and required a
   # downgrade.
 
-  url "https://downloads.isc.org/isc/bind9/9.20.9/bind-9.20.9.tar.xz"
-  sha256 "3d26900ed9c9a859073ffea9b97e292c1248dad18279b17b05fcb23c3091f86d"
+  url "https://downloads.isc.org/isc/bind9/9.20.11/bind-9.20.11.tar.xz"
+  sha256 "4da2d532e668bc21e883f6e6d9d3d81794d9ec60b181530385649a56f46ee17a"
   license "MPL-2.0"
+  revision 1
   version_scheme 1
   head "https://gitlab.isc.org/isc-projects/bind9.git", branch: "main"
 
@@ -22,13 +23,13 @@ class Bind < Formula
   end
 
   bottle do
-    sha256 arm64_sequoia: "4d7c66beb88c5e5d8e3c20291db418aad51300de900ed72418c394dd81840c41"
-    sha256 arm64_sonoma:  "2f3436e23ea82be7b6b3dd91775f939fde74a491b0e5c368df54c8444c6fe591"
-    sha256 arm64_ventura: "5245da53dc075ae58a340a551473413c2096a539f26f1e6429a63ba71e27114e"
-    sha256 sonoma:        "bbaf7eab0093885d78c95e5f6e722dd24012fe212a082a7485463ee13604840d"
-    sha256 ventura:       "87f3fab901cbb084953774a760f253899b05293d5b40b5cb423d5f12957a1268"
-    sha256 arm64_linux:   "a706d84cd5c331a552807cf3ae1cfb6a84692a18fd77af2bbd25bd1eefdca61d"
-    sha256 x86_64_linux:  "6e09280279e1450251a7da589d28a605560fb93096ab2e05beac7d5bc4699a10"
+    sha256 arm64_sequoia: "ec86c918acab962d82267f20bf3b2baad077dacfbc2ce5968c4ec841dde34b89"
+    sha256 arm64_sonoma:  "736a239a4027b77698f52503a8103844702c51566eba9e628ea2aef528d4f34e"
+    sha256 arm64_ventura: "7a4119bce30046c23d032198dd165e3e16295308ddb2d28f8e86d6e2bcb864ec"
+    sha256 sonoma:        "2b6cddfc3f454c4b0e46ed80b05671d07b070de3b410b34173012a92f2b8600e"
+    sha256 ventura:       "d58dcf153aef18b184dab9e869da55b90ae111ee7e83ff803439ecfba367991d"
+    sha256 arm64_linux:   "07b07a13b4d712a1d4b5ee038a2634eab381dcae30a0964b0cb3357c4c3c1b4a"
+    sha256 x86_64_linux:  "1f4bbe94883a40c0ad6d5f7d8a74e190752a8d72b284742593d1fb0cda2bbd5b"
   end
 
   depends_on "pkgconf" => :build
@@ -50,6 +51,11 @@ class Bind < Formula
   end
 
   def install
+    # Apply macOS 15+ libxml2 deprecation to all macOS versions.
+    # This allows our macOS 14-built Intel bottle to work on macOS 15+
+    # and also cover the case where a user on macOS 14- updates to macOS 15+.
+    ENV.append_to_cflags "-DLIBXML_HAS_DEPRECATED_MEMORY_ALLOCATION_FUNCTIONS" if OS.mac?
+
     args = [
       "--prefix=#{prefix}",
       "--sysconfdir=#{pkgetc}",

@@ -3,8 +3,8 @@ class Mlx < Formula
 
   desc "Array framework for Apple silicon"
   homepage "https://github.com/ml-explore/mlx"
-  url "https://github.com/ml-explore/mlx/archive/refs/tags/v0.26.1.tar.gz"
-  sha256 "76a9e2fff69b8b55097b87f7e7cab67107358b9f400575e4c0f6f1137893d000"
+  url "https://github.com/ml-explore/mlx/archive/refs/tags/v0.26.5.tar.gz"
+  sha256 "3c68272085490558690182718e62de934b51c3bd6e8cff522a4c3a14ccea0014"
   license all_of: [
     "MIT", # main license
     "Apache-2.0", # metal-cpp resource
@@ -12,11 +12,11 @@ class Mlx < Formula
   head "https://github.com/ml-explore/mlx.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any, arm64_sequoia: "c80b2b0e542e15da84bbca6b15cc64ee473fd4b08e8440fc1eefffc72987b850"
-    sha256 cellar: :any, arm64_sonoma:  "a9a72d07832767761c11b1459ba6f72583e43604a93de9e2bf5872e2e5bd16d7"
-    sha256 cellar: :any, arm64_ventura: "b733814476582692843cc078692e6752a541e5123b8326dacd9b4cd9cd08c62c"
-    sha256 cellar: :any, sonoma:        "34c6d9cb4c4e5156d92270f5aae726a5dc97e635dbf9a8cb249c5bf5829438df"
-    sha256 cellar: :any, ventura:       "44f944e688bcb15e598114966b06a15fd6c922de8e1a3a0a50a7f7a9bdebc8e6"
+    sha256 cellar: :any, arm64_sequoia: "5d84fac62d3a3f643a7fadcb78c0e7865a182ea7a2448b4a6d5cb10d72400f6c"
+    sha256 cellar: :any, arm64_sonoma:  "dd2800125c98e5e028c51a3708cf9ad0cb8fe69bdd23afd88f5da80b4ac2f433"
+    sha256 cellar: :any, arm64_ventura: "82d79d70225ab5c805575718f58409b7f5ca33b83fc5edd08afd095d577fbe88"
+    sha256 cellar: :any, sonoma:        "19f292fc900c5dc3daca7f3e43fd259438baaedc525c69ff300c1ccd36bb5192"
+    sha256 cellar: :any, ventura:       "7f1fda2544c693cc15a6e1b0ba2aebb9672ae96028cfa74205b1e1c39de4a7a8"
   end
 
   depends_on "cmake" => :build
@@ -37,7 +37,7 @@ class Mlx < Formula
     depends_on "openblas"
   end
 
-  # https://github.com/ml-explore/mlx/blob/v#{version}/CMakeLists.txt#L98
+  # https://github.com/ml-explore/mlx/blob/v#{version}/CMakeLists.txt
   # Included in not_a_binary_url_prefix_allowlist.json
   resource "metal-cpp" do
     on_arm do
@@ -46,7 +46,7 @@ class Mlx < Formula
     end
   end
 
-  # Update to GIT_TAG at https://github.com/ml-explore/mlx/blob/v#{version}/mlx/io/CMakeLists.txt#L21
+  # Update to GIT_TAG at https://github.com/ml-explore/mlx/blob/v#{version}/mlx/io/CMakeLists.txt
   resource "gguflib" do
     url "https://github.com/antirez/gguf-tools/archive/af7d88d808a7608a33723fba067036202910acb3.tar.gz"
     sha256 "1ee2dde74a3f9506af9ad61d7638a5e87b5e891b5e36a5dd3d5f412a8ce8dd03"

@@ -1,8 +1,8 @@
 class NodeAT20 < Formula
   desc "Platform built on V8 to build network applications"
   homepage "https://nodejs.org/"
-  url "https://nodejs.org/dist/v20.19.2/node-v20.19.2.tar.xz"
-  sha256 "4a7ff611d5180f4e420204fa6f22f9f9deb2ac5e98619dd9a4de87edf5b03b6e"
+  url "https://nodejs.org/dist/v20.19.4/node-v20.19.4.tar.xz"
+  sha256 "b87fd7106013d3906706913ffc63a4403715fbb272c4f83ff4338527353eec0f"
   license "MIT"
 
   livecheck do
@@ -11,13 +11,13 @@ class NodeAT20 < Formula
   end
 
   bottle do
-    sha256 arm64_sequoia: "be55f8d8c39ef95fc8679c5134e220170a1018b8260d4e0ef094bc1a2b4a9f75"
-    sha256 arm64_sonoma:  "6da90926c6e9c66a8a7cf036fac648b725885e9df5c4555138db694035fecb8f"
-    sha256 arm64_ventura: "a8868e101395048bb17d35f6c70d61876e79de376b09bd6c3008c89caebe9619"
-    sha256 sonoma:        "4f0d2148422fa01d70d1128f956625b75f2b6fb6e7e5e3fb51e32c982f5410cf"
-    sha256 ventura:       "d850934c12a4c34c7219346a875d8038f55484ad0630a81d59fd1142b4032235"
-    sha256 arm64_linux:   "7c0fddc0126df790140b7851ca49982e843c4fb94b35642b10cd08b1b16bdc17"
-    sha256 x86_64_linux:  "d70ddaccae20469adb9fbbd4f02f96f8d6e1fa8230f0199672c2e3204146c490"
+    sha256 arm64_sequoia: "62e9c3a38ade4feee40a8afd3be4aae9956b3a4b8a00b6185090fc8c3b75e196"
+    sha256 arm64_sonoma:  "3b99b3d9aa58de57ca704d351e369aad2f750cbe3005aed4b1bae5d2b580f947"
+    sha256 arm64_ventura: "6c264b13b45f336cd2640019f17bacb55553ab6960adfcca1603a4b405051404"
+    sha256 sonoma:        "d114f6a022c90185cab56ce991ffcb17db9b3504ddb20b4182b19a1b5c44d889"
+    sha256 ventura:       "37353ba8dd89ddff6f91b9ab295bb9f893561de2eaa5b54e4bb6b14714cb2b46"
+    sha256 arm64_linux:   "13034db1cd6aeb980276a5679c0ef7adf486cae7201af475e5d411004ea787ef"
+    sha256 x86_64_linux:  "38d9c443c9829768819694ce3645b33bae521122c550c08ff9bd4594c2906246"
   end
 
   keg_only :versioned_formula
@@ -47,20 +47,6 @@ class NodeAT20 < Formula
     cause <<~EOS
       error: calling a private constructor of class 'v8::internal::(anonymous namespace)::RegExpParserImpl<uint8_t>'
     EOS
-  end
-
-  # Fix build with Xcode 16.3.
-  patch do
-    url "https://github.com/Bo98/node/commit/3b5eb14cad3a493e99f84ca45871bd37570cae3d.patch?full_index=1"
-    sha256 "3a110c30ec63c4e5afbb48f27922a69c40d3939db5a5b6b20d40660f996ae27d"
-  end
-  patch do
-    url "https://github.com/Bo98/node/commit/e2ab76c1aeceaf866b8c5053cf71f199706d621d.patch?full_index=1"
-    sha256 "b306c7cfa910e025b1a23fda1da8f8613310a2d7b5c575d3718529db8d9e7fdd"
-  end
-  patch do
-    url "https://github.com/Bo98/node/commit/a56d782971c30164545e76a97b07ade373a3a565.patch?full_index=1"
-    sha256 "86af038fca81170d41e7c324864cc74fb098dbea6b8d28273b6b50ca53415979"
   end
 
   def install

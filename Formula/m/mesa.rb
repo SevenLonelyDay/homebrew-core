@@ -3,8 +3,8 @@ class Mesa < Formula
 
   desc "Graphics Library"
   homepage "https://www.mesa3d.org/"
-  url "https://archive.mesa3d.org/mesa-25.1.3.tar.xz"
-  sha256 "ffcb6cadb5fd356d56008e6308641dfe4b2929f30139f6585436ca6e3cddba7f"
+  url "https://archive.mesa3d.org/mesa-25.1.6.tar.xz"
+  sha256 "9f2b69eb39d2d8717d30a9868fdda3e0c0d3708ba32778bbac8ddb044538ce84"
   license all_of: [
     "MIT",
     "Apache-2.0", # include/{EGL,GLES*,vk_video,vulkan}, src/egl/generate/egl.xml, src/mapi/glapi/registry/gl.xml
@@ -22,16 +22,14 @@ class Mesa < Formula
   ]
   head "https://gitlab.freedesktop.org/mesa/mesa.git", branch: "main"
 
-  no_autobump! because: :requires_manual_review
-
   bottle do
-    sha256 arm64_sequoia: "25a43786f25a951721f4f239ecbdac034ef452ab1d0eeab3310dbbaade9dceee"
-    sha256 arm64_sonoma:  "7b7dbefe2293830585c8f135e140ed31db797cc8aa0aa5d41a28c8d35f712ae8"
-    sha256 arm64_ventura: "018397552a7884c4f685dfe4f56ec2d409f21bd72f323542b19f2020801599b8"
-    sha256 sonoma:        "1b9e7c285a014162b986a16e6cbee2625d0b5629acd1e1016786d75f54857ca8"
-    sha256 ventura:       "164f247aa653cb9d90cede241e758603eccc7d302c5f9d1dee09d04df6c67fb3"
-    sha256 arm64_linux:   "1ec91c65076383f25c001274ae480040571eff960f0fd03fa53863eb7f67aa7b"
-    sha256 x86_64_linux:  "32d10f3604285d30a1d4dfc7bfa04e2e0b061fba0f6ed62a3f17fe7c1698a047"
+    sha256 arm64_sequoia: "e68026fed60bfe45cc49032020773229711644cf00e624e2a1b81bd7aef1ff72"
+    sha256 arm64_sonoma:  "7e36ba1f5a3bcf8df5e49577d264d5443b229becfeca831209403bf781997b12"
+    sha256 arm64_ventura: "e40a376f566f8d1c13ef98952aef4aedf84e23bc6cd3ad840ec1467db63e7554"
+    sha256 sonoma:        "a0df8f9c13d8d0804a01a7d659368320f04a40b79d91d5615817fb0fc55219bf"
+    sha256 ventura:       "074c954d164280e15011b52bbe4aafb49a15f25e38febe7e00734d8ac48939b5"
+    sha256 arm64_linux:   "dd2a27631e4413c49c023f6dd6c35ed5e50f6fed3a5d66da71cfed028d374e13"
+    sha256 x86_64_linux:  "3e01c0fff41e0024dd2193764e5e259049632fbc52fc4c216b6e6680b7b2ffce"
   end
 
   depends_on "bindgen" => :build

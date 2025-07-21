@@ -1,18 +1,18 @@
 class GrafanaAlloy < Formula
   desc "OpenTelemetry Collector distribution with programmable pipelines"
   homepage "https://grafana.com/oss/alloy-opentelemetry-collector/"
-  url "https://github.com/grafana/alloy/archive/refs/tags/v1.9.1.tar.gz"
-  sha256 "d9eaa0719b9264b47d30ad459d13535d9e51815afcb089245b10eabffb14793c"
+  url "https://github.com/grafana/alloy/archive/refs/tags/v1.10.0.tar.gz"
+  sha256 "205a23ef00055381782e8823744c84d2b1124ca6f3993e91c276711cfb0a271b"
   license "Apache-2.0"
   head "https://github.com/grafana/alloy.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "5fa4ab718ee2c2a349ec18cfc32b64efa61b8c893373c4bf2d4e60865f972b3f"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "e2878ce46352a891e0e1403bc2b6ba622fd04bcc8f7c4a11527afe84f6ceb0ba"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "b7085ef27a3379c15b020ece45c2b3bd27da7d46c210719f2e917b5df2bfc7f3"
-    sha256 cellar: :any_skip_relocation, sonoma:        "e699aa684016788397b9f7ec8ceef2cf51c776eb6eec3a8de76af00d1b76cf3b"
-    sha256 cellar: :any_skip_relocation, ventura:       "804524c5b40a63fa3c02e08450abecb11a325440959984c1c2dad5f271497b70"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "77707c1e4a40bf5710c5751cea903427946072c2a87fdd25d1bb2b9ab360e6e5"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "9959875cf2dbaaeceb2c90607ff98fb02e868cb1f2413961978a99abfcb8c363"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "1deef7d2db828ec71ba1627c54bb49def4ebcd755121aeed6b18210b0b44b4a2"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "62a14822a093779b1eb0009885ec6935d222e3e07d94234124737fb8ced6a94d"
+    sha256 cellar: :any_skip_relocation, sonoma:        "5e51e7a0ffe2e3626cdce59db3923f4da51e851b3ca95d812ce4791e41ef4846"
+    sha256 cellar: :any_skip_relocation, ventura:       "8954f52f358aa96ed79a974992ac2da257f158251e372d3b8908691c6e6160a7"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "1b282c3443cfb6d03357adfb9396b882ea4c86b5be783d18a004ba006d51b1c1"
   end
 
   depends_on "go" => :build
@@ -23,7 +23,7 @@ class GrafanaAlloy < Formula
     depends_on "systemd" # for go-systemd (dlopen-ed)
   end
 
-  conflicts_with "alloy", because: "both install `alloy` binaries"
+  conflicts_with "alloy-analyzer", because: "both install `alloy` binaries"
 
   def install
     ldflags = %W[

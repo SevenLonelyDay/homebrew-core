@@ -6,16 +6,16 @@ class Dnstwist < Formula
   url "https://files.pythonhosted.org/packages/e7/0e/88b4c5c7f3077c0d2e8544a14e321fce80b3cf0148a46dec9724e27c61d3/dnstwist-20250130.tar.gz"
   sha256 "8b6dd9c42a643a0e8b087903c0e6d75c0f6cebf94920ab0b7760ac2522c6bb42"
   license "Apache-2.0"
-  revision 1
+  revision 3
 
   bottle do
-    sha256 cellar: :any,                 arm64_sequoia: "366ec0adb71ee84d67b89ce4d469f92dbba2f294b1f71f29753277a0343ac268"
-    sha256 cellar: :any,                 arm64_sonoma:  "374f1f149942aebe8e890ec038fce6eda557ec6bc5b7cb4f80e8eee6a59e1c52"
-    sha256 cellar: :any,                 arm64_ventura: "bbf0f1c3f9d1807e96192517840f29949ed4425b27f9aa58cd76bf3d3dcce258"
-    sha256 cellar: :any,                 sonoma:        "9f9253f3532aa49a25693021147fcfb3cfb05a9ba1eae15213de94aaa3525bde"
-    sha256 cellar: :any,                 ventura:       "789e566f70252c9351cbf04916ede41eb7457a06af724c6f471e292cf71108d3"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "31ab6f3c78135a30ee41c3e739bad5a83ad608077a430ae5925af24844798437"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "a0ea91569f0cc5fa1da1ec0292e8ac946afd4cf258d56aec68a7cce4db6c2940"
+    sha256 cellar: :any,                 arm64_sequoia: "92a414114759163636ead9e95b31239a977ceae1eeb477696f2d21ac144c23d7"
+    sha256 cellar: :any,                 arm64_sonoma:  "30209cc6e33da07ba4518aa25e9218445f4668b72542a776ad086788c8fca62c"
+    sha256 cellar: :any,                 arm64_ventura: "d2116f01b9fa5ea57456d7828632315f1de22842aa31ca88fb10c1820663fc06"
+    sha256 cellar: :any,                 sonoma:        "efbac42648b10f833375d9356c7b2563c7567d005efd00ada0434a7a3d9a9812"
+    sha256 cellar: :any,                 ventura:       "699a8d6af729a1aa6fe1786b2d996b0c8611dd5d8f9812b2d1b330947a4e3cb2"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "bbb111e74bbc82d05bc1b4b9effd33eba19e1672f077565d94b226cc4015eb94"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "5d2b855062d208f7ea5b2b4799b33cdc4d661e955ab7bd83ae0b5acffe1e5b4b"
   end
 
   depends_on "certifi"
@@ -35,13 +35,13 @@ class Dnstwist < Formula
   end
 
   resource "aiohttp" do
-    url "https://files.pythonhosted.org/packages/f2/84/ea27e6ad14747d8c51afe201fb88a5c8282b6278256d30a6f71f730add88/aiohttp-3.12.12.tar.gz"
-    sha256 "05875595d2483d96cb61fa9f64e75262d7ac6251a7e3c811d8e26f7d721760bd"
+    url "https://files.pythonhosted.org/packages/e6/0b/e39ad954107ebf213a2325038a3e7a506be3d98e1435e1f82086eec4cde2/aiohttp-3.12.14.tar.gz"
+    sha256 "6e06e120e34d93100de448fd941522e11dafa78ef1a893c179901b7d66aa29f2"
   end
 
   resource "aiosignal" do
-    url "https://files.pythonhosted.org/packages/ba/b5/6d55e80f6d8a08ce22b982eafa278d823b541c925f11ee774b0b9c43473d/aiosignal-1.3.2.tar.gz"
-    sha256 "a8c255c66fafb1e499c9351d0bf32ff2d8a0321595ebac3b93713656d2436f54"
+    url "https://files.pythonhosted.org/packages/61/62/06741b579156360248d1ec624842ad0edf697050bbaf7c3e46394e106ad1/aiosignal-1.4.0.tar.gz"
+    sha256 "f47eecd9468083c2029cc99945502cb7708b082c232f9aca65da147157b251c7"
   end
 
   resource "attrs" do
@@ -80,13 +80,13 @@ class Dnstwist < Formula
   end
 
   resource "multidict" do
-    url "https://files.pythonhosted.org/packages/91/2f/a3470242707058fe856fe59241eee5635d79087100b7042a867368863a27/multidict-6.4.4.tar.gz"
-    sha256 "69ee9e6ba214b5245031b76233dd95408a0fd57fdb019ddcc1ead4790932a8e8"
+    url "https://files.pythonhosted.org/packages/3d/2c/5dad12e82fbdf7470f29bff2171484bf07cb3b16ada60a6589af8f376440/multidict-6.6.3.tar.gz"
+    sha256 "798a9eb12dab0a6c2e29c1de6f3468af5cb2da6053a20dfa3344907eed0937cc"
   end
 
   resource "ppdeep" do
-    url "https://files.pythonhosted.org/packages/64/ad/ca722788606970d227b1778c158d4a04ffd8190487fa80b3273e3fa587ac/ppdeep-20200505.tar.gz"
-    sha256 "acc74bb902e6d21b03d39aed740597093c6562185bfe06da9b5272e01c80a1ff"
+    url "https://files.pythonhosted.org/packages/f2/74/d328ee495bcf5f98ae2967fdce45e1ca4b73e8f253e24a61e50f7527d5d9/ppdeep-20250625.tar.gz"
+    sha256 "b7da50e54ed9bd79326382b6f2f51f371816f0495a5233dee23a9469f87a2a78"
   end
 
   resource "propcache" do
@@ -110,8 +110,8 @@ class Dnstwist < Formula
   end
 
   resource "urllib3" do
-    url "https://files.pythonhosted.org/packages/8a/78/16493d9c386d8e60e442a35feac5e00f0913c0f4b7c217c11e8ec2ff53e0/urllib3-2.4.0.tar.gz"
-    sha256 "414bc6535b787febd7567804cc015fee39daab8ad86268f1310a9250697de466"
+    url "https://files.pythonhosted.org/packages/15/22/9ee70a2574a4f4599c47dd506532914ce044817c7752a79b6a51286319bc/urllib3-2.5.0.tar.gz"
+    sha256 "3fc47733c7e419d4bc3f6b3dc2b4f890bb743906a30d56ba4a5bfa4bbff92760"
   end
 
   resource "yarl" do

@@ -1,19 +1,19 @@
 class Rclone < Formula
   desc "Rsync for cloud storage"
   homepage "https://rclone.org/"
-  url "https://github.com/rclone/rclone/archive/refs/tags/v1.69.3.tar.gz"
-  sha256 "ff6d17d187dd23648bfd33f20ff48902f7f08d2d9231f1f11825109903356b21"
+  url "https://github.com/rclone/rclone/archive/refs/tags/v1.70.3.tar.gz"
+  sha256 "0b25fb9f0cb26883cfa885576ddb34276564a1e224edc5aacab826f9ba22179d"
   license "MIT"
   head "https://github.com/rclone/rclone.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "1a68f9f61f3d375d71ee51f276d0a22d11902ea1525bf1aaa0cf6a14b2e40876"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "66d574b317412061e35b3f5dbe72d677dc1147c7642a62bca721be6df4d4f8b3"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "180411120c0caf156d73481bbd7d73553e30cdf9e6ca611cf49671652ba2d57a"
-    sha256 cellar: :any_skip_relocation, sonoma:        "655b770e1560d1fb67e2c53018425420e25733f40e145c272eeffe0df3d68c3a"
-    sha256 cellar: :any_skip_relocation, ventura:       "2246e2b974c8c6ef03a6509434dc2d47f583403288a5accfc9eb418ffa08047e"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "c8111eb9652a49b8b70a5f391414264988ab0a00d2f12e1ebf912f3a58b45d5c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "53b4a81d1083edcbac8f53f87017952c76826b09399ea6eb65620a781f11fba1"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "88f68f773f201fe8519cfd5f2f43e19b6b031e6dff9d80769f6d9c33435b3d67"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "cfd8d19db35ae2f3ffd6b0aca47f7b7dd15bf156c5b39cf303fbc2272d20933f"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "f821054e37ea2730afe194e78427e17fcadf4dd1a394f500af0d90f1b1539d32"
+    sha256 cellar: :any_skip_relocation, sonoma:        "3b1da20eb88b913ffb5614dd7bed8571ec63c751d6516fceae47a00d44ebb05d"
+    sha256 cellar: :any_skip_relocation, ventura:       "5a147b19d298a6d0427b291261e545e7a7647c10933cb1a77d318a8e5e5d2cda"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "382c43672dcf92de64f20df8bc02e13e7ab1ce674de7448afa6275117f764440"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "f35f2c6c2fed7316c6d8019c7eaba52aea9d0f2f37905a8e63b13846a37a4d63"
   end
 
   depends_on "go" => :build

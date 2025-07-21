@@ -6,17 +6,18 @@ class Gptme < Formula
   url "https://files.pythonhosted.org/packages/5e/82/8d6200fabd2dfaee7ab62713a51174b2634d0ef47cea17a1c67871625c43/gptme-0.27.0.tar.gz"
   sha256 "6d2ebc20275d028a6f013a05e9b6a93d7bc02fc39ecb6ec3003d573c0690f11c"
   license "MIT"
-  revision 2
+  revision 3
   head "https://github.com/ErikBjare/gptme.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_sequoia: "7484af5292adb27d27d837a7a0af5b3a6dfbe7af80351a92e4e233e5c46f83fe"
-    sha256 cellar: :any,                 arm64_sonoma:  "f9e0b7932cde7f7e1e5f53c7edac2f7e7a242a6607dbd29ca83eef5c085ed647"
-    sha256 cellar: :any,                 arm64_ventura: "35817ddbdb8eef12958f5cda311f5bfa6f0e1414134f2805724b7e8f4a994312"
-    sha256 cellar: :any,                 sonoma:        "b5ac7fc5aa195fdbc7db675fa257b4a94afb9502a2fd1ecd0dc5c7c08a383b75"
-    sha256 cellar: :any,                 ventura:       "38dbb0137bfcc39dfd555bf0b768d83dcc58397e5fa5355770540edbe00e66b9"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "3215bf39eaa9a72c20a707a7011bda7279fc25a34b5b394e8c688ea7cf76f2a0"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "462059e69ab67f78bb4b64b3fa579343f73b2a40e5e60ba11bd1c30dc18685c0"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_sequoia: "a0c6728a8e0bdf0e3174f356cfb05571e7e9d96f230b79b0906c15908273001c"
+    sha256 cellar: :any,                 arm64_sonoma:  "021fe908e6382c4325bb12b7204c257f7a420c1492a4190f28229b7194c16a8c"
+    sha256 cellar: :any,                 arm64_ventura: "d755f15f5fe7cbfdb7c868a1ab15f41fa4bbaab4be2200289edfc6a14c52d9b8"
+    sha256 cellar: :any,                 sonoma:        "2220c5dad0209c8d349533bad86a4c62ba7776ef073e72aba78fcdd05168c0c3"
+    sha256 cellar: :any,                 ventura:       "de10426374a40c0eec86026511d9ef7c5b3a58cb60b02570b6d409e3ba2ceebd"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "e4bc750e9608327aee86ce0a1c7d2b3be00dd48810ded4482bff8e58d4dba1d2"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "ba127e9a2e2c0ea3c6ca52e6979df5921bdff4b803ec5381a5291ed7129e5738"
   end
 
   depends_on "rust" => :build
@@ -144,8 +145,8 @@ class Gptme < Formula
   end
 
   resource "openai" do
-    url "https://files.pythonhosted.org/packages/ec/7a/9ad4a61f1502f0e59d8c27fb629e28a63259a44d8d31cd2314e1534a2d9f/openai-1.86.0.tar.gz"
-    sha256 "c64d5b788359a8fdf69bd605ae804ce41c1ce2e78b8dd93e2542e0ee267f1e4b"
+    url "https://files.pythonhosted.org/packages/5a/ea/bbeef604d1fe0f7e9111745bb8a81362973a95713b28855beb9a9832ab12/openai-1.88.0.tar.gz"
+    sha256 "122d35e42998255cf1fc84560f6ee49a844e65c054cd05d3e42fda506b832bb1"
   end
 
   resource "parso" do
@@ -184,8 +185,8 @@ class Gptme < Formula
   end
 
   resource "pydantic" do
-    url "https://files.pythonhosted.org/packages/f0/86/8ce9040065e8f924d642c58e4a344e33163a07f6b57f836d0d734e0ad3fb/pydantic-2.11.5.tar.gz"
-    sha256 "7f853db3d0ce78ce8bbb148c401c2cdd6431b3473c0cdff2755c7690952a7b7a"
+    url "https://files.pythonhosted.org/packages/00/dd/4325abf92c39ba8623b5af936ddb36ffcfe0beae70405d456ab1fb2f5b8c/pydantic-2.11.7.tar.gz"
+    sha256 "d989c3c6cb79469287b1569f7447a17848c998458d49ebe294e975b9baf0f0db"
   end
 
   resource "pydantic-core" do
@@ -264,8 +265,8 @@ class Gptme < Formula
   end
 
   resource "urllib3" do
-    url "https://files.pythonhosted.org/packages/8a/78/16493d9c386d8e60e442a35feac5e00f0913c0f4b7c217c11e8ec2ff53e0/urllib3-2.4.0.tar.gz"
-    sha256 "414bc6535b787febd7567804cc015fee39daab8ad86268f1310a9250697de466"
+    url "https://files.pythonhosted.org/packages/15/22/9ee70a2574a4f4599c47dd506532914ce044817c7752a79b6a51286319bc/urllib3-2.5.0.tar.gz"
+    sha256 "3fc47733c7e419d4bc3f6b3dc2b4f890bb743906a30d56ba4a5bfa4bbff92760"
   end
 
   resource "wcwidth" do
@@ -279,7 +280,7 @@ class Gptme < Formula
 
     virtualenv_install_with_resources
 
-    generate_completions_from_executable(bin/"gptme", shells: [:fish, :zsh], shell_parameter_format: :click)
+    generate_completions_from_executable(bin/"gptme", shell_parameter_format: :click)
   end
 
   test do

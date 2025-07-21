@@ -1,18 +1,18 @@
 class Basedpyright < Formula
   desc "Pyright fork with various improvements and built-in pylance features"
   homepage "https://github.com/DetachHead/basedpyright"
-  url "https://registry.npmjs.org/basedpyright/-/basedpyright-1.29.4.tgz"
-  sha256 "5a0345d716abbb9a8399378825a41daceb869448874a40852511a0ee97246c91"
+  url "https://registry.npmjs.org/basedpyright/-/basedpyright-1.31.0.tgz"
+  sha256 "05391cdff033634b37234ecd8331ce238479f1c331afa95fa95bc494b104e432"
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "41f2cfb259721f6d825a5bdd4c0af11aa9e865497ea17046a286af1972775412"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "41f2cfb259721f6d825a5bdd4c0af11aa9e865497ea17046a286af1972775412"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "41f2cfb259721f6d825a5bdd4c0af11aa9e865497ea17046a286af1972775412"
-    sha256 cellar: :any_skip_relocation, sonoma:        "8e10d442928a4943cb2ac83aa9456960daefd09f04f6776dc00fde08c0cdae11"
-    sha256 cellar: :any_skip_relocation, ventura:       "8e10d442928a4943cb2ac83aa9456960daefd09f04f6776dc00fde08c0cdae11"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "41f2cfb259721f6d825a5bdd4c0af11aa9e865497ea17046a286af1972775412"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "41f2cfb259721f6d825a5bdd4c0af11aa9e865497ea17046a286af1972775412"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "18e8de81c5058a34215e34a28489d9b2beaa91c94d8e5c0140553edf664d1efe"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "18e8de81c5058a34215e34a28489d9b2beaa91c94d8e5c0140553edf664d1efe"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "18e8de81c5058a34215e34a28489d9b2beaa91c94d8e5c0140553edf664d1efe"
+    sha256 cellar: :any_skip_relocation, sonoma:        "38cdc47202d9fba2aabdac40d3d662c6863fa5de6387fb0174d1d2d2eade025d"
+    sha256 cellar: :any_skip_relocation, ventura:       "38cdc47202d9fba2aabdac40d3d662c6863fa5de6387fb0174d1d2d2eade025d"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "18e8de81c5058a34215e34a28489d9b2beaa91c94d8e5c0140553edf664d1efe"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "18e8de81c5058a34215e34a28489d9b2beaa91c94d8e5c0140553edf664d1efe"
   end
 
   depends_on "node"

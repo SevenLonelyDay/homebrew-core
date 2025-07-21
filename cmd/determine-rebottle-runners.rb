@@ -32,7 +32,7 @@ module Homebrew
         {
           runner:    linux_runner,
           container: {
-            image:   "ghcr.io/homebrew/ubuntu22.04:master",
+            image:   "ghcr.io/homebrew/ubuntu22.04:main",
             options: "--user=linuxbrew -e GITHUB_ACTIONS_HOMEBREW_SELF_HOSTED",
           },
           workdir:   "/github/home",
@@ -47,9 +47,9 @@ module Homebrew
         timeout = args.named.second.to_i
 
         tags = formula.bottle_specification.collector.tags
-        runners = if tags.count == 1 && tags.first.system == :all
+        runners = if tags.one? && tags.first.system == :all
           # Build on all supported macOS versions and Linux.
-          MacOSVersion::SYMBOLS.keys.flat_map do |symbol|
+          [linux_runner_spec(:x86_64, timeout)] + MacOSVersion::SYMBOLS.keys.flat_map do |symbol|
             macos_version = MacOSVersion.from_symbol(symbol)
             if macos_version.outdated_release? || macos_version.prerelease?
               nil
@@ -59,7 +59,7 @@ module Homebrew
               macos_runners << { runner: "#{macos_version}-arm64#{ephemeral_suffix}" }
               macos_runners
             end
-          end << linux_runner_spec(:x86_64, timeout)
+          end
         else
           tags.map do |tag|
             macos_version = tag.to_macos_version

@@ -6,19 +6,20 @@ class HttpPrompt < Formula
   url "https://files.pythonhosted.org/packages/bf/e2/bc5b0df107afcac65fde7015df48cbe9b4d877d1d0818203544ed1a41d4c/http-prompt-2.1.0.tar.gz"
   sha256 "eee71a00fed0b8a2a35bb338b269be7a20e8a1a6f6465a65561d76a21521e7f3"
   license "MIT"
-  revision 12
+  revision 13
   head "https://github.com/httpie/http-prompt.git", branch: "master"
 
   no_autobump! because: :requires_manual_review
 
   bottle do
-    sha256 cellar: :any,                 arm64_sequoia: "46c04a51a98a30cf89419af3cb9451e8e77fc07c7073ba55fbe4eb97cf189b9a"
-    sha256 cellar: :any,                 arm64_sonoma:  "81f84f831dc105e50f1f728ac75295d4d7578c3548e273b0ff5d383ca67ea519"
-    sha256 cellar: :any,                 arm64_ventura: "b16ff6d6a0e929e06e7b313e31d76bdb5b3deed58fe0789bffff804d5c369076"
-    sha256 cellar: :any,                 sonoma:        "83bb2b5e2f453636747c09a9685f5fff1e602d6784927e4af7b32f4ccfae4dc7"
-    sha256 cellar: :any,                 ventura:       "0138720ad89613031315237d087bb659ddd6c8cbd6a4a855d5b59dc40df26b4c"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "a1aaabc4d6a32d2bf63453ca1ab1a8a6f4dfbbc5368f1f9be6685f82a0b588a3"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "bdc91e5f1f00b48530a123c24d565108f1e48cee2da7d715147d3cb585c0c067"
+    rebuild 2
+    sha256 cellar: :any,                 arm64_sequoia: "8fb96b2aaf910e390ac7e12f7268f8679311a7782648ddcb066322eccfa43ef5"
+    sha256 cellar: :any,                 arm64_sonoma:  "ad2764c7662bfbc1f34e93161f87981ad2ff41166f75b9c244704d9bb7598264"
+    sha256 cellar: :any,                 arm64_ventura: "0532a8228129394bf13ee6f053858ffd7954404bd53dbb5b7da5da0274f10a6a"
+    sha256 cellar: :any,                 sonoma:        "dacf348561198beea4d248bd7a9d816a30399f707d08ec4fec8342db6fc05f28"
+    sha256 cellar: :any,                 ventura:       "9e0a279b469685fc81daaaa65b61b25d0869e797fc161972152529a585260b5b"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "64128e8649f032b5515f1692641730b1a18b01c8f8526e7ec7f71df02ca2fb6b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "16bd9aa4d0b7cbaa76f7a09fd2ab89e5d5d61aa7529175ac213e592a1d8d1970"
   end
 
   depends_on "certifi"
@@ -61,8 +62,8 @@ class HttpPrompt < Formula
   end
 
   resource "multidict" do
-    url "https://files.pythonhosted.org/packages/91/2f/a3470242707058fe856fe59241eee5635d79087100b7042a867368863a27/multidict-6.4.4.tar.gz"
-    sha256 "69ee9e6ba214b5245031b76233dd95408a0fd57fdb019ddcc1ead4790932a8e8"
+    url "https://files.pythonhosted.org/packages/3d/2c/5dad12e82fbdf7470f29bff2171484bf07cb3b16ada60a6589af8f376440/multidict-6.6.3.tar.gz"
+    sha256 "798a9eb12dab0a6c2e29c1de6f3468af5cb2da6053a20dfa3344907eed0937cc"
   end
 
   resource "parsimonious" do
@@ -76,8 +77,8 @@ class HttpPrompt < Formula
   end
 
   resource "pygments" do
-    url "https://files.pythonhosted.org/packages/7c/2d/c3338d48ea6cc0feb8446d8e6937e1408088a72a39937982cc6111d17f84/pygments-2.19.1.tar.gz"
-    sha256 "61c16d2a8576dc0649d9f39e089b5f02bcd27fba10d8fb4dcc28173f7a45151f"
+    url "https://files.pythonhosted.org/packages/b0/77/a5b8c569bf593b0140bde72ea885a803b82086995367bf2037de0159d924/pygments-2.19.2.tar.gz"
+    sha256 "636cb2477cec7f8952536970bc533bc43743542f70392ae026374600add5b887"
   end
 
   resource "pysocks" do
@@ -121,8 +122,8 @@ class HttpPrompt < Formula
   end
 
   resource "urllib3" do
-    url "https://files.pythonhosted.org/packages/8a/78/16493d9c386d8e60e442a35feac5e00f0913c0f4b7c217c11e8ec2ff53e0/urllib3-2.4.0.tar.gz"
-    sha256 "414bc6535b787febd7567804cc015fee39daab8ad86268f1310a9250697de466"
+    url "https://files.pythonhosted.org/packages/15/22/9ee70a2574a4f4599c47dd506532914ce044817c7752a79b6a51286319bc/urllib3-2.5.0.tar.gz"
+    sha256 "3fc47733c7e419d4bc3f6b3dc2b4f890bb743906a30d56ba4a5bfa4bbff92760"
   end
 
   resource "wcwidth" do
@@ -133,7 +134,7 @@ class HttpPrompt < Formula
   def install
     virtualenv_install_with_resources
 
-    generate_completions_from_executable(bin/"http-prompt", shells: [:fish, :zsh], shell_parameter_format: :click)
+    generate_completions_from_executable(bin/"http-prompt", shell_parameter_format: :click)
   end
 
   test do

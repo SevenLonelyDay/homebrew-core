@@ -1,8 +1,8 @@
 class WasiRuntimes < Formula
   desc "Compiler-RT and libc++ runtimes for WASI"
   homepage "https://wasi.dev"
-  url "https://github.com/llvm/llvm-project/releases/download/llvmorg-20.1.6/llvm-project-20.1.6.src.tar.xz"
-  sha256 "5c70549d524284c184fe9fbff862c3d2d7a61b787570611b5a30e5cc345f145e"
+  url "https://github.com/llvm/llvm-project/releases/download/llvmorg-20.1.8/llvm-project-20.1.8.src.tar.xz"
+  sha256 "6898f963c8e938981e6c4a302e83ec5beb4630147c7311183cf61069af16333d"
   license "Apache-2.0" => { with: "LLVM-exception" }
   head "https://github.com/llvm/llvm-project.git", branch: "main"
 
@@ -11,13 +11,13 @@ class WasiRuntimes < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "5413b097ad2ded323a3d6cc61fd47de4a16231722402019979f075d159e66225"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "7101c9859188a255db13ad7e6d088554d4f76b542427d920efc34799b906ac2c"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "1693e392d4c3c125805fe2d6f245853d9351202004b3c9412e40bb38f8d51c10"
-    sha256 cellar: :any_skip_relocation, sonoma:        "06f3410d451e4d0b71ba06e5a2455a9b6fb1ec11dc0e2a94334a284c8d3ffed6"
-    sha256 cellar: :any_skip_relocation, ventura:       "897ca8efdbfd5ce922943b43d47be86365eac278255b3445e77b253d66596371"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "3e83e2b94020a6ae2468d75402fad2f1366dc3bbf89814050ecf7a057cd268cb"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "5b50559da088e476224d93375ba18fa0e5a74dd37b9654ba8d961368c4da990c"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "6cd664d45755254ce3ae2e19e41e8a81a7a2eb03c47000dae6d026ddd0cb6993"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "1ed3e8da09194c8682c33a5344428709db774efba69d95fb17c155d0effa4724"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "fb6f48eeba18de5e1e65f4c532de1f96715e24aeddb2fdf42828a7ae7b24ecb4"
+    sha256 cellar: :any_skip_relocation, sonoma:        "151407202f74fd0b96c97275e421fcf6f2a0b45abbf105ef83b7303672d99223"
+    sha256 cellar: :any_skip_relocation, ventura:       "ae29e65d5286118494ef89ed92cf9ee3a39dc522298ebe763f7f483ae26a4dc0"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "33a5deda14ed01dfd36a26080c248b14f3f81c7be0e9a87212045024ad283a2b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "5aa09804268b9e53b425f98b75f3c621e5f4b42483b6ab93bc25528a21ba9ed7"
   end
 
   depends_on "cmake" => :build

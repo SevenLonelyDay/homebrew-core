@@ -3,22 +3,21 @@ class Xml2rfc < Formula
 
   desc "Tool to convert XML RFC7749 to the original ASCII or the new HTML look-and-feel"
   homepage "https://xml2rfc.tools.ietf.org/"
-  url "https://files.pythonhosted.org/packages/19/5a/4e4cbd0d669ff6bd368ba185bfbad3fb91ac4d500374398d2e245ddc5394/xml2rfc-3.28.1.tar.gz"
-  sha256 "76201b28f5b5d4c466dad74d972b3260013db0f462c76ebc633ea1c7fcd87194"
+  url "https://files.pythonhosted.org/packages/7b/dc/4207f1b808dc974b199d9e491601401baf1e32a81cafc2a209dcc75062fa/xml2rfc-3.30.0.tar.gz"
+  sha256 "b977b26edd5d930020966fa4692fc7fcdcb4f7401a8429981d4cbc0cc4bbba25"
   license "BSD-3-Clause"
-  revision 1
   head "https://github.com/ietf-tools/xml2rfc.git", branch: "main"
 
   no_autobump! because: :requires_manual_review
 
   bottle do
-    sha256 cellar: :any,                 arm64_sequoia: "72d9a1d05a2329cfabb2419c9b474b820f90f7d7e88385af98464524fe7feb50"
-    sha256 cellar: :any,                 arm64_sonoma:  "e0f31f2356080c4d80383fbd277f94346689b5a7829b784798c5a855d275e596"
-    sha256 cellar: :any,                 arm64_ventura: "0abca83a636ce8cd7f8ce4018110709b7cd93239bc7388128c1496c8477db371"
-    sha256 cellar: :any,                 sonoma:        "9e521feba3843e67c9c28fe5ee760801701cbe9374c02c17c0fa8ded3b6c61c8"
-    sha256 cellar: :any,                 ventura:       "66925bf7079f050de6396467c29c64d549bb8e67c6ce0f879cf5282bfb6d1a25"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "463fd069e52db06294ce3ee246e2f2d0e02cc7af986faac0f770f3835ca94860"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "121e579c8b4fb6f65661ef794a3f6fc6f7e1f7eb51bc75aa5289d585d13b2d06"
+    sha256 cellar: :any,                 arm64_sequoia: "9d779c5043e45a65d381bce49e1d3ccc922364d1cade4356664676438defe34f"
+    sha256 cellar: :any,                 arm64_sonoma:  "b73d40fa03980a13ccd5adf616719ea307bf10f8c4d28a6232ceff4b2eaf7cae"
+    sha256 cellar: :any,                 arm64_ventura: "20902d9915818b020b2d50e277a62057816c1807f7bdbc5643e6ac302b814f43"
+    sha256 cellar: :any,                 sonoma:        "3965e4431f18103380bbebb81846caeec3789e48ba4593f180ae8a56aa5c7c93"
+    sha256 cellar: :any,                 ventura:       "243cce098334a0dd75ebd812f4db17aa1996e29bbcacdeda9bf755a78e5eaea4"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "7ca976e3c50b3a9f88230bdcbbc3102f64aef33331704e69aa7a10e28a797cb2"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "d870499bc811b04b4d66a73ba4e846f0f881b8bd2cce18f7bad901bc855063c8"
   end
 
   depends_on "libyaml"
@@ -31,8 +30,8 @@ class Xml2rfc < Formula
   end
 
   resource "certifi" do
-    url "https://files.pythonhosted.org/packages/e8/9e/c05b3920a3b7d20d3d3310465f50348e5b3694f4f88c6daf736eef3024c4/certifi-2025.4.26.tar.gz"
-    sha256 "0a816057ea3cdefcef70270d2c515e4506bbc954f417fa5ade2021213bb8f0c6"
+    url "https://files.pythonhosted.org/packages/b3/76/52c535bcebe74590f296d6c77c86dabf761c41980e1347a2422e4aa2ae41/certifi-2025.7.14.tar.gz"
+    sha256 "8ea99dbdfaaf2ba2f9bac77b9249ef62ec5218e7c2b2e903378ed5fccf765995"
   end
 
   resource "charset-normalizer" do
@@ -66,8 +65,8 @@ class Xml2rfc < Formula
   end
 
   resource "lxml" do
-    url "https://files.pythonhosted.org/packages/76/3d/14e82fc7c8fb1b7761f7e748fd47e2ec8276d137b6acfe5a4bb73853e08f/lxml-5.4.0.tar.gz"
-    sha256 "d12832e1dbea4be280b22fd0ea7c9b87f0d8fc51ba06e92dc62d52f804f78ebd"
+    url "https://files.pythonhosted.org/packages/c5/ed/60eb6fa2923602fba988d9ca7c5cdbd7cf25faa795162ed538b527a35411/lxml-6.0.0.tar.gz"
+    sha256 "032e65120339d44cdc3efc326c9f660f5f7205f3a535c1fdbf898b29ea01fb72"
   end
 
   resource "markupsafe" do
@@ -106,8 +105,8 @@ class Xml2rfc < Formula
   end
 
   resource "urllib3" do
-    url "https://files.pythonhosted.org/packages/8a/78/16493d9c386d8e60e442a35feac5e00f0913c0f4b7c217c11e8ec2ff53e0/urllib3-2.4.0.tar.gz"
-    sha256 "414bc6535b787febd7567804cc015fee39daab8ad86268f1310a9250697de466"
+    url "https://files.pythonhosted.org/packages/15/22/9ee70a2574a4f4599c47dd506532914ce044817c7752a79b6a51286319bc/urllib3-2.5.0.tar.gz"
+    sha256 "3fc47733c7e419d4bc3f6b3dc2b4f890bb743906a30d56ba4a5bfa4bbff92760"
   end
 
   resource "wcwidth" do

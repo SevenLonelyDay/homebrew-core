@@ -1,8 +1,8 @@
 class GitGui < Formula
   desc "Tcl/Tk UI for the git revision control system"
   homepage "https://git-scm.com"
-  url "https://mirrors.edge.kernel.org/pub/software/scm/git/git-2.49.0.tar.xz"
-  sha256 "618190cf590b7e9f6c11f91f23b1d267cd98c3ab33b850416d8758f8b5a85628"
+  url "https://mirrors.edge.kernel.org/pub/software/scm/git/git-2.50.1.tar.xz"
+  sha256 "7e3e6c36decbd8f1eedd14d42db6674be03671c2204864befa2a41756c5c8fc4"
   license "GPL-2.0-only"
   head "https://github.com/git/git.git", branch: "master"
 
@@ -13,7 +13,7 @@ class GitGui < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "b23434b9e20e8d7d5ecd4fc68f398606c2077575ef7718ce6470fa5d4bbce1c2"
+    sha256 cellar: :any_skip_relocation, all: "47b3646a5929563330e69235b3df3533599c2e79bb486906a782a520544a369e"
   end
 
   depends_on "tcl-tk@8"

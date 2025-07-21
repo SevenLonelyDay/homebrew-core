@@ -3,18 +3,18 @@ class Pipdeptree < Formula
 
   desc "CLI to display dependency tree of the installed Python packages"
   homepage "https://github.com/tox-dev/pipdeptree"
-  url "https://files.pythonhosted.org/packages/74/ef/9158ee3b28274667986d39191760c988a2de22c6321be1262e21c8a19ccf/pipdeptree-2.26.1.tar.gz"
-  sha256 "92a8f37ab79235dacb46af107e691a1309ca4a429315ba2a1df97d1cd56e27ac"
+  url "https://files.pythonhosted.org/packages/25/61/0e855474eee22f06d8508aad787c1bb3f9fff28759e758c0da44f8549998/pipdeptree-2.28.0.tar.gz"
+  sha256 "bae533e30249b1aa6d9cb315ef6f1c039e9adaa55d5b25438395cace5716eaa6"
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "522d354e5706c06a83b1b1b58b6967363100f003bba3761c885448b9792ccff4"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "522d354e5706c06a83b1b1b58b6967363100f003bba3761c885448b9792ccff4"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "522d354e5706c06a83b1b1b58b6967363100f003bba3761c885448b9792ccff4"
-    sha256 cellar: :any_skip_relocation, sonoma:        "ac623f210f353911644b09784a94f5d110437ec9aaacd0bc2418cefa9cb3557d"
-    sha256 cellar: :any_skip_relocation, ventura:       "ac623f210f353911644b09784a94f5d110437ec9aaacd0bc2418cefa9cb3557d"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "522d354e5706c06a83b1b1b58b6967363100f003bba3761c885448b9792ccff4"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "522d354e5706c06a83b1b1b58b6967363100f003bba3761c885448b9792ccff4"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "b4186df680dd5e48dc0eb1b9ace7b83b092dde1d36d173a9d77e5f52bf833a9f"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "b4186df680dd5e48dc0eb1b9ace7b83b092dde1d36d173a9d77e5f52bf833a9f"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "b4186df680dd5e48dc0eb1b9ace7b83b092dde1d36d173a9d77e5f52bf833a9f"
+    sha256 cellar: :any_skip_relocation, sonoma:        "9d16f75593085ae5f9e5079a9347bc50a6544734bb3de8a39a87159059d156d9"
+    sha256 cellar: :any_skip_relocation, ventura:       "9d16f75593085ae5f9e5079a9347bc50a6544734bb3de8a39a87159059d156d9"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "b4186df680dd5e48dc0eb1b9ace7b83b092dde1d36d173a9d77e5f52bf833a9f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "b4186df680dd5e48dc0eb1b9ace7b83b092dde1d36d173a9d77e5f52bf833a9f"
   end
 
   depends_on "python@3.13"

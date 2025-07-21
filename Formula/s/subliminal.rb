@@ -6,17 +6,18 @@ class Subliminal < Formula
   url "https://files.pythonhosted.org/packages/50/fc/24c86cc9bf5ef2543a14cbff1e71a81165e760e2dfc61814ac3d7d9bfa9d/subliminal-2.3.2.tar.gz"
   sha256 "e9adee230b8bf46e27214da71ada18a3a0107d968005a25be3db5bc5855fb433"
   license "MIT"
-  revision 1
+  revision 2
   head "https://github.com/Diaoul/subliminal.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any,                 arm64_sequoia: "714aa3e649d1b327880692e595b250dd4d727689ccd532053b959d3eb3052601"
-    sha256 cellar: :any,                 arm64_sonoma:  "60751318c6c71962743245dfdf7f807032039eb2eefa861bb647e6dddbd6efd0"
-    sha256 cellar: :any,                 arm64_ventura: "55fe4daf22a84f1fa32c78b0b1ef1897ff6d67d9c7c6714862c0a84bc2e2ef1c"
-    sha256 cellar: :any,                 sonoma:        "981cf832217c4cb2e7a25c7357da43472e73aff72bc54731af840b189020ab85"
-    sha256 cellar: :any,                 ventura:       "b23975960f3407dbc77e6d474a29c3041ba289651462ebb17b353e96f8cb3323"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "2c52de75f72894350779953e81f7f5a25592e8d2392cd659c5567e59e496e3ea"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "d047122d0a91a4f13454e701a2105115c43ddb65dd526a0690409336c680cfb0"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_sequoia: "7ef2d779b37ac8893792dbe85344fdd5e66a41a7ff026e928df9cc5069857f01"
+    sha256 cellar: :any,                 arm64_sonoma:  "9c701b1b35b5f701e855a66b2204c550ca0c5569cdc01ec092ff7318947e0fe4"
+    sha256 cellar: :any,                 arm64_ventura: "e4cb2b55889d3eb232eed5d8c8ff74bef8bfe29d552f732adadd9331443a7a7a"
+    sha256 cellar: :any,                 sonoma:        "b364d5d7051f89d62e58464d8a82b8d2ef1b8bf9f25ed1cda9a9654d9e33fb4f"
+    sha256 cellar: :any,                 ventura:       "2c16a2ee1d2ac22eb1cf437bf8b9fa795b8cf5ae7a6787fd88747bfcf4a9afd3"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "c8b2fdbbed0bf325167ac51370959c322fb973711aae245944b85fcd0d748c26"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "5535e61d5320ae97f94b9baba9d370793e3f7306d663e98845f5d3f7e54c7023"
   end
 
   depends_on "certifi"
@@ -184,14 +185,14 @@ class Subliminal < Formula
   end
 
   resource "urllib3" do
-    url "https://files.pythonhosted.org/packages/8a/78/16493d9c386d8e60e442a35feac5e00f0913c0f4b7c217c11e8ec2ff53e0/urllib3-2.4.0.tar.gz"
-    sha256 "414bc6535b787febd7567804cc015fee39daab8ad86268f1310a9250697de466"
+    url "https://files.pythonhosted.org/packages/15/22/9ee70a2574a4f4599c47dd506532914ce044817c7752a79b6a51286319bc/urllib3-2.5.0.tar.gz"
+    sha256 "3fc47733c7e419d4bc3f6b3dc2b4f890bb743906a30d56ba4a5bfa4bbff92760"
   end
 
   def install
     virtualenv_install_with_resources
 
-    generate_completions_from_executable(bin/"subliminal", shells: [:fish, :zsh], shell_parameter_format: :click)
+    generate_completions_from_executable(bin/"subliminal", shell_parameter_format: :click)
   end
 
   test do

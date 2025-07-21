@@ -1,8 +1,8 @@
 class Strongswan < Formula
   desc "VPN based on IPsec"
   homepage "https://www.strongswan.org"
-  url "https://download.strongswan.org/strongswan-6.0.1.tar.bz2"
-  sha256 "212368cbc674fed31f3292210303fff06da8b90acad2d1387375ed855e6879c4"
+  url "https://download.strongswan.org/strongswan-6.0.2.tar.bz2"
+  sha256 "b8bfc897b84001fd810a281918d6c9ce37503cae0f41b39c43d4aba0201277cf"
   license "GPL-2.0-or-later"
 
   livecheck do
@@ -11,13 +11,13 @@ class Strongswan < Formula
   end
 
   bottle do
-    sha256 arm64_sequoia: "1d400a27f9827ddc6cf1558f1745ec2de5b726b5846fc0ccb940ce1ae4816c46"
-    sha256 arm64_sonoma:  "a53259dbcb6295c222daf978857a3bbc5b9227d008c77a211f92ad7341ab72ca"
-    sha256 arm64_ventura: "fa99e2acc5b7dad59ba0c34729ac9962265b3a44471b76ea2ccb3449b091a6d0"
-    sha256 sonoma:        "324b1831262b1913c26de58b0062943a9d453fac4ed1b1ebc8448b47457e207f"
-    sha256 ventura:       "328816ca28f4d263fc8389a4384b481c86f46a2e1d43f152ba7a1ab6ca10b656"
-    sha256 arm64_linux:   "5933ebc1945502e575568a71fd8f230164aafad1228b0fc41e895c848a25113a"
-    sha256 x86_64_linux:  "5639fc4928b7bf717c6c4eb52db38c58205b332c9a3694f8197195555e24a165"
+    sha256 arm64_sequoia: "ccecd25f08f24fd32178ccdc58f98ba3cb43e5f8145786fca72f02b5efaa7242"
+    sha256 arm64_sonoma:  "1fa01b0d9382a6af24ff0220dccdd83a3a56c87c37b0d7c48487c4c7f1b4d4cb"
+    sha256 arm64_ventura: "ad54d4161628511ebb7ea92ba2ce4d6da9a5ad4048949110a988658019c11c9b"
+    sha256 sonoma:        "28c6a9c784715f75817a784726bf8aeadc734c8c3e7b6728ac79ad8c01c7e840"
+    sha256 ventura:       "6f23fcd4ef43c6262bdf09821aef9c44a7bc5d2c7db4a7e6b2c9f8d95f0e4690"
+    sha256 arm64_linux:   "baf7a4be65bb2ef39608c0d27a9aef2469e0d4180f6cea72584306ec4e860da8"
+    sha256 x86_64_linux:  "eb4968f284518e118309d8ca96af2e858c2976165b1e9a8fb924f3f7268b2cb7"
   end
 
   head do
@@ -54,6 +54,7 @@ class Strongswan < Formula
       --enable-eap-mschapv2
       --enable-ikev1
       --enable-ikev2
+      --enable-kdf
       --enable-kernel-pfkey
       --enable-nonce
       --enable-openssl

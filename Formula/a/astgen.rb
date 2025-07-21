@@ -1,13 +1,13 @@
 class Astgen < Formula
   desc "Generate AST in json format for JS/TS"
   homepage "https://github.com/joernio/astgen"
-  url "https://github.com/joernio/astgen/archive/refs/tags/v3.29.0.tar.gz"
-  sha256 "4f841f76daa13cb6e8e3c1c8b173084d005b4fdbe49e68092c4e9dc4132fa244"
+  url "https://github.com/joernio/astgen/archive/refs/tags/v3.35.0.tar.gz"
+  sha256 "be3c0584696c670a341ee7ca6dfbe350a09b577f4ef33033bd75bed5b8d758d1"
   license "Apache-2.0"
   head "https://github.com/joernio/astgen.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "93cfdd571ea5cfa13c9e5ae1f5246cd740a8f7ad12749d8969d69496d45554cb"
+    sha256 cellar: :any_skip_relocation, all: "cd2872237247b4b7caa39d4b41cd25f0ef13db6a2233bffd0863180ca4e64a91"
   end
 
   depends_on "node"
@@ -30,6 +30,6 @@ class Astgen < Formula
 
     assert_match "Converted AST", shell_output("#{bin}/astgen -t js -i . -o #{testpath}/out")
     assert_match "\"fullName\":\"#{testpath}/main.js\"", (testpath/"out/main.js.json").read
-    assert_match '"0":"Console"', (testpath/"out/main.js.typemap").read
+    assert_match '"0:7":"Console"', (testpath/"out/main.js.typemap").read
   end
 end

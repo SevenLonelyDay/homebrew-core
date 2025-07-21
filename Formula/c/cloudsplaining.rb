@@ -6,17 +6,18 @@ class Cloudsplaining < Formula
   url "https://files.pythonhosted.org/packages/6e/09/acb8e088d1c6cc6fc9d6d42c1e61168f36339f13b1ea8e54f9a7e93949d1/cloudsplaining-0.8.0.tar.gz"
   sha256 "02029432316a56551e58296496bc80e4778a58468273dbcd61df4ed2c369ede4"
   license "BSD-3-Clause"
-  revision 2
+  revision 3
   head "https://github.com/salesforce/cloudsplaining.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_sequoia: "ee37ddda13b58065f7bef47caf31091e91cbceddc7f5a9142e1e69dd88a1bcbd"
-    sha256 cellar: :any,                 arm64_sonoma:  "f364f470b80e1fff1cff3c3815ddc44d4f6d59862fd8e57ce3d879078ceaced2"
-    sha256 cellar: :any,                 arm64_ventura: "8336328a62cab5384ec8c55e626638ad50c2e6494537fed1bf5094c33a243d31"
-    sha256 cellar: :any,                 sonoma:        "c79e09ac0fdd27e79f449809d89557a84cee5b43d4dbf11a3b3f4a875d4e33d9"
-    sha256 cellar: :any,                 ventura:       "d1196fed9771284659d539ca34d894926445223d5c4af15807f2cc4039dfbf52"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "077b6ccde8c6c40c313a000700049c28a6a7b997d4d3e430c13d928d9769e57e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "1bbba75f816193064411549d5770401aa5c180b1c298223920487df432436459"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_sequoia: "48b4acede5eb5b4f635b1a506dbcbf9698a7247993656e1633ab64b71a3d96b2"
+    sha256 cellar: :any,                 arm64_sonoma:  "8ddf6f257babd0a4d65a796fe10a9163b80a221612ffaf19db32ce251c83ac97"
+    sha256 cellar: :any,                 arm64_ventura: "0fa574e4ad463dadd904e1e628207171bba6ad0524b9ea2ce2cf71f026cbf5d8"
+    sha256 cellar: :any,                 sonoma:        "cda069559fb8b000312d48023a2b0712f1a9034d1d1490605ce64638d2eb05b8"
+    sha256 cellar: :any,                 ventura:       "b90b887ea3286d3993ddb2b970719338b0d695281bf0af18041bd07c925d6253"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "359c22a44ec43cf008ef07a7e6b1a18bab9da6f3d4bc8e770c40da22b873c194"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "f2dd728d1aa2204e5ad596eb6a1e33deb937bf59a55763e37d7ca2b062043135"
   end
 
   depends_on "rust" => :build # for orjson
@@ -30,13 +31,13 @@ class Cloudsplaining < Formula
   end
 
   resource "boto3" do
-    url "https://files.pythonhosted.org/packages/ad/95/99046c55799732d97b0f9a0bb99b64760f07dd55ac793393a6c4e847d8d6/boto3-1.38.33.tar.gz"
-    sha256 "6467909c1ae01ff67981f021bb2568592211765ec8a9a1d2c4529191e46c3541"
+    url "https://files.pythonhosted.org/packages/70/b0/a35b320e5084821de69a66962513dcc8aa37b7a5bc80e761685533e97be9/boto3-1.38.39.tar.gz"
+    sha256 "22cca12cfe1b24670de53e3b8f4c69bdf34a2bd3e3363f72393b6b03bb0d78bc"
   end
 
   resource "botocore" do
-    url "https://files.pythonhosted.org/packages/9d/aa/1521d7e1dcb76af8dca81539eec141ee3581a32e0dc1f31d092b59feb06a/botocore-1.38.33.tar.gz"
-    sha256 "dbe8fea9d0426c644c89ef2018ead886ccbcc22901a02b377b4e65ce1cb69a2b"
+    url "https://files.pythonhosted.org/packages/09/61/20eceeccdce79ca238453389e9a8a9147a79417a07e22fa6715f1abd6421/botocore-1.38.39.tar.gz"
+    sha256 "2305f688e9328af473a504197584112f228513e06412038d83205ce8d1456f40"
   end
 
   resource "cached-property" do
@@ -75,8 +76,8 @@ class Cloudsplaining < Formula
   end
 
   resource "markdown" do
-    url "https://files.pythonhosted.org/packages/2f/15/222b423b0b88689c266d9eac4e61396fe2cc53464459d6a37618ac863b24/markdown-3.8.tar.gz"
-    sha256 "7df81e63f0df5c4b24b7d156eb81e4690595239b7d70937d0409f1b0de319c6f"
+    url "https://files.pythonhosted.org/packages/db/7c/0738e5ff0adccd0b4e02c66d0446c03a3c557e02bb49b7c263d7ab56c57d/markdown-3.8.1.tar.gz"
+    sha256 "a2e2f01cead4828ee74ecca9623045f62216aef2212a7685d6eb9163f590b8c1"
   end
 
   resource "markupsafe" do
@@ -135,14 +136,14 @@ class Cloudsplaining < Formula
   end
 
   resource "urllib3" do
-    url "https://files.pythonhosted.org/packages/8a/78/16493d9c386d8e60e442a35feac5e00f0913c0f4b7c217c11e8ec2ff53e0/urllib3-2.4.0.tar.gz"
-    sha256 "414bc6535b787febd7567804cc015fee39daab8ad86268f1310a9250697de466"
+    url "https://files.pythonhosted.org/packages/15/22/9ee70a2574a4f4599c47dd506532914ce044817c7752a79b6a51286319bc/urllib3-2.5.0.tar.gz"
+    sha256 "3fc47733c7e419d4bc3f6b3dc2b4f890bb743906a30d56ba4a5bfa4bbff92760"
   end
 
   def install
     virtualenv_install_with_resources
 
-    generate_completions_from_executable(bin/"cloudsplaining", shells: [:fish, :zsh], shell_parameter_format: :click)
+    generate_completions_from_executable(bin/"cloudsplaining", shell_parameter_format: :click)
   end
 
   test do
